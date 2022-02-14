@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="utf-8" />
+   <title>Самолет</title>
+   <meta name="keywords" content="Airplane" />
+   <meta name="description" content="Airplane" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="format-detection" content="telephone=no" />
+
+   <meta property="og:title" content="" />
+   <meta property="og:description" content="" />
+   <meta property="og:image" content="" />
+   <style>
+      @font-face {
+         font-family: 'CoFo Sans';
+         src: url('./fonts/cofo/CoFoSans-Bold.eot');
+         src: local('CoFo Sans Bold'), local('CoFoSans-Bold'),
+            url('./fonts/cofo/CoFoSans-Bold.eot?#iefix') format('embedded-opentype'),
+            url('./fonts/cofo/CoFoSans-Bold.woff2') format('woff2'),
+            url('./fonts/cofo/CoFoSans-Bold.woff') format('woff'),
+            url('./fonts/cofo/CoFoSans-Bold.ttf') format('truetype');
+         font-weight: bold;
+         font-style: normal;
+         font-display: swap;
+      }
+
+      @font-face {
+         font-family: 'CoFo Sans';
+         src: url('./fonts/cofo/CoFoSans-Regular.eot');
+         src: local('CoFo Sans'), local('CoFoSans-Regular'),
+            url('./fonts/cofo/CoFoSans-Regular.eot?#iefix') format('embedded-opentype'),
+            url('./fonts/cofo/CoFoSans-Regular.woff2') format('woff2'),
+            url('./fonts/cofo/CoFoSans-Regular.woff') format('woff'),
+            url('./fonts/cofo/CoFoSans-Regular.ttf') format('truetype');
+         font-weight: normal;
+         font-style: normal;
+         font-display: swap;
+      }
+
+      @font-face {
+         font-family: 'CoFo Sans';
+         src: url('./fonts/cofo/CoFoSans-Medium.eot');
+         src: local('CoFo Sans Medium'), local('CoFoSans-Medium'),
+            url('./fonts/cofo/CoFoSans-Medium.eot?#iefix') format('embedded-opentype'),
+            url('./fonts/cofo/CoFoSans-Medium.woff2') format('woff2'),
+            url('./fonts/cofo/CoFoSans-Medium.woff') format('woff'),
+            url('./fonts/cofo/CoFoSans-Medium.ttf') format('truetype');
+         font-weight: 500;
+         font-style: normal;
+         font-display: swap;
+      }
+   </style>
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css">
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="fonts/cofo.css">
+   <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+   <div class="wrapper" id="wrapper">
+      @@include('inc-header.html')
+      <div class="middle" id="middle">
+         <div class="container">
+            <div class="top-screen">
+               <!-- Slider main container -->
+               <div class="swiper">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                     <!-- Slides -->
+                     <div class="swiper-slide">Slide 1</div>
+                     <div class="swiper-slide">Slide 2</div>
+                     <div class="swiper-slide">Slide 3</div>
+                     ...
+                  </div>
+                  <div class="swiper-pagination"></div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+      @@include('inc-footer.html')
+   </div>
+   @@include('inc-script.html')
+</body>
+
+</html>

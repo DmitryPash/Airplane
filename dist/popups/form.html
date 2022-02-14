@@ -1,0 +1,105 @@
+<div class="zoom-anim-dialog popup-form">
+   <div class="form">
+      <div class="popup-form-title form-title">
+         Fill out your information to participate in the drawing
+      </div>
+      <form action="" id="form-validation">
+         <div class="ui-field">
+            <input type="text" placeholder="Your name" name="name" class="ui-input">
+            <label for="name" class="ui-label">
+               <img src="./images/icon/Profile.svg" alt="alt">
+            </label>
+         </div>
+         <div class="ui-field">
+            <input type="text" placeholder="yourmail@example.com" name="email" class="ui-input">
+            <label for="email" class="ui-label">
+               <img src="./images/icon/Message.svg" alt="alt">
+            </label>
+         </div>
+         <div class="ui-field">
+            <input type="text" placeholder="+0-000-000-0000" name="phone" class="ui-input" id="imask-phone">
+            <label for="phone" class="ui-label">
+               <img src="./images/icon/Call.svg" alt="alt">
+            </label>
+         </div>
+         <div class="ui-field">
+            <input type="text" name="date" class="ui-input" id="imask-input" placeholder="DD/MM/YYYY (today date)">
+            <label for="date" class="ui-label">
+               <img src="./images/icon/Calendar.svg" alt="alt">
+            </label>
+         </div>
+         <div class="checkbox">
+            <input type="checkbox" class="ui-checkbox" id="checkbox_1" name="checkbox_1" value="yes">
+            <label for="checkbox_1" name="checkbox" class="checkbox-form">I agree to the processing of personal data and
+               to
+               the <a href="#" class="checkbox-link"> Terms &
+                  Conditions</a></label>
+         </div>
+         <button class="popup-form-btn form-btn ui-btn" type="submit">Send</button>
+      </form>
+   </div>
+
+   <script>
+      $(document).ready(function () {
+         $("#form-validation").validate({
+            errorElement: 'span',
+            errorPlacement: function (error, element) {
+               if (element.attr("type") == "checkbox") {
+                  return element.next('label').append(error);
+               }
+
+               error.insertAfter($(element));
+            },
+            rules: {
+               email: {
+                  required: true,
+                  email: true,
+               },
+               phone: {
+                  required: true,
+                  telephone: true,
+               },
+               name: {
+                  required: true,
+                  lettersonly: true,
+               },
+               date: {
+                  required: true,
+                  // date: true,
+               },
+               checkbox_1: {
+                  required: true,
+               }
+
+            },
+         });
+      });
+      // iMask
+
+      var overwriteMask = IMask(
+         document.getElementById('imask-input'),
+         {
+            mask: 'd/m/Y',
+            //  lazy: false,
+            overwrite: true,
+            autofix: true,
+            blocks: {
+               d: { mask: IMask.MaskedRange, placeholderChar: 'd', from: 1, to: 31, maxLength: 2 },
+               m: { mask: IMask.MaskedRange, placeholderChar: 'm', from: 1, to: 12, maxLength: 2 },
+               Y: { mask: IMask.MaskedRange, placeholderChar: 'y', from: 1900, to: 2999, maxLength: 4 }
+            }
+         }
+      );
+
+
+      var element = document.getElementById('imask-phone');
+      var maskOptions = {
+         placeholder: '+{7}(000)000-00-00',
+         mask: '+{0}(000)000-00-00'
+      };
+      var mask = IMask(element, maskOptions);
+
+
+
+   </script>
+</div>

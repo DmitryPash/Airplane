@@ -1,0 +1,47 @@
+.header {
+  margin-top: 52px;
+  margin-bottom: 78px;
+}
+.logo {
+  margin-bottom: 38px;
+  &-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-link {
+    display: inline-block;
+    text-transform: lowercase;
+    font-size: 42px;
+    font-size: 2.625rem;
+    font-weight: 500;
+    color: #fff;
+  }
+  &-sticker {
+    width: 126px;
+    height: 48px;
+    line-height: 48px;
+    font-weight: 700;
+    transform: rotate(-18.73deg);
+  }
+}
+.navigation {
+  background-color: $colorCyan;
+  border-radius: 35px;
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  a {
+    display: block;
+    height: 67px;
+    line-height: 67px;
+    padding: 0px 10px;
+    font-size: rem(15px);
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: #fff;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+  }
+}
