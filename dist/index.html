@@ -13,56 +13,16 @@
    <meta property="og:title" content="" />
    <meta property="og:description" content="" />
    <meta property="og:image" content="" />
-   <style>
-      @font-face {
-         font-family: 'CoFo Sans';
-         src: url('./fonts/cofo/CoFoSans-Bold.eot');
-         src: local('CoFo Sans Bold'), local('CoFoSans-Bold'),
-            url('./fonts/cofo/CoFoSans-Bold.eot?#iefix') format('embedded-opentype'),
-            url('./fonts/cofo/CoFoSans-Bold.woff2') format('woff2'),
-            url('./fonts/cofo/CoFoSans-Bold.woff') format('woff'),
-            url('./fonts/cofo/CoFoSans-Bold.ttf') format('truetype');
-         font-weight: bold;
-         font-style: normal;
-         font-display: swap;
-      }
 
-      @font-face {
-         font-family: 'CoFo Sans';
-         src: url('./fonts/cofo/CoFoSans-Regular.eot');
-         src: local('CoFo Sans'), local('CoFoSans-Regular'),
-            url('./fonts/cofo/CoFoSans-Regular.eot?#iefix') format('embedded-opentype'),
-            url('./fonts/cofo/CoFoSans-Regular.woff2') format('woff2'),
-            url('./fonts/cofo/CoFoSans-Regular.woff') format('woff'),
-            url('./fonts/cofo/CoFoSans-Regular.ttf') format('truetype');
-         font-weight: normal;
-         font-style: normal;
-         font-display: swap;
-      }
-
-      @font-face {
-         font-family: 'CoFo Sans';
-         src: url('./fonts/cofo/CoFoSans-Medium.eot');
-         src: local('CoFo Sans Medium'), local('CoFoSans-Medium'),
-            url('./fonts/cofo/CoFoSans-Medium.eot?#iefix') format('embedded-opentype'),
-            url('./fonts/cofo/CoFoSans-Medium.woff2') format('woff2'),
-            url('./fonts/cofo/CoFoSans-Medium.woff') format('woff'),
-            url('./fonts/cofo/CoFoSans-Medium.ttf') format('truetype');
-         font-weight: 500;
-         font-style: normal;
-         font-display: swap;
-      }
-   </style>
 
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css">
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-   <link rel="stylesheet" href="fonts/cofo.css">
    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
    <div class="wrapper" id="wrapper">
-      <header class="header" id="header">
+      <header class="header header-active" id="header">
    <div class="container">
       <div class="logo">
          <div class="logo-row">
@@ -70,8 +30,12 @@
             <div class="logo-sticker ui-sticker-blue">
                #SMLT
             </div>
+            <div class="toggler">
+               <div class="toggler-item-1"></div>
+               <div class="toggler-item-2"></div>
+               <div class="toggler-item-3"></div>
+            </div>
          </div>
-
       </div>
       <nav class="navigation">
          <ul>
@@ -84,28 +48,196 @@
          </ul>
       </nav>
    </div>
-   </div>
+
 </header>
       <div class="middle" id="middle">
          <div class="container">
             <div class="top-screen">
                <!-- Slider main container -->
-               <div class="swiper">
+               <div class="swiper gifts-container">
                   <!-- Additional required wrapper -->
                   <div class="swiper-wrapper">
                      <!-- Slides -->
-                     <div class="swiper-slide">Slide 1</div>
-                     <div class="swiper-slide">Slide 2</div>
-                     <div class="swiper-slide">Slide 3</div>
-                     ...
+                     <div class="swiper-slide gifts-slider">
+                        <img src="./images/example/top-screen-slider.png" alt="alt">
+                     </div>
+                     <div class="swiper-slide gifts-slider">
+                        <img src="https://via.placeholder.com/1190x550" alt="alt">
+                     </div>
+                     <div class="swiper-slide gifts-slider">
+                        <img src="https://via.placeholder.com/1190x550/0000FF" alt="alt">
+                     </div>
+                     <div class="swiper-slide gifts-slider">
+                        <img src="https://via.placeholder.com/1190x550/FF00000" alt="alt">
+                     </div>
+                     <div class="swiper-slide gifts-slider">
+                        <img src="https://via.placeholder.com/1190x550" alt="alt">
+                     </div>
                   </div>
                   <div class="swiper-pagination"></div>
                </div>
             </div>
-         </div>
+            <div class="gifts">
+               <div class="gifts-row">
+                  <div class="gifts-btn ui-btn ui-yellow">
+                     #подарок
+                     <div class="gifts-click">
+                        <img src="./images/icon/стикер-палец.svg" alt="alt">
+                     </div>
+                  </div>
+                  <div class="gifts-sticker ui-sticker-blue">
+                     #SMLT
+                  </div>
+                  <div class="gifts-heart">
+                     <img src="./images/icon/стикер-сердце.svg" alt="alt">
+                  </div>
+               </div>
+            </div>
+            <div class="video">
+               <iframe class="video-frame" src="https://www.youtube.com/embed/zJLOc1NmEaU" title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+               <div class="video-sticker ui-sticker-blue">
+                  <img class="video-sticker-img" src="./images/icon/item-video.svg" alt="alt">
+               </div>
+               <div class="video-sticker-text ui-sticker-blue ui-yellow">
+                  #включизвук
+               </div>
+            </div>
+            <div class="lectures">
+               <div class="lectures-sticker ui-sticker-blue ui-yellow">
+                  #лекторийсамолет
+               </div>
+               <div class="lectures-container">
+                  <div class="lectures-text">
+                     Небольшой сопутствующий текст о разделе. Любая информация, которая опишет суть
+                     и назначение блока и отображаемую в нем визуальную составляющую.
+                  </div>
+                  <div class="lectures-streamers">
+                     <div class="row">
+                        <div class="col-6 col-md-12">
+                           <div class="lectures-streamers-streamer flex valign-center">
+                              <div class=" lectures-streamers-streamer-img">
+                                 <img src="./images/photo-1.png" alt="alt">
+                              </div>
+                              <div class="lectures-streamers-streamer-group">
+                                 <div class="lectures-streamers-streamer-sticker ui-sticker-blue">
+                                    Смотреть эфир
+                                 </div>
+                                 <div class="lectures-streamers-streamer-title">
+                                    Как мужчине всегда оставаться
+                                    с хорошим настроением
+                                 </div>
+                                 <div class="lectures-streamers-streamer-name">
+                                    Приходько Владимир Александрович
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-6 col-md-12">
+                           <div class="lectures-streamers-streamer flex valign-center">
+                              <div class=" lectures-streamers-streamer-img">
+                                 <img src="./images/photo-1.png" alt="alt">
+                              </div>
+                              <div class="lectures-streamers-streamer-group">
+                                 <div class="lectures-streamers-streamer-date">
+                                    22 февраля 2022 г.
+                                 </div>
+                                 <div class="lectures-streamers-streamer-title">
+                                    Здоровье, спорт, питание
+                                    и полезные привычки
+                                 </div>
+                                 <div class="lectures-streamers-streamer-name">
+                                    Прожигина Анжелика Сергеевна
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-6 col-md-12">
+                           <div class="lectures-streamers-streamer flex valign-center">
+                              <div class=" lectures-streamers-streamer-img">
+                                 <img src="./images/photo-1.png" alt="alt">
+                              </div>
+                              <div class="lectures-streamers-streamer-group">
+                                 <div class="lectures-streamers-streamer-date">
+                                    22 февраля 2022 г.
+                                 </div>
+                                 <div class="lectures-streamers-streamer-title">
+                                    Навыки общения.
+                                    Практические упражнения
+                                 </div>
+                                 <div class="lectures-streamers-streamer-name">
+                                    Зыков Максим Кириллович
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-6 col-md-12">
+                           <div class="lectures-streamers-streamer flex valign-center">
+                              <div class=" lectures-streamers-streamer-img">
+                                 <img src="./images/photo-1.png" alt="alt">
+                              </div>
+                              <div class="lectures-streamers-streamer-group">
+                                 <div class="lectures-streamers-streamer-date">
+                                    22 февраля 2022 г.
+                                 </div>
+                                 <div class="lectures-streamers-streamer-title">
+                                    Как правильно ставить цели,
+                                    чтобы всегда их достигать
+                                 </div>
+                                 <div class="lectures-streamers-streamer-name">
+                                    Румянцев Сергей Демидович
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-6 col-md-12">
+                           <div class="lectures-streamers-streamer flex valign-center">
+                              <div class=" lectures-streamers-streamer-img">
+                                 <img src="./images/photo-1.png" alt="alt">
+                              </div>
+                              <div class="lectures-streamers-streamer-group">
+                                 <div class="lectures-streamers-streamer-date">
+                                    22 февраля 2022 г.
+                                 </div>
+                                 <div class="lectures-streamers-streamer-title">
+                                    Планирование бюджета
+                                    и основы инвестирования
+                                 </div>
+                                 <div class="lectures-streamers-streamer-name">
+                                    Горячев Лев Григорьевич
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-6 col-md-12">
+                           <div class="lectures-streamers-streamer flex valign-center">
+                              <div class=" lectures-streamers-streamer-img">
+                                 <img src="./images/photo-1.png" alt="alt">
+                              </div>
+                              <div class="lectures-streamers-streamer-group">
+                                 <div class="lectures-streamers-streamer-date">
+                                    22 февраля 2022 г.
+                                 </div>
+                                 <div class="lectures-streamers-streamer-title">
+                                    Как проживать жизнь ярко
+                                 </div>
+                                 <div class="lectures-streamers-streamer-name">
+                                    Сергеева София Александровна
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
 
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-      <footer class="footer" id="footer">
+   </div>
+   <footer class="footer" id="footer">
 
 </footer>
    </div>
