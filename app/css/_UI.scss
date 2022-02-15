@@ -106,11 +106,6 @@ a {
   transition: color 0.4s, border 0.4s;
 }
 
-a:hover {
-  text-decoration: none;
-  color: #eee;
-}
-
 a:active {
   color: #b0b0b0;
 }
@@ -224,6 +219,97 @@ textarea {
     }
   }
 }
+.ui-header {
+  &-container {
+    padding: 0 40px;
+  }
+  &-sticker {
+    height: 98px;
+    line-height: 98px;
+    font-size: rem(52px);
+    padding: 0 45px;
+    margin-bottom: 54px;
+  }
+  &-text {
+    font-size: rem(24px);
+    max-width: 985px;
+  }
+}
+.ui-pgn {
+  padding: 0;
+  margin: 20px 0;
+
+  &-link,
+  &-current {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 7px;
+    min-width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 0;
+    border-radius: 12px;
+    padding: 0px 5px;
+    font-weight: 400;
+    transition: none;
+  }
+  &-link {
+    color: #000000;
+    background: $colorYellow;
+
+    &:hover {
+      color: #fff;
+      background: $colorCyan;
+    }
+  }
+
+  &-current {
+    background-color: #fff;
+    color: #000;
+    cursor: default;
+  }
+
+  &-btn {
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: rem(14px);
+    color: #fff;
+    min-width: 128px;
+    margin: 0px 28px;
+    background: $colorCyan;
+    border-radius: 8px;
+
+    &:hover {
+      color: #000;
+      background: $colorYellow;
+    }
+  }
+
+  @media (max-width: 576px) {
+    &-link,
+    &-current,
+    &-btn {
+      font-size: rem(10px);
+      height: 22px;
+      line-height: 22px;
+      border-radius: 4px;
+    }
+    &-btn {
+      min-width: 66px;
+      margin: 0px 3px;
+    }
+    &-link,
+    &-current {
+      min-width: 22px;
+      margin: 0px 3px;
+    }
+  }
+}
+
 // .ui-checkbox {
 //   position: absolute;
 //   z-index: -1;

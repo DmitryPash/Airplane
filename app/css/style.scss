@@ -18,6 +18,73 @@ $html-font-size: 16px;
 @function rem($pxValue) {
   @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
 }
+// border style mixin
+@mixin magic-border($width, $color, $duration, $direction) {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: calc(100% + #{$width * 2});
+    height: calc(100% + #{$width * 2});
+    top: calc(#{$width}/ -1);
+    left: calc(#{$width}/ -1);
+    background: linear-gradient(to right, $color 0%, $color 100%),
+      linear-gradient(to top, $color 50%, transparent 50%),
+      linear-gradient(to top, $color 50%, transparent 50%),
+      linear-gradient(to right, $color 0%, $color 100%),
+      linear-gradient(to left, $color 0%, $color 100%);
+    background-size: 100% $width, $width 200%, $width 200%, 0% $width, 0% $width;
+    background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+    background-repeat: no-repeat, no-repeat;
+    transition: transform $duration ease-in-out,
+      background-position $duration ease-in-out,
+      background-size $duration ease-in-out;
+    transform: scaleX(0) rotate(180deg * $direction);
+    transition-delay: $duration * 2, $duration, 0s;
+  }
+  &:hover {
+    &:before {
+      background-size: 200% $width, $width 400%, $width 400%, 55% $width,
+        55% $width;
+      background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+      transform: scaleX(1) rotate(180deg * $direction);
+      transition-delay: 0s, $duration, $duration * 2;
+    }
+  }
+}
+
+@mixin magic-border-mask($width, $duration, $background, $direction) {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: calc(100% + #{$width * 2});
+    height: calc(100% + #{$width * 2});
+    top: calc(#{$width}/ -1);
+    left: calc(#{$width}/ -1);
+    mask: linear-gradient(to right, #000 0%, #000 100%),
+      linear-gradient(to top, #000 50%, transparent 50%),
+      linear-gradient(to top, #000 50%, transparent 50%),
+      linear-gradient(to right, #000 0%, #000 100%),
+      linear-gradient(to left, #000 0%, #000 100%);
+    mask-size: 100% $width, $width 200%, $width 200%, 0% $width, 0% $width;
+    mask-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+    mask-repeat: no-repeat, no-repeat;
+    transition: transform $duration ease-in-out,
+      mask-position $duration ease-in-out, mask-size $duration ease-in-out;
+    transform: scaleX(0) rotate(180deg * $direction);
+    transition-delay: $duration * 2, $duration, 0s;
+    background: $background;
+  }
+  &:hover {
+    &:before {
+      mask-size: 200% $width, $width 400%, $width 400%, 55% $width, 55% $width;
+      mask-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+      transform: scaleX(1) rotate(180deg * $direction);
+      transition-delay: 0s, $duration, $duration * 2;
+    }
+  }
+}
 
 * {
   margin: 0;
@@ -88,6 +155,18 @@ body {
   height: 16px;
   opacity: 1;
   background: #ffffff;
+  @media (max-width: 992px) {
+    width: 14px;
+    height: 14px;
+  }
+  @media (max-width: 768px) {
+    width: 12px;
+    height: 12px;
+  }
+  @media (max-width: 576px) {
+    width: 8px;
+    height: 8px;
+  }
 }
 .swiper-pagination-bullet-active {
   background: $colorCyan;
@@ -100,11 +179,23 @@ body {
 
 .top-screen {
   margin-bottom: 200px;
+  @media (max-width: 992px) {
+    margin-bottom: 100px;
+  }
 }
 .gifts {
   position: relative;
   height: 485px;
   margin-bottom: 200px;
+  @media (max-width: 992px) {
+    margin-bottom: 100px;
+  }
+  @media (max-width: 576px) {
+    height: 380px;
+  }
+  @media (max-width: 400px) {
+    height: 320px;
+  }
   &-row {
     display: flex;
     justify-content: center;
@@ -119,31 +210,127 @@ body {
     padding: 0 45px;
     box-shadow: 5px 9px 4px rgba(0, 0, 0, 0.2);
     border-radius: 225.629px;
+    overflow: initial;
+    transition: 0.3s ease;
+    &:hover {
+      transform: scale(1.03);
+    }
+    @media (max-width: 992px) {
+      height: 100px;
+      line-height: 100px;
+      padding: 0 35px;
+      font-size: rem(62px);
+    }
+    @media (max-width: 768px) {
+      height: 80px;
+      line-height: 80px;
+      padding: 0 25px;
+      font-size: rem(54px);
+    }
+    @media (max-width: 576px) {
+      height: 60px;
+      line-height: 60px;
+      padding: 0 18px;
+      font-size: rem(32px);
+    }
+    @media (max-width: 400px) {
+      height: 30px;
+      line-height: 30px;
+      padding: 0 15px;
+      font-size: rem(18px);
+    }
   }
   &-sticker {
     position: absolute;
     bottom: 25px;
     left: 0;
-    width: 174px;
+    padding: 0 40px;
     height: 67px;
     line-height: 67px;
     transform: rotate(-18deg);
+    @media (max-width: 576px) {
+      height: 30px;
+      line-height: 30px;
+      padding: 0 25px;
+      font-size: rem(15px);
+    }
   }
   &-click {
     cursor: pointer;
     position: absolute;
-    z-index: 1;
+    width: 66px;
+    height: 66px;
+    border-radius: 10px;
+    background: $colorCyan;
+    right: 0;
+    bottom: -40px;
+    transform: rotate(-16.7deg);
+    img {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+    @media (max-width: 992px) {
+      width: 46px;
+      height: 46px;
+
+      bottom: -30px;
+      img {
+        width: -webkit-fill-available;
+      }
+    }
+    @media (max-width: 768px) {
+      width: 36px;
+      height: 36px;
+      bottom: -20px;
+    }
+    @media (max-width: 576px) {
+      width: 26px;
+      height: 26px;
+      bottom: -10px;
+    }
+    @media (max-width: 400px) {
+      width: 16px;
+      height: 16px;
+      bottom: -10px;
+    }
   }
   &-heart {
     position: absolute;
+    width: 78px;
+    height: 78px;
     top: 0;
     right: 0;
+    img {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+    @media (max-width: 576px) {
+      height: 40px;
+      width: 40px;
+      img {
+        width: -webkit-fill-available;
+      }
+    }
   }
 }
 .video {
   position: relative;
   height: 664px;
   margin-bottom: 277px;
+  @media (max-width: 992px) {
+    height: 550px;
+    margin-bottom: 100px;
+  }
+  @media (max-width: 576px) {
+    height: 480px;
+  }
+  @media (max-width: 400px) {
+    height: 320px;
+  }
   &-frame {
     width: 100%;
     height: 100%;
@@ -153,36 +340,93 @@ body {
     z-index: 1;
     bottom: 54px;
     right: 0px;
-    width: 109px;
+    padding: 0 54px;
     height: 109px;
-    line-height: 109px;
     border-radius: 109px;
     box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
     &-img {
+      width: -webkit-fill-available;
       position: absolute;
       transform: translate(-50%, -50%);
       top: 50%;
       left: 50%;
+    }
+    @media (max-width: 992px) {
+      padding: 0 44px;
+      height: 88px;
+    }
+    @media (max-width: 576px) {
+      padding: 0 34px;
+      height: 68px;
+      bottom: 18px;
+    }
+    @media (max-width: 400px) {
+      padding: 0 20px;
+      height: 40px;
+      bottom: 2px;
     }
   }
   &-sticker-text {
     position: absolute;
     bottom: -35px;
     right: -72px;
-    width: 341px;
+    padding: 0px 30px;
     height: 83px;
     line-height: 83px;
     font-size: rem(43px);
     transform: rotate(-15.53deg);
+    @media (max-width: 1300px) {
+      right: -34px;
+    }
+    @media (max-width: 992px) {
+      padding: 0px 25px;
+      height: 63px;
+      line-height: 63px;
+      font-size: rem(33px);
+      bottom: -18px;
+    }
+    @media (max-width: 576px) {
+      padding: 0px 20px;
+      height: 40px;
+      line-height: 40px;
+      font-size: rem(23px);
+    }
+    @media (max-width: 400px) {
+      padding: 0px 10px;
+      height: 23px;
+      line-height: 23px;
+      font-size: rem(15px);
+      right: -22px;
+    }
   }
 }
 .lectures {
+  margin-bottom: 113px;
   &-sticker {
     padding: 0 77px;
     height: 98px;
     line-height: 98px;
     font-size: rem(52px);
     margin-bottom: 54px;
+    @media (max-width: 992px) {
+      padding: 0 67px;
+      height: 78px;
+      line-height: 78px;
+      font-size: rem(38px);
+    }
+    @media (max-width: 576px) {
+      padding: 0 57px;
+      height: 68px;
+      line-height: 68px;
+      font-size: rem(32px);
+    }
+    @media (max-width: 400px) {
+      padding: 0 37px;
+      height: 38px;
+      line-height: 38px;
+      font-size: rem(22px);
+      margin-bottom: 34px;
+    }
   }
   &-container {
     padding: 0 40px;
@@ -192,13 +436,22 @@ body {
   }
   &-text {
     font-size: rem(24px);
-    margin-bottom: 100px;
+    margin-bottom: 35px;
     max-width: 900px;
+    @media (max-width: 575px) {
+      font-size: rem(18px);
+    }
+    @media (max-width: 400px) {
+      margin-bottom: 40px;
+    }
   }
   &-streamers {
     &-streamer {
       min-height: calc(100% - 16px);
-      margin-bottom: 50px;
+      margin-bottom: 38px;
+      padding: 10px 20px;
+      @include magic-border(1px, white, 0.3s, 0);
+
       &-date {
         font-size: 12px;
         margin-bottom: 9px;
@@ -236,6 +489,423 @@ body {
         font-size: rem(15px);
       }
     }
+  }
+}
+.podcast {
+  position: relative;
+  margin-bottom: 200px;
+  @media (max-width: 992px) {
+    margin-bottom: 100px;
+  }
+  &-btn {
+    text-align: center;
+    &-download {
+      padding: 0 40px;
+      @media (max-width: 992px) {
+        font-size: rem(20px);
+      }
+      @media (max-width: 765px) {
+        height: 60px;
+        line-height: 60px;
+        font-size: rem(18px);
+      }
+      @media (max-width: 575px) {
+        height: 50px;
+        line-height: 50px;
+        font-size: rem(16px);
+      }
+      @media (max-width: 400px) {
+        font-size: rem(14px);
+      }
+    }
+  }
+}
+.podcasts-slider {
+  &-wrp {
+    padding-left: 75px;
+    padding-right: 75px;
+    position: relative;
+    margin-bottom: 60px;
+  }
+
+  &-slide {
+    width: 604px;
+
+    img {
+      display: block;
+    }
+  }
+
+  &-next,
+  &-prev {
+    width: 61px;
+    height: 61px;
+    line-height: 59px;
+    border: 1px solid #ffffff00;
+    border-radius: 50%;
+    margin-top: -27px;
+    background-color: $colorCyan;
+    color: #fff;
+    transition: 0.3s ease;
+
+    &:after {
+      font-size: 20px;
+    }
+
+    &:hover {
+      // background-color: rgba(#fff, 0.85);
+      border: 1px solid #fff;
+      // color: black;
+    }
+  }
+  &-prev {
+    left: 0;
+  }
+  &-next {
+    right: 0;
+  }
+  &-icon {
+    position: absolute;
+    right: -35px;
+    top: -114px;
+    width: 150px;
+    transform: rotate(327deg);
+    z-index: -1;
+  }
+
+  @media (max-width: 992px) {
+    &-slide {
+      width: 440px;
+    }
+    &-icon {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &-slide {
+      width: 50vw;
+    }
+    &-wrp {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    &-next,
+    &-prev {
+      width: 25px;
+      height: 25px;
+      line-height: 23px;
+      margin-top: -12px;
+
+      &:after {
+        font-size: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    &-wrp {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    &-slide {
+      width: 68vw;
+    }
+    &-prev {
+      left: -5px;
+    }
+    &-next {
+      right: -5px;
+    }
+  }
+}
+.podcasts-card {
+  position: relative;
+  padding-bottom: 65%;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  &-plug {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    border-radius: 30px;
+  }
+  &-play {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 86px;
+    height: 86px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: $colorYellow url(../images/icon/play.svg) 54% 50% no-repeat;
+    background-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+  }
+
+  @media (max-width: 576px) {
+    &-play {
+      width: 60px;
+      height: 60px;
+      background-size: 19px;
+    }
+  }
+}
+.swiper-slide-active {
+  .podcasts-card-play {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.broadcast {
+  position: relative;
+  text-align: center;
+  padding: 117px 0px;
+  margin-bottom: 243px;
+  &-sticker {
+    height: 97px;
+    line-height: 97px;
+    font-size: rem(52px);
+    padding: 0 35px;
+    margin-bottom: 70px;
+    @media (max-width: 992px) {
+      font-size: rem(42px);
+    }
+    @media (max-width: 575px) {
+      height: 77px;
+      line-height: 77px;
+      font-size: rem(34px);
+      padding: 0 30px;
+      margin-bottom: 50px;
+    }
+    @media (max-width: 400px) {
+      height: 67px;
+      line-height: 67px;
+      font-size: rem(24px);
+      padding: 0 25px;
+      margin-bottom: 20px;
+    }
+    &-tree {
+      position: absolute;
+      height: 66px;
+      width: 170px;
+      top: 0;
+      left: 0;
+      transform: rotate(-17.61deg);
+      img {
+        width: -webkit-fill-available;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+      }
+    }
+    &-rocket {
+      position: absolute;
+      height: 66px;
+      width: 170px;
+      border-radius: 15px;
+      right: 0;
+      transform: rotate(-17.98deg);
+      img {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+      }
+      @media (max-width: 400px) {
+        bottom: 0px;
+      }
+    }
+    &-tree,
+    &-rocket {
+      @media (max-width: 992px) {
+        height: 56px;
+        width: 130px;
+      }
+      @media (max-width: 575px) {
+        height: 46px;
+        width: 110px;
+      }
+      @media (max-width: 400px) {
+        height: 46px;
+        width: 90px;
+      }
+    }
+  }
+  &-text {
+    display: inline-block;
+    text-align: center;
+    max-width: 800px;
+    font-size: rem(24px);
+    margin-bottom: 70px;
+    @media (max-width: 575px) {
+      font-size: rem(22px);
+    }
+    @media (max-width: 400px) {
+      font-size: rem(18px);
+    }
+  }
+  &-btn {
+    &-link {
+      padding: 0 20px;
+
+      @media (max-width: 575px) {
+        padding: 0 15px;
+        height: 60px;
+        line-height: 60px;
+      }
+      @media (max-width: 400px) {
+        font-size: rem(20px);
+      }
+    }
+  }
+}
+.event {
+  margin-bottom: 150px;
+}
+.gentleman {
+  &-header {
+    margin-bottom: 80px;
+    &-sticker {
+    }
+  }
+}
+.histories-list {
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+.histories-card {
+  margin-bottom: 40px;
+
+  .ui-video {
+    display: block;
+    margin-bottom: 15px;
+    background: #fff;
+  }
+  &-img {
+    display: block;
+    position: relative;
+    padding-bottom: 65%;
+    margin-bottom: 15px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 30px;
+    &.mfp-gallery {
+      cursor: pointer;
+    }
+
+    iframe {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    & > img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+
+  &-bottom {
+    position: relative;
+    padding-right: 100px;
+  }
+
+  &-author {
+    font-size: rem(19px);
+  }
+
+  &-likes {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &-counter {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 9px;
+      height: 25px;
+      line-height: 25px;
+      min-width: 45px;
+      text-align: center;
+      padding: 0px 5px;
+      border-radius: 8px;
+      background: $colorCyan;
+      color: #fff;
+      font-size: rem(15px);
+      font-weight: 500;
+    }
+    &-btn {
+      position: relative;
+      top: -2px;
+      display: inline-block;
+      vertical-align: middle;
+      width: 30px;
+      height: 24px;
+      background: url(../images/icon/лайк.svg) center no-repeat;
+      background-size: contain;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &-author {
+      font-size: rem(16px);
+    }
+    &-likes-counter {
+      min-width: 35px;
+      font-size: rem(12px);
+      height: 20px;
+      line-height: 16px;
+    }
+    &-likes-btn {
+      width: 28px;
+      height: 20px;
+    }
+  }
+}
+
+.histories-pgn {
+  padding: 20px 0px;
+  margin-bottom: 110px;
+  border-radius: 100px;
+  &-link {
+    padding: 0 38px;
+  }
+  @media (max-width: 992px) {
+    display: block;
+    text-align: center;
+    border-radius: 0;
+    margin-left: -100px;
+    margin-right: -100px;
+    padding: 20px 10px 40px;
+    margin-bottom: 60px;
   }
 }
 
