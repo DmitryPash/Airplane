@@ -22,6 +22,9 @@
     margin-bottom: 0px;
   }
 }
+.header .container {
+  position: relative;
+}
 .header-active {
   @media (max-width: 992px) {
     background: #301bac;
@@ -30,10 +33,11 @@
 }
 .toggler {
   display: none;
-  position: relative;
-  bottom: -3px;
+  position: absolute;
+  right: 35px;
+  bottom: 27px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     display: block;
     & > div {
       position: absolute;
@@ -69,10 +73,14 @@
   transform: rotate(315deg);
 }
 .logo {
+  position: relative;
   margin-bottom: 38px;
+  padding: 0 15px;
   &-row {
     display: flex;
     justify-content: space-between;
+    margin-right: -15px;
+    margin-left: -15px;
   }
   &-link {
     display: inline-block;
@@ -86,57 +94,45 @@
       opacity: 0.8;
     }
   }
-  &-sticker {
-    width: 126px;
-    height: 48px;
-    line-height: 48px;
-    font-weight: 700;
-    transform: rotate(-18.73deg);
-    @media (max-width: 400px) {
-      display: none;
-    }
-  }
-  @media (max-width: 400px) {
-    margin-bottom: 22px;
-  }
 }
 .navigation {
-  background-color: $colorCyan;
-  border-radius: 35px;
-  @media (max-width: 768px) {
-    display: none;
-  }
   ul {
-    display: flex;
-    justify-content: space-evenly;
+    display: block;
+    // display: flex;
+    // justify-content: space-evenly;
+    li {
+      display: inline-block;
+    }
   }
   a {
-    display: block;
     height: 67px;
     line-height: 67px;
-    padding: 0px 10px;
+    // padding: 0px 15px;
     font-size: rem(15px);
     font-weight: 700;
     letter-spacing: 0.025em;
     color: #fff;
     transition: 0.3s ease;
+    margin-left: 45px;
     &:hover {
       color: $colorYellow;
     }
   }
   @media (max-width: 992px) {
-    a {
-      font-size: rem(14px);
-      height: 47px;
-      line-height: 47px;
-    }
-  }
-  @media (max-width: 768px) {
-    background-color: transparent;
-    border-radius: 0;
+    display: none;
+    width: 100%;
+    // position: absolute;
+    // top: 170px;
+    // left: 0;
+    background-color: #301bac;
     ul {
       display: block;
+      li {
+        display: block;
+        margin-bottom: 20px;
+      }
     }
+
     a {
       font-size: rem(15px);
       height: auto;

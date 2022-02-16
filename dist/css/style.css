@@ -544,6 +544,36 @@ textarea {
   background: #e0fe02;
 }
 
+.ui-ribbon div {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  right: -50%;
+  height: 150px;
+  line-height: 150px;
+  font-size: 3.25rem;
+  font-weight: 500;
+  color: #000;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ui-ribbon-yellow {
+  background: #e0fe02;
+  -webkit-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  z-index: -1;
+}
+
+.ui-ribbon-cyan {
+  background: #007bfd;
+  -webkit-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+  z-index: -2;
+}
+
 /* hover checkbox */
 
 .ui-checkbox:not(:disabled):not(:checked) + label:hover::before {
@@ -631,10 +661,15 @@ input:focus:-ms-input-placeholder {
   margin-bottom: 78px;
 }
 
+.header .container {
+  position: relative;
+}
+
 .toggler {
   display: none;
-  position: relative;
-  bottom: -3px;
+  position: absolute;
+  right: 35px;
+  bottom: 27px;
 }
 
 .toggler.active .toggler-item-1 {
@@ -654,7 +689,9 @@ input:focus:-ms-input-placeholder {
 }
 
 .logo {
+  position: relative;
   margin-bottom: 38px;
+  padding: 0 15px;
 }
 
 .logo-row {
@@ -664,6 +701,8 @@ input:focus:-ms-input-placeholder {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .logo-link {
@@ -682,35 +721,17 @@ input:focus:-ms-input-placeholder {
   opacity: 0.8;
 }
 
-.logo-sticker {
-  width: 126px;
-  height: 48px;
-  line-height: 48px;
-  font-weight: 700;
-  -webkit-transform: rotate(-18.73deg);
-  -ms-transform: rotate(-18.73deg);
-  transform: rotate(-18.73deg);
-}
-
-.navigation {
-  background-color: #007bfd;
-  border-radius: 35px;
-}
-
 .navigation ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+  display: block;
+}
+
+.navigation ul li {
+  display: inline-block;
 }
 
 .navigation a {
-  display: block;
   height: 67px;
   line-height: 67px;
-  padding: 0px 10px;
   font-size: 0.9375rem;
   font-weight: 700;
   letter-spacing: 0.025em;
@@ -718,6 +739,7 @@ input:focus:-ms-input-placeholder {
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
+  margin-left: 45px;
 }
 
 .navigation a:hover {
@@ -873,94 +895,38 @@ body {
 
 .gifts {
   position: relative;
-  height: 485px;
-  margin-bottom: 200px;
+  padding-top: 300px;
+  margin-bottom: 270px;
 }
 
-.gifts-row {
+.gifts-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100%;
 }
 
 .gifts-btn {
-  position: relative;
-  font-size: 4.875rem;
-  height: 145px;
-  line-height: 145px;
-  padding: 0 45px;
-  -webkit-box-shadow: 5px 9px 4px rgba(0, 0, 0, 0.2);
-  box-shadow: 5px 9px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 225.629px;
-  overflow: initial;
+  padding: 0 75px;
+  font-size: 1.375rem;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
 .gifts-btn:hover {
-  -webkit-transform: scale(1.03);
-  -ms-transform: scale(1.03);
-  transform: scale(1.03);
-}
-
-.gifts-sticker {
-  position: absolute;
-  bottom: 25px;
-  left: 0;
-  padding: 0 40px;
-  height: 67px;
-  line-height: 67px;
-  -webkit-transform: rotate(-18deg);
-  -ms-transform: rotate(-18deg);
-  transform: rotate(-18deg);
-}
-
-.gifts-click {
-  cursor: pointer;
-  position: absolute;
-  width: 66px;
-  height: 66px;
-  border-radius: 10px;
-  background: #007bfd;
-  right: 0;
-  bottom: -40px;
-  -webkit-transform: rotate(-16.7deg);
-  -ms-transform: rotate(-16.7deg);
-  transform: rotate(-16.7deg);
-}
-
-.gifts-click img {
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-}
-
-.gifts-heart {
-  position: absolute;
-  width: 78px;
-  height: 78px;
-  top: 0;
-  right: 0;
-}
-
-.gifts-heart img {
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
+  background: #e0fe02;
+  color: #000;
 }
 
 .video {
@@ -1994,10 +1960,59 @@ body {
     padding-bottom: 20px;
   }
 
+  .toggler {
+    display: block;
+  }
+
+  .toggler > div {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -20px;
+    border-radius: 1px;
+    background: #fff;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    -o-transition: transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+  }
+
+  .toggler-item-1 {
+    -webkit-transform: translate(0, -6px);
+    -ms-transform: translate(0, -6px);
+    transform: translate(0, -6px);
+  }
+
+  .toggler-item-3 {
+    -webkit-transform: translate(0, 6px);
+    -ms-transform: translate(0, 6px);
+    transform: translate(0, 6px);
+  }
+
+  .navigation {
+    display: none;
+    width: 100%;
+    background-color: #301bac;
+  }
+
+  .navigation ul {
+    display: block;
+  }
+
+  .navigation ul li {
+    display: block;
+    margin-bottom: 20px;
+  }
+
   .navigation a {
-    font-size: 0.875rem;
-    height: 47px;
-    line-height: 47px;
+    font-size: 0.9375rem;
+    height: auto;
+    line-height: 1.35;
+    padding: 10px 0px;
   }
 
   .footer-links {
@@ -2012,23 +2027,6 @@ body {
 
   .gifts {
     margin-bottom: 100px;
-  }
-
-  .gifts-btn {
-    height: 100px;
-    line-height: 100px;
-    padding: 0 35px;
-    font-size: 3.875rem;
-  }
-
-  .gifts-click {
-    width: 46px;
-    height: 46px;
-    bottom: -30px;
-  }
-
-  .gifts-click img {
-    width: -webkit-fill-available;
   }
 
   .video {
@@ -2184,74 +2182,8 @@ body {
     margin-bottom: 58px;
   }
 
-  .toggler {
-    display: block;
-  }
-
-  .toggler > div {
-    position: absolute;
-    width: 20px;
-    height: 2px;
-    top: 50%;
-    margin-top: -1px;
-    left: 50%;
-    margin-left: -20px;
-    border-radius: 1px;
-    background: #fff;
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: -webkit-transform 0.2s;
-    -o-transition: transform 0.2s;
-    transition: transform 0.2s;
-    transition: transform 0.2s, -webkit-transform 0.2s;
-  }
-
-  .toggler-item-1 {
-    -webkit-transform: translate(0, -6px);
-    -ms-transform: translate(0, -6px);
-    transform: translate(0, -6px);
-  }
-
-  .toggler-item-3 {
-    -webkit-transform: translate(0, 6px);
-    -ms-transform: translate(0, 6px);
-    transform: translate(0, 6px);
-  }
-
-  .navigation {
-    display: none;
-  }
-
-  .navigation {
-    background-color: transparent;
-    border-radius: 0;
-  }
-
-  .navigation ul {
-    display: block;
-  }
-
-  .navigation a {
-    font-size: 0.9375rem;
-    height: auto;
-    line-height: 1.35;
-    padding: 10px 0px;
-  }
-
   .footer {
     padding-bottom: 184px;
-  }
-
-  .gifts-btn {
-    height: 80px;
-    line-height: 80px;
-    padding: 0 25px;
-    font-size: 3.375rem;
-  }
-
-  .gifts-click {
-    width: 36px;
-    height: 36px;
-    bottom: -20px;
   }
 
   .podcasts-slider-slide {
@@ -2428,35 +2360,6 @@ body {
 
   .gifts {
     height: 380px;
-  }
-
-  .gifts-btn {
-    height: 60px;
-    line-height: 60px;
-    padding: 0 18px;
-    font-size: 2rem;
-  }
-
-  .gifts-sticker {
-    height: 30px;
-    line-height: 30px;
-    padding: 0 25px;
-    font-size: 0.9375rem;
-  }
-
-  .gifts-click {
-    width: 26px;
-    height: 26px;
-    bottom: -10px;
-  }
-
-  .gifts-heart {
-    height: 40px;
-    width: 40px;
-  }
-
-  .gifts-heart img {
-    width: -webkit-fill-available;
   }
 
   .video {
@@ -2695,14 +2598,6 @@ body {
     margin-bottom: 0px;
   }
 
-  .logo-sticker {
-    display: none;
-  }
-
-  .logo {
-    margin-bottom: 22px;
-  }
-
   .footer {
     padding-bottom: 50px;
   }
@@ -2713,19 +2608,6 @@ body {
 
   .gifts {
     height: 320px;
-  }
-
-  .gifts-btn {
-    height: 30px;
-    line-height: 30px;
-    padding: 0 15px;
-    font-size: 1.125rem;
-  }
-
-  .gifts-click {
-    width: 16px;
-    height: 16px;
-    bottom: -10px;
   }
 
   .video {

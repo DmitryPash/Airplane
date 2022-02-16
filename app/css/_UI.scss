@@ -310,6 +310,33 @@ textarea {
   }
 }
 
+.ui-ribbon div {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  right: -50%;
+  height: 150px;
+  line-height: 150px;
+  font-size: rem(52px);
+  font-weight: 500;
+  color: #000;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ui-ribbon {
+  &-yellow {
+    background: $colorYellow;
+    transform: rotate(-3deg);
+    z-index: -1;
+  }
+  &-cyan {
+    background: $colorCyan;
+    transform: rotate(5deg);
+    z-index: -2;
+  }
+}
+
 // .ui-checkbox {
 //   position: absolute;
 //   z-index: -1;

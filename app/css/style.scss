@@ -173,8 +173,26 @@ body {
 }
 .gifts {
   position: relative;
-  height: 485px;
-  margin-bottom: 200px;
+  // height: 368px;
+  padding-top: 300px;
+  margin-bottom: 270px;
+  &-flex {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &-btn {
+    padding: 0 75px;
+    font-size: rem(22px);
+    transition: 0.3s ease;
+    &:hover {
+      background: $colorYellow;
+      color: #000;
+    }
+  }
+
   @media (max-width: 992px) {
     margin-bottom: 100px;
   }
@@ -183,126 +201,6 @@ body {
   }
   @media (max-width: 400px) {
     height: 320px;
-  }
-  &-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  &-btn {
-    position: relative;
-    font-size: rem(78px);
-    height: 145px;
-    line-height: 145px;
-    padding: 0 45px;
-    box-shadow: 5px 9px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 225.629px;
-    overflow: initial;
-    transition: 0.3s ease;
-    &:hover {
-      transform: scale(1.03);
-    }
-    @media (max-width: 992px) {
-      height: 100px;
-      line-height: 100px;
-      padding: 0 35px;
-      font-size: rem(62px);
-    }
-    @media (max-width: 768px) {
-      height: 80px;
-      line-height: 80px;
-      padding: 0 25px;
-      font-size: rem(54px);
-    }
-    @media (max-width: 576px) {
-      height: 60px;
-      line-height: 60px;
-      padding: 0 18px;
-      font-size: rem(32px);
-    }
-    @media (max-width: 400px) {
-      height: 30px;
-      line-height: 30px;
-      padding: 0 15px;
-      font-size: rem(18px);
-    }
-  }
-  &-sticker {
-    position: absolute;
-    bottom: 25px;
-    left: 0;
-    padding: 0 40px;
-    height: 67px;
-    line-height: 67px;
-    transform: rotate(-18deg);
-    @media (max-width: 576px) {
-      height: 30px;
-      line-height: 30px;
-      padding: 0 25px;
-      font-size: rem(15px);
-    }
-  }
-  &-click {
-    cursor: pointer;
-    position: absolute;
-    width: 66px;
-    height: 66px;
-    border-radius: 10px;
-    background: $colorCyan;
-    right: 0;
-    bottom: -40px;
-    transform: rotate(-16.7deg);
-    img {
-      position: absolute;
-      transform: translate(-50%, -50%);
-      top: 50%;
-      left: 50%;
-    }
-    @media (max-width: 992px) {
-      width: 46px;
-      height: 46px;
-
-      bottom: -30px;
-      img {
-        width: -webkit-fill-available;
-      }
-    }
-    @media (max-width: 768px) {
-      width: 36px;
-      height: 36px;
-      bottom: -20px;
-    }
-    @media (max-width: 576px) {
-      width: 26px;
-      height: 26px;
-      bottom: -10px;
-    }
-    @media (max-width: 400px) {
-      width: 16px;
-      height: 16px;
-      bottom: -10px;
-    }
-  }
-  &-heart {
-    position: absolute;
-    width: 78px;
-    height: 78px;
-    top: 0;
-    right: 0;
-    img {
-      position: absolute;
-      transform: translate(-50%, -50%);
-      top: 50%;
-      left: 50%;
-    }
-    @media (max-width: 576px) {
-      height: 40px;
-      width: 40px;
-      img {
-        width: -webkit-fill-available;
-      }
-    }
   }
 }
 .video {
