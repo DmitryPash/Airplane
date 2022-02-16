@@ -9,6 +9,9 @@
   }
   &-social {
     white-space: nowrap;
+    &:hover {
+      color: $colorYellow;
+    }
     img {
       vertical-align: middle;
     }
@@ -21,6 +24,9 @@
   &-privacy {
     border-bottom: 1px dotted;
     margin-right: 5px;
+    &:hover {
+      color: $colorYellow;
+    }
     &::after {
       content: "";
       display: inline-block;
@@ -38,5 +44,8 @@
   &-policy {
     border-bottom: 1px dotted;
     margin-right: 5px;
+    &:hover {
+      color: $colorYellow;
+    }
   }
 }

@@ -672,6 +672,13 @@ input:focus:-ms-input-placeholder {
   font-size: 2.625rem;
   font-weight: 500;
   color: #fff;
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.logo-link:hover {
+  opacity: 0.8;
 }
 
 .logo-sticker {
@@ -713,7 +720,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .navigation a:hover {
-  color: #004085;
+  color: #e0fe02;
 }
 
 .footer {
@@ -739,6 +746,10 @@ input:focus:-ms-input-placeholder {
   white-space: nowrap;
 }
 
+.footer-social:hover {
+  color: #e0fe02;
+}
+
 .footer-social img {
   vertical-align: middle;
 }
@@ -750,6 +761,10 @@ input:focus:-ms-input-placeholder {
 .specification-privacy {
   border-bottom: 1px dotted;
   margin-right: 5px;
+}
+
+.specification-privacy:hover {
+  color: #e0fe02;
 }
 
 .specification-privacy::after {
@@ -766,6 +781,10 @@ input:focus:-ms-input-placeholder {
 .specification-policy {
   border-bottom: 1px dotted;
   margin-right: 5px;
+}
+
+.specification-policy:hover {
+  color: #e0fe02;
 }
 
 * {
@@ -786,7 +805,7 @@ html {
 body {
   height: 100%;
   min-height: 100%;
-  font-family: "CoFo Sans";
+  font-family: "CoFo Sans", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.42;

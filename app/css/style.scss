@@ -4,7 +4,7 @@
 @import "header";
 @import "footer";
 
-// $ffCoFo: ;
+$ffCoFo: "CoFo Sans", sans-serif;
 $colorBlack: #1a140f;
 $colorYellow: #e0fe02;
 $colorBlue: #0e0060;
@@ -103,7 +103,7 @@ html {
 body {
   height: 100%;
   min-height: 100%;
-  font-family: "CoFo Sans";
+  font-family: $ffCoFo;
   font-weight: 400;
   font-size: rem(16px);
   line-height: 1.42;

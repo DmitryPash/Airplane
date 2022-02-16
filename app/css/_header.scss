@@ -61,6 +61,10 @@
     font-size: 2.625rem;
     font-weight: 500;
     color: #fff;
+    transition: 0.2s ease;
+    &:hover {
+      opacity: 0.8;
+    }
   }
   &-sticker {
     width: 126px;
@@ -94,7 +98,7 @@
     color: #fff;
     transition: 0.3s ease;
     &:hover {
-      color: #004085;
+      color: $colorYellow;
     }
   }
   @media (max-width: 992px) {
