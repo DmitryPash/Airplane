@@ -43,15 +43,12 @@ jQuery.validator.addMethod(
   "Incorrect format"
 );
 
-// const swiper = new Swiperzxc(".swiper", {
-//   // Optional parameters
-//   loop: true,
-
-//   // If we need pagination
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
-// });
+const swiper = new Swiper(".gifts-container", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 
 const swiperPodcasts = new Swiper(".podcasts-slider", {
   effect: "coverflow",

@@ -12,6 +12,7 @@
 .toggler {
   display: none;
   position: relative;
+
   @media (max-width: 992px) {
     display: block;
     & > div {
@@ -38,6 +39,15 @@
     }
   }
 }
+.toggler.active .toggler-item-1 {
+  transform: rotate(45deg);
+}
+.toggler.active .toggler-item-2 {
+  display: none;
+}
+.toggler.active .toggler-item-3 {
+  transform: rotate(315deg);
+}
 .logo {
   margin-bottom: 38px;
   &-row {
@@ -58,6 +68,9 @@
     line-height: 48px;
     font-weight: 700;
     transform: rotate(-18.73deg);
+    @media (max-width: 400px) {
+      display: none;
+    }
   }
 }
 .navigation {

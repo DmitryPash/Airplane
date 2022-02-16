@@ -636,6 +636,22 @@ input:focus:-ms-input-placeholder {
   position: relative;
 }
 
+.toggler.active .toggler-item-1 {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.toggler.active .toggler-item-2 {
+  display: none;
+}
+
+.toggler.active .toggler-item-3 {
+  -webkit-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+
 .logo {
   margin-bottom: 38px;
 }
@@ -698,6 +714,58 @@ input:focus:-ms-input-placeholder {
 
 .navigation a:hover {
   color: #004085;
+}
+
+.footer {
+  padding-bottom: 234px;
+}
+
+.footer-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-social {
+  white-space: nowrap;
+}
+
+.footer-social img {
+  vertical-align: middle;
+}
+
+.footer-logo {
+  text-align: end;
+}
+
+.specification-privacy {
+  border-bottom: 1px dotted;
+  margin-right: 5px;
+}
+
+.specification-privacy::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  right: -5px;
+  bottom: -2px;
+  height: 12px;
+  width: 1px;
+  background: #fff;
+}
+
+.specification-policy {
+  border-bottom: 1px dotted;
+  margin-right: 5px;
 }
 
 * {
@@ -2444,6 +2512,12 @@ body {
   }
 }
 
+@media (max-width: 416px) {
+  .specification-privacy::after {
+    display: none;
+  }
+}
+
 @media (max-width: 400px) {
   .col-us-0 {
     display: none;
@@ -2531,6 +2605,10 @@ body {
     -webkit-box-flex: 0;
     flex: 0 0 100%;
     max-width: 100%;
+  }
+
+  .logo-sticker {
+    display: none;
   }
 
   .gifts {
