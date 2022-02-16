@@ -167,9 +167,6 @@ body {
   @media (max-width: 992px) {
     margin-bottom: 100px;
   }
-  @media (max-width: 400px) {
-    margin-bottom: 30px;
-  }
 }
 .gifts {
   position: relative;
@@ -178,7 +175,6 @@ body {
   margin-bottom: 270px;
   &-flex {
     display: flex;
-    height: 100%;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
@@ -191,16 +187,20 @@ body {
       background: $colorYellow;
       color: #000;
     }
+    @media (max-width: 400px) {
+      height: 50px;
+      line-height: 50px;
+      padding: 0 35px;
+    }
   }
 
   @media (max-width: 992px) {
     margin-bottom: 100px;
   }
   @media (max-width: 576px) {
-    height: 380px;
+    padding-top: 180px;
   }
   @media (max-width: 400px) {
-    height: 320px;
   }
 }
 .video {
