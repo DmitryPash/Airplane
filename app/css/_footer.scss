@@ -1,5 +1,21 @@
 .footer {
   padding-bottom: 234px;
+    @media (max-width: 768px) {
+   padding-bottom: 184px;
+}
+@media (max-width: 655px) {
+padding-bottom: 144px;
+}
+
+@media (max-width: 576px) {
+padding-bottom: 124px;
+}
+@media (max-width: 476px) {
+padding-bottom: 104px;
+}
+@media (max-width: 400px) {
+padding-bottom: 50px;
+}
   &-row {
     display: flex;
     align-items: center;
@@ -9,6 +25,11 @@
   }
   &-social {
     white-space: nowrap;
+    @media (max-width:575px){
+          flex: 0 0 100%;
+    order: 2;
+    text-align: center;
+    }
     &:hover {
       color: $colorYellow;
     }
@@ -21,6 +42,13 @@
   }
 }
 .specification {
+  @media (max-width:992px) {
+    order:2;
+  }
+    @media (max-width:575px){
+          flex: 0 0 100%;
+    text-align: center;
+    }
   &-privacy {
     border-bottom: 1px dotted;
     margin-right: 5px;

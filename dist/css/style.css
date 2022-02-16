@@ -2045,6 +2045,12 @@ body {
     padding: 10px 0px;
   }
 
+  .specification {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
   .swiper-pagination-bullet {
     width: 14px;
     height: 14px;
@@ -2223,6 +2229,15 @@ body {
     max-width: 100%;
   }
 
+  .header {
+    padding-top: 42px;
+    margin-bottom: 58px;
+  }
+
+  .footer {
+    padding-bottom: 184px;
+  }
+
   .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
@@ -2285,6 +2300,17 @@ body {
     height: 60px;
     line-height: 60px;
     font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 655px) {
+  .header {
+    padding-top: 32px;
+    margin-bottom: 50px;
+  }
+
+  .footer {
+    padding-bottom: 144px;
   }
 }
 
@@ -2393,6 +2419,15 @@ body {
     margin: 0px 3px;
   }
 
+  .header {
+    padding-top: 22px;
+    margin-bottom: 40px;
+  }
+
+  .footer {
+    padding-bottom: 124px;
+  }
+
   .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
@@ -2463,6 +2498,23 @@ body {
 }
 
 @media (max-width: 575px) {
+  .footer-social {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    text-align: center;
+  }
+
+  .specification {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    text-align: center;
+  }
+
   .lectures-container {
     padding: 0;
   }
@@ -2524,6 +2576,16 @@ body {
 
   .podcasts-slider-next {
     right: -5px;
+  }
+}
+
+@media (max-width: 476px) {
+  .header {
+    margin-bottom: 20px;
+  }
+
+  .footer {
+    padding-bottom: 104px;
   }
 }
 
@@ -2622,8 +2684,16 @@ body {
     max-width: 100%;
   }
 
+  .header {
+    margin-bottom: 0px;
+  }
+
   .logo-sticker {
     display: none;
+  }
+
+  .footer {
+    padding-bottom: 50px;
   }
 
   .gifts {
