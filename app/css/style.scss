@@ -105,7 +105,7 @@ body {
   min-height: 100%;
   font-family: $ffCoFo;
   font-weight: 400;
-  font-size: rem(16px);
+  font-size: rem(15px);
   line-height: 1.42;
   color: #ffffff;
   background-color: $colorBlue;
@@ -152,18 +152,6 @@ body {
   height: 16px;
   opacity: 1;
   background: #ffffff;
-  @media (max-width: 992px) {
-    width: 14px;
-    height: 14px;
-  }
-  @media (max-width: 768px) {
-    width: 12px;
-    height: 12px;
-  }
-  @media (max-width: 576px) {
-    width: 8px;
-    height: 8px;
-  }
 }
 .swiper-pagination-bullet-active {
   background: $colorCyan;

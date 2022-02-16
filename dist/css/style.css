@@ -634,6 +634,7 @@ input:focus:-ms-input-placeholder {
 .toggler {
   display: none;
   position: relative;
+  bottom: -3px;
 }
 
 .toggler.active .toggler-item-1 {
@@ -742,6 +743,10 @@ input:focus:-ms-input-placeholder {
   gap: 15px;
 }
 
+.footer-arrow img {
+  vertical-align: middle;
+}
+
 .footer-social {
   white-space: nowrap;
 }
@@ -754,20 +759,16 @@ input:focus:-ms-input-placeholder {
   vertical-align: middle;
 }
 
-.footer-logo {
-  text-align: end;
-}
-
-.specification-privacy {
+.footer-links-privacy {
   border-bottom: 1px dotted;
   margin-right: 5px;
 }
 
-.specification-privacy:hover {
+.footer-links-privacy:hover {
   color: #e0fe02;
 }
 
-.specification-privacy::after {
+.footer-links-privacy::after {
   content: "";
   display: inline-block;
   position: relative;
@@ -778,12 +779,12 @@ input:focus:-ms-input-placeholder {
   background: #fff;
 }
 
-.specification-policy {
+.footer-links-policy {
   border-bottom: 1px dotted;
-  margin-right: 5px;
+  margin-left: 5px;
 }
 
-.specification-policy:hover {
+.footer-links-policy:hover {
   color: #e0fe02;
 }
 
@@ -807,7 +808,7 @@ body {
   min-height: 100%;
   font-family: "CoFo Sans", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   line-height: 1.42;
   color: #ffffff;
   background-color: #0e0060;
@@ -1993,67 +1994,16 @@ body {
     padding-bottom: 20px;
   }
 
-  .toggler {
-    display: block;
-  }
-
-  .toggler > div {
-    position: absolute;
-    width: 20px;
-    height: 2px;
-    top: 50%;
-    margin-top: -1px;
-    left: 50%;
-    margin-left: -20px;
-    border-radius: 1px;
-    background: #fff;
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: -webkit-transform 0.2s;
-    -o-transition: transform 0.2s;
-    transition: transform 0.2s;
-    transition: transform 0.2s, -webkit-transform 0.2s;
-  }
-
-  .toggler-item-1 {
-    -webkit-transform: translate(0, -6px);
-    -ms-transform: translate(0, -6px);
-    transform: translate(0, -6px);
-  }
-
-  .toggler-item-3 {
-    -webkit-transform: translate(0, 6px);
-    -ms-transform: translate(0, 6px);
-    transform: translate(0, 6px);
-  }
-
-  .navigation {
-    display: none;
-  }
-
-  .navigation {
-    background-color: transparent;
-    border-radius: 0;
-  }
-
-  .navigation ul {
-    display: block;
-  }
-
   .navigation a {
-    height: auto;
-    line-height: 1.35;
-    padding: 10px 0px;
+    font-size: 0.875rem;
+    height: 47px;
+    line-height: 47px;
   }
 
-  .specification {
+  .footer-links {
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
-  }
-
-  .swiper-pagination-bullet {
-    width: 14px;
-    height: 14px;
   }
 
   .top-screen {
@@ -2234,13 +2184,61 @@ body {
     margin-bottom: 58px;
   }
 
-  .footer {
-    padding-bottom: 184px;
+  .toggler {
+    display: block;
   }
 
-  .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
+  .toggler > div {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -20px;
+    border-radius: 1px;
+    background: #fff;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    -o-transition: transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+  }
+
+  .toggler-item-1 {
+    -webkit-transform: translate(0, -6px);
+    -ms-transform: translate(0, -6px);
+    transform: translate(0, -6px);
+  }
+
+  .toggler-item-3 {
+    -webkit-transform: translate(0, 6px);
+    -ms-transform: translate(0, 6px);
+    transform: translate(0, 6px);
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .navigation {
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  .navigation ul {
+    display: block;
+  }
+
+  .navigation a {
+    font-size: 0.9375rem;
+    height: auto;
+    line-height: 1.35;
+    padding: 10px 0px;
+  }
+
+  .footer {
+    padding-bottom: 184px;
   }
 
   .gifts-btn {
@@ -2428,11 +2426,6 @@ body {
     padding-bottom: 124px;
   }
 
-  .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-  }
-
   .gifts {
     height: 380px;
   }
@@ -2508,7 +2501,7 @@ body {
     text-align: center;
   }
 
-  .specification {
+  .footer-links {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
@@ -2554,6 +2547,26 @@ body {
   }
 }
 
+@media (max-width: 520px) {
+  .footer-links-privacy::after {
+    display: none;
+  }
+
+  .footer-links-privacy {
+    display: block;
+    border: none;
+    text-decoration: underline;
+    margin: 0;
+  }
+
+  .footer-links-policy {
+    display: block;
+    border: none;
+    text-decoration: underline;
+    margin: 0;
+  }
+}
+
 @media (max-width: 480px) {
   .container {
     max-width: 1210px;
@@ -2586,12 +2599,6 @@ body {
 
   .footer {
     padding-bottom: 104px;
-  }
-}
-
-@media (max-width: 416px) {
-  .specification-privacy::after {
-    display: none;
   }
 }
 
@@ -2690,6 +2697,10 @@ body {
 
   .logo-sticker {
     display: none;
+  }
+
+  .logo {
+    margin-bottom: 22px;
   }
 
   .footer {

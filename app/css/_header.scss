@@ -4,25 +4,23 @@
   margin-bottom: 78px;
   @media (max-width: 768px) {
     padding-top: 42px;
-  margin-bottom: 58px;
-}
-@media (max-width: 655px) {
-padding-top: 32px;
-  margin-bottom: 50px;
+    margin-bottom: 58px;
+  }
+  @media (max-width: 655px) {
+    padding-top: 32px;
+    margin-bottom: 50px;
+  }
 
-}
-
-@media (max-width: 576px) {
- padding-top: 22px;
-  margin-bottom: 40px;
-}
-@media (max-width: 476px) {
-margin-bottom: 20px;
-}
-@media (max-width: 400px) {
-margin-bottom: 0px;
-}
-
+  @media (max-width: 576px) {
+    padding-top: 22px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 476px) {
+    margin-bottom: 20px;
+  }
+  @media (max-width: 400px) {
+    margin-bottom: 0px;
+  }
 }
 .header-active {
   @media (max-width: 992px) {
@@ -33,8 +31,9 @@ margin-bottom: 0px;
 .toggler {
   display: none;
   position: relative;
+  bottom: -3px;
 
-  @media (max-width: 992px) {
+  @media (max-width: 768px) {
     display: block;
     & > div {
       position: absolute;
@@ -97,11 +96,14 @@ margin-bottom: 0px;
       display: none;
     }
   }
+  @media (max-width: 400px) {
+    margin-bottom: 22px;
+  }
 }
 .navigation {
   background-color: $colorCyan;
   border-radius: 35px;
-  @media (max-width: 992px) {
+  @media (max-width: 768px) {
     display: none;
   }
   ul {
@@ -123,12 +125,20 @@ margin-bottom: 0px;
     }
   }
   @media (max-width: 992px) {
+    a {
+      font-size: rem(14px);
+      height: 47px;
+      line-height: 47px;
+    }
+  }
+  @media (max-width: 768px) {
     background-color: transparent;
     border-radius: 0;
     ul {
       display: block;
     }
     a {
+      font-size: rem(15px);
       height: auto;
       line-height: 1.35;
       padding: 10px 0px;

@@ -1,21 +1,21 @@
 .footer {
   padding-bottom: 234px;
-    @media (max-width: 768px) {
-   padding-bottom: 184px;
-}
-@media (max-width: 655px) {
-padding-bottom: 144px;
-}
+  @media (max-width: 768px) {
+    padding-bottom: 184px;
+  }
+  @media (max-width: 655px) {
+    padding-bottom: 144px;
+  }
 
-@media (max-width: 576px) {
-padding-bottom: 124px;
-}
-@media (max-width: 476px) {
-padding-bottom: 104px;
-}
-@media (max-width: 400px) {
-padding-bottom: 50px;
-}
+  @media (max-width: 576px) {
+    padding-bottom: 124px;
+  }
+  @media (max-width: 476px) {
+    padding-bottom: 104px;
+  }
+  @media (max-width: 400px) {
+    padding-bottom: 50px;
+  }
   &-row {
     display: flex;
     align-items: center;
@@ -23,12 +23,17 @@ padding-bottom: 50px;
     flex-wrap: wrap;
     gap: 15px;
   }
+  &-arrow {
+    img {
+      vertical-align: middle;
+    }
+  }
   &-social {
     white-space: nowrap;
-    @media (max-width:575px){
-          flex: 0 0 100%;
-    order: 2;
-    text-align: center;
+    @media (max-width: 575px) {
+      flex: 0 0 100%;
+      order: 2;
+      text-align: center;
     }
     &:hover {
       color: $colorYellow;
@@ -37,18 +42,15 @@ padding-bottom: 50px;
       vertical-align: middle;
     }
   }
-  &-logo {
-    text-align: end;
-  }
 }
-.specification {
-  @media (max-width:992px) {
-    order:2;
+.footer-links {
+  @media (max-width: 992px) {
+    order: 2;
   }
-    @media (max-width:575px){
-          flex: 0 0 100%;
+  @media (max-width: 575px) {
+    flex: 0 0 100%;
     text-align: center;
-    }
+  }
   &-privacy {
     border-bottom: 1px dotted;
     margin-right: 5px;
@@ -64,16 +66,28 @@ padding-bottom: 50px;
       height: 12px;
       width: 1px;
       background: #fff;
-      @media (max-width: 416px) {
+      @media (max-width: 520px) {
         display: none;
       }
+    }
+    @media (max-width: 520px) {
+      display: block;
+      border: none;
+      text-decoration: underline;
+      margin: 0;
     }
   }
   &-policy {
     border-bottom: 1px dotted;
-    margin-right: 5px;
+    margin-left: 5px;
     &:hover {
       color: $colorYellow;
+    }
+    @media (max-width: 520px) {
+      display: block;
+      border: none;
+      text-decoration: underline;
+      margin: 0;
     }
   }
 }
