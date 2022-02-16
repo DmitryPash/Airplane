@@ -43,7 +43,7 @@ jQuery.validator.addMethod(
   "Incorrect format"
 );
 
-const swiper = new Swiper(".gifts-container", {
+const swiper = new Swiper(".top-screen-container", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
