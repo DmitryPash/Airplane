@@ -2696,6 +2696,10 @@ body {
     padding-bottom: 50px;
   }
 
+  .top-screen {
+    margin-bottom: 30px;
+  }
+
   .gifts {
     height: 320px;
   }
