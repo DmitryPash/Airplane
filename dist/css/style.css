@@ -410,6 +410,7 @@ textarea {
   position: relative;
   margin-bottom: 16px;
   color: #fa5353;
+  text-align: left;
 }
 
 .ui-input {
@@ -417,11 +418,11 @@ textarea {
   display: block;
   height: 50px;
   border-radius: 10px;
-  border: 1.6px solid #ebecf5;
-  padding-left: 64px;
+  border: none;
+  padding-left: 24px;
   padding-right: 10px;
   font-size: 1rem;
-  color: #ffffff;
+  color: #000;
 }
 
 .ui-input ::-webkit-input-placeholder {
@@ -450,9 +451,9 @@ textarea {
 }
 
 .ui-label {
-  position: absolute;
-  top: 14px;
-  left: 28px;
+  display: block;
+  color: #fff;
+  margin-bottom: 5px;
 }
 
 .checkbox {
@@ -935,6 +936,13 @@ body {
   margin-bottom: 277px;
 }
 
+.video-container {
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
 .video-frame {
   width: 100%;
   height: 100%;
@@ -976,69 +984,25 @@ body {
 }
 
 .lectures {
+  position: relative;
   margin-bottom: 113px;
 }
 
-.lectures-sticker {
-  padding: 0 77px;
-  height: 98px;
-  line-height: 98px;
+.lectures-title {
   font-size: 3.25rem;
   margin-bottom: 54px;
 }
 
-.lectures-container {
-  padding: 0 40px;
-}
-
 .lectures-text {
   font-size: 1.5rem;
-  margin-bottom: 35px;
-  max-width: 900px;
+  margin-bottom: 70px;
+  max-width: 570px;
 }
 
 .lectures-streamers-streamer {
   min-height: calc(100% - 16px);
   margin-bottom: 38px;
-  padding: 10px 20px;
-  position: relative;
-}
-
-.lectures-streamers-streamer:before {
-  content: "";
-  position: absolute;
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  top: calc(1px/ -1);
-  left: calc(1px/ -1);
-  background: -webkit-gradient(linear, left top, right top, from(white), to(white)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, white), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, white), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, from(white), to(white)), -webkit-gradient(linear, right top, left top, from(white), to(white));
-  background: -o-linear-gradient(left, white 0%, white 100%), -o-linear-gradient(bottom, white 50%, transparent 50%), -o-linear-gradient(bottom, white 50%, transparent 50%), -o-linear-gradient(left, white 0%, white 100%), -o-linear-gradient(right, white 0%, white 100%);
-  background: linear-gradient(to right, white 0%, white 100%), linear-gradient(to top, white 50%, transparent 50%), linear-gradient(to top, white 50%, transparent 50%), linear-gradient(to right, white 0%, white 100%), linear-gradient(to left, white 0%, white 100%);
-  background-size: 100% 1px, 1px 200%, 1px 200%, 0% 1px, 0% 1px;
-  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
-  background-repeat: no-repeat, no-repeat;
-  -webkit-transition: background-position 0.3s ease-in-out, background-size 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: background-position 0.3s ease-in-out, background-size 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  -o-transition: transform 0.3s ease-in-out, background-position 0.3s ease-in-out, background-size 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, background-position 0.3s ease-in-out, background-size 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, background-position 0.3s ease-in-out, background-size 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  -webkit-transform: scaleX(0) rotate(0deg);
-  -ms-transform: scaleX(0) rotate(0deg);
-  transform: scaleX(0) rotate(0deg);
-  -webkit-transition-delay: 0.6s, 0.3s, 0s;
-  -o-transition-delay: 0.6s, 0.3s, 0s;
-  transition-delay: 0.6s, 0.3s, 0s;
-}
-
-.lectures-streamers-streamer:hover:before {
-  background-size: 200% 1px, 1px 400%, 1px 400%, 55% 1px, 55% 1px;
-  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
-  -webkit-transform: scaleX(1) rotate(0deg);
-  -ms-transform: scaleX(1) rotate(0deg);
-  transform: scaleX(1) rotate(0deg);
-  -webkit-transition-delay: 0s, 0.3s, 0.6s;
-  -o-transition-delay: 0s, 0.3s, 0.6s;
-  transition-delay: 0s, 0.3s, 0.6s;
+  padding: 10px 0px;
 }
 
 .lectures-streamers-streamer-date {
@@ -1083,6 +1047,41 @@ body {
 
 .lectures-streamers-streamer-name {
   font-size: 0.9375rem;
+}
+
+.lectures-sticker {
+  position: absolute;
+  z-index: -2;
+  right: -100px;
+  top: 58px;
+  -webkit-transform: rotate(23deg);
+  -ms-transform: rotate(23deg);
+  transform: rotate(23deg);
+  height: 144px;
+  line-height: 144px;
+  padding: 0 55px;
+  font-size: 3.6875rem;
+  font-weight: 500;
+}
+
+.lectures-sticker-heart {
+  position: absolute;
+  z-index: -1;
+  right: -109px;
+  top: 227px;
+  background: #e0fe02;
+  height: 171px;
+  width: 171px;
+  border-radius: 50%;
+}
+
+.lectures-sticker-heart img {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
 
 .podcast {
@@ -1161,6 +1160,8 @@ body {
   position: relative;
   padding-bottom: 65%;
   overflow: hidden;
+  border: 1px solid #fff;
+  border-radius: 30px;
 }
 
 .podcasts-card iframe {
@@ -1422,11 +1423,11 @@ body {
 }
 
 .popup-form {
-  background: #ffffff;
+  background: #0e0060;
   position: relative;
   margin: 20px auto;
-  max-width: 770px;
-  padding: 60px 20px 48px 20px;
+  max-width: 630px;
+  padding: 100px 20px 100px 20px;
   border-radius: 20px;
 }
 
@@ -1455,9 +1456,14 @@ body {
   display: block;
   margin: 0 auto;
   text-align: center;
-  line-height: 32px;
-  max-width: 600px;
+  line-height: 1.5;
+  max-width: 450px;
   margin-bottom: 24px;
+}
+
+.popup-form-text span {
+  font-weight: 700;
+  color: #007bfd;
 }
 
 .popup-form-btn {
@@ -1467,7 +1473,7 @@ body {
   max-width: 340px;
   height: 60px;
   line-height: 60px;
-  background: #0e0060;
+  background: #007bfd;
   font-size: 1rem;
   font-weight: 600;
   -webkit-transition: 0.3s ease;
@@ -1479,8 +1485,16 @@ body {
   background: #4258ff;
 }
 
-.button.mfp-close {
-  background: black;
+.mfp-close {
+  opacity: 1 !important;
+  font-size: 2.5rem;
+  color: #fff !important;
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  background: black !important;
+  right: -20px;
+  top: -20px;
 }
 
 .confirmation {
@@ -1676,6 +1690,49 @@ body {
   transform: scale(1);
 }
 
+.popup-thanks {
+  text-align: center;
+}
+
+.thanks-sticker {
+  display: inline-block;
+  padding: 0 25px;
+  border-radius: 25px;
+  font-size: 1.875rem;
+  font-weight: 500;
+  line-height: 55px;
+  margin-bottom: 33px;
+}
+
+.popup-graz {
+  text-align: center;
+}
+
+.graz-text {
+  max-width: 600px;
+}
+
+.popup-error {
+  text-align: center;
+}
+
+.popup-form {
+  text-align: center;
+}
+
+.form-container {
+  max-width: 255px;
+  margin: 0 auto;
+}
+
+.form-btn {
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  padding: 0px 30px;
+  font-size: 1.375rem;
+}
+
 .active {
   background: #0e0060;
 }
@@ -1690,6 +1747,16 @@ body {
 
 .error {
   display: block;
+}
+
+@media (max-width: 1350px) {
+  .lectures-sticker-heart {
+    right: 18px;
+  }
+
+  .lectures-sticker {
+    right: 38px;
+  }
 }
 
 @media (max-width: 1330px) {
@@ -1867,6 +1934,22 @@ body {
     -webkit-box-flex: 0;
     flex: 0 0 100%;
     max-width: 100%;
+  }
+
+  .lectures-sticker-heart {
+    height: 100px;
+    width: 100px;
+    top: 205px;
+  }
+
+  .lectures-sticker-heart img {
+    width: -webkit-fill-available;
+  }
+
+  .lectures-sticker {
+    height: 110px;
+    line-height: 110px;
+    padding: 0 40px;
   }
 }
 
@@ -2056,11 +2139,23 @@ body {
     bottom: -18px;
   }
 
-  .lectures-sticker {
-    padding: 0 67px;
+  .lectures-title {
     height: 78px;
     line-height: 78px;
     font-size: 2.375rem;
+  }
+
+  .lectures-sticker-heart {
+    height: 70px;
+    width: 70px;
+    top: 170px;
+  }
+
+  .lectures-sticker {
+    height: 90px;
+    line-height: 90px;
+    font-size: 2.375rem;
+    right: -6px;
   }
 
   .podcast {
@@ -2394,8 +2489,7 @@ body {
     font-size: 1.4375rem;
   }
 
-  .lectures-sticker {
-    padding: 0 57px;
+  .lectures-title {
     height: 68px;
     line-height: 68px;
     font-size: 2rem;
@@ -2424,10 +2518,6 @@ body {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     text-align: center;
-  }
-
-  .lectures-container {
-    padding: 0;
   }
 
   .lectures-text {
@@ -2647,8 +2737,7 @@ body {
     right: -22px;
   }
 
-  .lectures-sticker {
-    padding: 0 37px;
+  .lectures-title {
     height: 38px;
     line-height: 38px;
     font-size: 1.375rem;

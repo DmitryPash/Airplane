@@ -19,72 +19,6 @@ $html-font-size: 16px;
   @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
 }
 // border style mixin
-@mixin magic-border($width, $color, $duration, $direction) {
-  position: relative;
-  &:before {
-    content: "";
-    position: absolute;
-    width: calc(100% + #{$width * 2});
-    height: calc(100% + #{$width * 2});
-    top: calc(#{$width}/ -1);
-    left: calc(#{$width}/ -1);
-    background: linear-gradient(to right, $color 0%, $color 100%),
-      linear-gradient(to top, $color 50%, transparent 50%),
-      linear-gradient(to top, $color 50%, transparent 50%),
-      linear-gradient(to right, $color 0%, $color 100%),
-      linear-gradient(to left, $color 0%, $color 100%);
-    background-size: 100% $width, $width 200%, $width 200%, 0% $width, 0% $width;
-    background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
-    background-repeat: no-repeat, no-repeat;
-    transition: transform $duration ease-in-out,
-      background-position $duration ease-in-out,
-      background-size $duration ease-in-out;
-    transform: scaleX(0) rotate(180deg * $direction);
-    transition-delay: $duration * 2, $duration, 0s;
-  }
-  &:hover {
-    &:before {
-      background-size: 200% $width, $width 400%, $width 400%, 55% $width,
-        55% $width;
-      background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
-      transform: scaleX(1) rotate(180deg * $direction);
-      transition-delay: 0s, $duration, $duration * 2;
-    }
-  }
-}
-
-@mixin magic-border-mask($width, $duration, $background, $direction) {
-  position: relative;
-  &:before {
-    content: "";
-    position: absolute;
-    width: calc(100% + #{$width * 2});
-    height: calc(100% + #{$width * 2});
-    top: calc(#{$width}/ -1);
-    left: calc(#{$width}/ -1);
-    mask: linear-gradient(to right, #000 0%, #000 100%),
-      linear-gradient(to top, #000 50%, transparent 50%),
-      linear-gradient(to top, #000 50%, transparent 50%),
-      linear-gradient(to right, #000 0%, #000 100%),
-      linear-gradient(to left, #000 0%, #000 100%);
-    mask-size: 100% $width, $width 200%, $width 200%, 0% $width, 0% $width;
-    mask-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
-    mask-repeat: no-repeat, no-repeat;
-    transition: transform $duration ease-in-out,
-      mask-position $duration ease-in-out, mask-size $duration ease-in-out;
-    transform: scaleX(0) rotate(180deg * $direction);
-    transition-delay: $duration * 2, $duration, 0s;
-    background: $background;
-  }
-  &:hover {
-    &:before {
-      mask-size: 200% $width, $width 400%, $width 400%, 55% $width, 55% $width;
-      mask-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
-      transform: scaleX(1) rotate(180deg * $direction);
-      transition-delay: 0s, $duration, $duration * 2;
-    }
-  }
-}
 
 * {
   margin: 0;
@@ -207,6 +141,7 @@ body {
   position: relative;
   height: 664px;
   margin-bottom: 277px;
+
   @media (max-width: 992px) {
     height: 550px;
     margin-bottom: 100px;
@@ -216,6 +151,12 @@ body {
   }
   @media (max-width: 400px) {
     height: 320px;
+  }
+  &-container {
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    overflow: hidden;
   }
   &-frame {
     width: 100%;
@@ -287,43 +228,32 @@ body {
   }
 }
 .lectures {
+  position: relative;
   margin-bottom: 113px;
-  &-sticker {
-    padding: 0 77px;
-    height: 98px;
-    line-height: 98px;
+  &-title {
     font-size: rem(52px);
     margin-bottom: 54px;
     @media (max-width: 992px) {
-      padding: 0 67px;
       height: 78px;
       line-height: 78px;
       font-size: rem(38px);
     }
     @media (max-width: 576px) {
-      padding: 0 57px;
       height: 68px;
       line-height: 68px;
       font-size: rem(32px);
     }
     @media (max-width: 400px) {
-      padding: 0 37px;
       height: 38px;
       line-height: 38px;
       font-size: rem(22px);
       margin-bottom: 34px;
     }
   }
-  &-container {
-    padding: 0 40px;
-    @media (max-width: 575px) {
-      padding: 0;
-    }
-  }
   &-text {
     font-size: rem(24px);
-    margin-bottom: 35px;
-    max-width: 900px;
+    margin-bottom: 70px;
+    max-width: 570px;
     @media (max-width: 575px) {
       font-size: rem(18px);
     }
@@ -335,9 +265,7 @@ body {
     &-streamer {
       min-height: calc(100% - 16px);
       margin-bottom: 38px;
-      padding: 10px 20px;
-      @include magic-border(1px, white, 0.3s, 0);
-
+      padding: 10px 0px;
       &-date {
         font-size: 12px;
         margin-bottom: 9px;
@@ -374,6 +302,64 @@ body {
       &-name {
         font-size: rem(15px);
       }
+    }
+  }
+  &-sticker {
+    position: absolute;
+    z-index: -2;
+    right: -100px;
+    top: 58px;
+    transform: rotate(23deg);
+    height: 144px;
+    line-height: 144px;
+    padding: 0 55px;
+    font-size: rem(59px);
+    font-weight: 500;
+    &-heart {
+      position: absolute;
+      z-index: -1;
+      right: -109px;
+      top: 227px;
+      background: $colorYellow;
+      height: 171px;
+      width: 171px;
+      border-radius: 50%;
+      img {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+      }
+      @media (max-width: 1350px) {
+        right: 18px;
+      }
+      @media (max-width: 1170px) {
+        height: 100px;
+        width: 100px;
+        top: 205px;
+        img {
+          width: -webkit-fill-available;
+        }
+      }
+      @media (max-width: 992px) {
+        height: 70px;
+        width: 70px;
+        top: 170px;
+      }
+    }
+    @media (max-width: 1350px) {
+      right: 38px;
+    }
+    @media (max-width: 1170px) {
+      height: 110px;
+      line-height: 110px;
+      padding: 0 40px;
+    }
+    @media (max-width: 992px) {
+      height: 90px;
+      line-height: 90px;
+      font-size: rem(38px);
+      right: -6px;
     }
   }
 }
@@ -510,7 +496,8 @@ body {
   position: relative;
   padding-bottom: 65%;
   overflow: hidden;
-
+  border: 1px solid #fff;
+  border-radius: 30px;
   iframe {
     position: absolute;
     left: 0;
@@ -562,7 +549,6 @@ body {
     opacity: 1;
   }
 }
-
 .broadcast {
   position: relative;
   text-align: center;
@@ -826,11 +812,11 @@ body {
 
 // popup style
 .popup-form {
-  background: #ffffff;
+  background: $colorBlue;
   position: relative;
   margin: 20px auto;
-  max-width: 770px;
-  padding: 60px 20px 48px 20px;
+  max-width: 630px;
+  padding: 100px 20px 100px 20px;
   border-radius: 20px;
   &-img {
     margin-bottom: 15px;
@@ -854,9 +840,13 @@ body {
     display: block;
     margin: 0 auto;
     text-align: center;
-    line-height: 32px;
-    max-width: 600px;
+    line-height: 1.5;
+    max-width: 450px;
     margin-bottom: 24px;
+    span {
+      font-weight: 700;
+      color: $colorCyan;
+    }
   }
   &-btn {
     display: block;
@@ -865,7 +855,7 @@ body {
     max-width: 340px;
     height: 60px;
     line-height: 60px;
-    background: $colorBlue;
+    background: $colorCyan;
     font-size: rem(16px);
     font-weight: 600;
     transition: 0.3s ease;
@@ -874,8 +864,16 @@ body {
     }
   }
 }
-.button.mfp-close {
-  background: black;
+.mfp-close {
+  opacity: 1 !important;
+  font-size: rem(40px);
+  color: #fff !important;
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  background: black !important;
+  right: -20px;
+  top: -20px;
 }
 
 .confirmation {
@@ -1026,6 +1024,45 @@ body {
   transform: scale(1);
 }
 
+// popup thanks
+.popup-thanks {
+  text-align: center;
+}
+.thanks-sticker {
+  display: inline-block;
+  padding: 0 25px;
+  border-radius: 25px;
+  font-size: rem(30px);
+  font-weight: 500;
+  line-height: 55px;
+  margin-bottom: 33px;
+}
+// popup graz
+.popup-graz {
+  text-align: center;
+}
+.graz-text {
+  max-width: 600px;
+}
+// popup error
+.popup-error {
+  text-align: center;
+}
+// popup form
+.popup-form {
+  text-align: center;
+}
+.form-container {
+  max-width: 255px;
+  margin: 0 auto;
+}
+.form-btn {
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  padding: 0px 30px;
+  font-size: rem(22px);
+}
 // Modificator
 .active {
   background: $colorBlue;
