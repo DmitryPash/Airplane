@@ -83,9 +83,9 @@ function js() {
 }
 function fonts() {
   return src(path.src.fonts)
-    .pipe(fileinclude())
+    // .pipe(fileinclude())
     .pipe(dest(path.build.fonts))
-    .pipe(browsersync.stream());
+    // .pipe(browsersync.stream());
 }
 
 function images() {
