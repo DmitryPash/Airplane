@@ -1178,6 +1178,10 @@ input[type="radio"] {
   transform: scale(1);
 }
 
+.mfp-close:active {
+  top: -20px;
+}
+
 // popup thanks
 .popup-thanks {
   text-align: center;
