@@ -27,7 +27,7 @@
 }
 .header-active {
   @media (max-width: 992px) {
-    background: #301bac;
+    background: $colorCyan;
     padding-bottom: 20px;
   }
 }
@@ -41,7 +41,7 @@
 .toggler {
   display: none;
   position: absolute;
-  right: 35px;
+  right: 0;
   bottom: 27px;
 
   @media (max-width: 992px) {
