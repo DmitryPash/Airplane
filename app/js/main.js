@@ -24,6 +24,25 @@ $(document).on("click", ".mfp-link", function () {
 
 // Validation
 
+$(document).ready(function () {
+  $("#form-validation").validate({
+    errorElement: "span",
+    errorClass: "mail-form",
+    rules: {
+      email: {
+        required: true,
+        email: true,
+      },
+    },
+    messages: {
+      email: {
+        required: "Пожалуйста введите ваш email",
+        email: "Введите корректный email",
+      },
+    },
+  });
+});
+
 jQuery.validator.addMethod(
   "lettersonly",
   function (value, element) {
@@ -90,5 +109,12 @@ $(document).ready(function () {
     $(this).toggleClass("active");
     $(".header").toggleClass("header-active");
     $(".navigation").slideToggle(300);
+  });
+});
+
+$(document).ready(function () {
+  $(".certificate-item").click(function () {
+    $(".certificate-item").removeClass("certificate-active");
+    $(this).addClass("certificate-active");
   });
 });

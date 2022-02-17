@@ -577,35 +577,15 @@ textarea {
 
 /* hover checkbox */
 
-.ui-checkbox:not(:disabled):not(:checked) + label:hover::before {
+.certificate-checkbox:not(:disabled):not(:checked) + label:hover::before {
   border-color: #b3d7ff;
 }
 
 /* Active checkbox */
 
-.ui-checkbox:not(:disabled):active + label::before {
+.certificate-checkbox:not(:disabled):active + label::before {
   background-color: #b3d7ff;
   border-color: #b3d7ff;
-}
-
-input[type=radio] {
-  display: none;
-}
-
-.question-label {
-  display: inline-block;
-  width: 100%;
-  height: 50px;
-  text-align: center;
-  line-height: 48px;
-  color: #1a140f;
-  border: 1.6px solid #ebecf5;
-  border-radius: 10px;
-}
-
-input[type=radio]:checked + .question-label {
-  border: 1.6px solid #0e0060;
-  color: #0e0060;
 }
 
 input::-webkit-input-placeholder {
@@ -1289,6 +1269,10 @@ body {
   margin-bottom: 150px;
 }
 
+.gentleman {
+  margin-bottom: 200px;
+}
+
 .gentleman-header {
   margin-bottom: 80px;
 }
@@ -1392,6 +1376,121 @@ body {
 
 .histories-pgn-link {
   padding: 0 38px;
+}
+
+.certificate {
+  position: relative;
+}
+
+.certificate-header {
+  margin: 0 auto;
+  padding-top: 300px;
+  margin-bottom: 80px;
+}
+
+.certificate-text {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5rem;
+  max-width: 750px;
+}
+
+.certificate-row {
+  width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  bottom: -60px;
+}
+
+.certificate-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.certificate-footer-field {
+  margin-right: 53px;
+}
+
+.certificate-footer-field input {
+  position: relative;
+  height: 58px;
+  line-height: 58px;
+}
+
+.certificate-footer-btn {
+  border: none;
+  padding: 0 36px;
+}
+
+.certificate-item {
+  margin-bottom: 43px;
+}
+
+.certificate-items {
+  margin-bottom: 80px;
+}
+
+.certificate-label {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 260px;
+  text-align: center;
+  line-height: 48px;
+  background: #fff;
+  background-image: url(../images/Box.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  color: #1a140f;
+  cursor: pointer;
+  margin-bottom: 70px;
+  border: 1px solid #ffffff00;
+}
+
+.certificate-label-text {
+  font-size: 1.1875rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.certificate-label-btn {
+  display: inline-block;
+  width: 82px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  background: #007bfd;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.certificate-active * .certificate-label-btn {
+  background: #e0fe02;
+  font-size: 0;
+  background-image: url(../images/icon/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input[type=radio] {
+  display: none;
 }
 
 .popups-links > ul > li {
@@ -1746,6 +1845,10 @@ body {
 
 .error {
   display: block;
+}
+
+.mail-form {
+  position: absolute;
 }
 
 @media (max-width: 1350px) {
@@ -2340,6 +2443,14 @@ body {
     width: 28px;
     height: 20px;
   }
+
+  .certificate-header {
+    padding-top: 200px;
+  }
+
+  .certificate-footer-field {
+    margin-right: 33px;
+  }
 }
 
 @media (max-width: 765px) {
@@ -2518,6 +2629,23 @@ body {
     width: 60px;
     height: 60px;
     background-size: 19px;
+  }
+
+  .certificate-footer-field {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .certificate-footer-btn {
+    width: 100%;
+  }
+
+  .certificate-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -2799,5 +2927,13 @@ body {
 
   .broadcast-btn-link {
     font-size: 1.25rem;
+  }
+
+  .certificate-text {
+    font-size: 1.25rem;
+  }
+
+  .certificate-label-text {
+    font-size: 0.9375rem;
   }
 }

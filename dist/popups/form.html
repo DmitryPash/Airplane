@@ -50,6 +50,10 @@
                   required: true,
                   lettersonly: true,
                },
+               secondname: {
+                  required: true,
+                  lettersonly: true,
+               },
                date: {
                   required: true,
                   // date: true,
@@ -61,32 +65,6 @@
             },
          });
       });
-      // iMask
-
-      var overwriteMask = IMask(
-         document.getElementById('imask-input'),
-         {
-            mask: 'd/m/Y',
-            //  lazy: false,
-            overwrite: true,
-            autofix: true,
-            blocks: {
-               d: { mask: IMask.MaskedRange, placeholderChar: 'd', from: 1, to: 31, maxLength: 2 },
-               m: { mask: IMask.MaskedRange, placeholderChar: 'm', from: 1, to: 12, maxLength: 2 },
-               Y: { mask: IMask.MaskedRange, placeholderChar: 'y', from: 1900, to: 2999, maxLength: 4 }
-            }
-         }
-      );
-
-
-      var element = document.getElementById('imask-phone');
-      var maskOptions = {
-         placeholder: '+{7}(000)000-00-00',
-         mask: '+{0}(000)000-00-00'
-      };
-      var mask = IMask(element, maskOptions);
-
-
 
    </script>
 </div>
