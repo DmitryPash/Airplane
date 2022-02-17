@@ -167,7 +167,38 @@ body {
   @media (max-width: 992px) {
     margin-bottom: 100px;
   }
+}
+.gifts {
+  position: relative;
+  // height: 368px;
+  padding-top: 300px;
+  margin-bottom: 270px;
+  &-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &-btn {
+    padding: 0 75px;
+    font-size: rem(22px);
+    transition: 0.3s ease;
+    &:hover {
+      background: #007afd8e;
+    }
+    @media (max-width: 400px) {
+      height: 50px;
+      line-height: 50px;
+      padding: 0 35px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    margin-bottom: 100px;
+  }
+  @media (max-width: 576px) {
+    padding-top: 180px;
+  }
   @media (max-width: 400px) {
-    margin-bottom: 30px;
   }
 }
