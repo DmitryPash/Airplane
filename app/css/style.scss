@@ -118,8 +118,7 @@ body {
     font-size: rem(22px);
     transition: 0.3s ease;
     &:hover {
-      background: $colorYellow;
-      color: #000;
+      background: #007afd8e;
     }
     @media (max-width: 400px) {
       height: 50px;
