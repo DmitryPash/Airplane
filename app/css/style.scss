@@ -867,7 +867,6 @@ body {
   background-image: url(../images/Box.png);
   background-position: center;
   background-repeat: no-repeat;
-  // background-size: cover;
   border-radius: 30px;
   color: $colorBlack;
   cursor: pointer;
@@ -877,6 +876,9 @@ body {
     font-size: rem(19px);
     font-weight: 500;
     color: #fff;
+    @media (max-width: 800px) {
+      font-size: rem(18px);
+    }
     @media (max-width: 400px) {
       font-size: rem(15px);
     }
@@ -907,6 +909,30 @@ body {
 }
 input[type="radio"] {
   display: none;
+}
+.file-input {
+  display: none;
+}
+.upload-photo {
+  font-size: rem(18px);
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 18px;
+  cursor: pointer;
+  &-type {
+    color: #d4d4d4;
+    text-align: center;
+    font-size: rem(12px);
+    line-height: 1.5;
+  }
+  img {
+    position: relative;
+    bottom: -2px;
+    margin-right: 12px;
+  }
+}
+.field-upload-photo {
+  margin-bottom: 30px;
 }
 // PopUp
 .popups-links > ul > li {
@@ -939,12 +965,12 @@ input[type="radio"] {
 
 // popup style
 .popup-form {
-  background: $colorBlue;
+  background: $colorCyan;
   position: relative;
   margin: 20px auto;
-  max-width: 630px;
-  padding: 100px 20px 100px 20px;
-  border-radius: 20px;
+  max-width: 930px;
+  padding: 100px 140px 100px 140px;
+  border-radius: 16px;
   &-img {
     margin-bottom: 15px;
     img {
@@ -970,6 +996,7 @@ input[type="radio"] {
     line-height: 1.5;
     max-width: 450px;
     margin-bottom: 24px;
+    font-size: rem(20px);
     span {
       font-weight: 700;
       color: $colorCyan;
@@ -982,7 +1009,7 @@ input[type="radio"] {
     max-width: 340px;
     height: 60px;
     line-height: 60px;
-    background: $colorCyan;
+    background: $colorBlue;
     font-size: rem(16px);
     font-weight: 600;
     transition: 0.3s ease;
@@ -1164,12 +1191,15 @@ input[type="radio"] {
   line-height: 55px;
   margin-bottom: 33px;
 }
+.thanks-text {
+  max-width: 600px;
+}
 // popup graz
 .popup-graz {
   text-align: center;
 }
 .graz-text {
-  max-width: 600px;
+  max-width: 100%;
 }
 // popup error
 .popup-error {
@@ -1203,6 +1233,7 @@ input[type="radio"] {
 .error {
   display: block;
 }
+
 .mail-form {
   position: absolute;
 }

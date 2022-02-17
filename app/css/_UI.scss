@@ -198,10 +198,14 @@ textarea {
   padding-left: 24px;
   padding-right: 10px;
   font-size: rem(16px);
+  border: 1px solid #ffffff00;
   color: #000;
   ::placeholder {
     font-family: $ffCoFo;
     color: #8b8d9b;
+  }
+  &:focus {
+    border: 1px solid $colorBlue;
   }
 }
 .ui-label {
@@ -353,6 +357,9 @@ textarea {
   }
 }
 
+.ui-btn-sticker {
+  box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
+}
 /* hover checkbox */
 .certificate-checkbox:not(:disabled):not(:checked) + label:hover::before {
   border-color: #b3d7ff;

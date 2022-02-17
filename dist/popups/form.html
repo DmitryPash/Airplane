@@ -1,5 +1,5 @@
 <div class="zoom-anim-dialog popup-form">
-   <div class="thanks-sticker ui-bnt-sticker ui-yellow">
+   <div class="thanks-sticker ui-btn-sticker ui-yellow">
       #отправьсвоефото
    </div>
    <div class="form-container">
@@ -16,11 +16,15 @@
             </label>
             <input type="text" placeholder="Введи свою фамилию" name="secondname" class="ui-input">
          </div>
-         <div class="ui-field">
-            <label for="file" class="ui-label">
-               Твоя фамилия
+         <div class="ui-field field-upload-photo">
+            <label for="upload_photo" class="ui-label upload-photo">
+               <img src="../images/icon/upload.svg" alt="alt"> Прикрепить файл
             </label>
-            <input type="file" name="file" class="ui-input">
+            <input type="checkbox" name="upload_photo" class="file-input" id="upload_photo">
+            <div class="upload-photo-type">
+               Требования к загрузке файлов:
+               Фото в форматах .jpg, .jpeg, .png, не более 2 мб.
+            </div>
          </div>
          <button class="popup-form-btn form-btn ui-btn" type="submit">Загрузить</button>
       </form>
@@ -38,14 +42,6 @@
                error.insertAfter($(element));
             },
             rules: {
-               email: {
-                  required: true,
-                  email: true,
-               },
-               phone: {
-                  required: true,
-                  telephone: true,
-               },
                name: {
                   required: true,
                   lettersonly: true,
@@ -54,16 +50,23 @@
                   required: true,
                   lettersonly: true,
                },
-               date: {
-                  required: true,
-                  // date: true,
-               },
-               checkbox_1: {
+               upload_photo: {
                   required: true,
                }
 
             },
+            messages: {
+               name: {
+                  required: "Пожалуйста введите своё имя",
+                  lettersonly: "Введите корректное имя",
+               },
+               secondname: {
+                  required: "Пожалуйста введите свою фамилию",
+                  lettersonly: "Введите корректную фамилию",
+               },
+            },
          });
+
       });
 
    </script>
