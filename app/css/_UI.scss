@@ -162,6 +162,10 @@ textarea {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: 0.3s ease;
+  &:hover {
+    background: #007afd8e;
+  }
 }
 
 .ui-sticker-blue {
@@ -238,6 +242,12 @@ textarea {
   &-text {
     font-size: rem(24px);
     max-width: 985px;
+    @media (max-width: 576px) {
+      font-size: rem(20px);
+    }
+    @media (max-width: 400px) {
+      font-size: rem(18px);
+    }
   }
 }
 .ui-pgn {

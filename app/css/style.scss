@@ -156,13 +156,17 @@ body {
     height: 550px;
     margin-bottom: 100px;
   }
-  @media (max-width: 576px) {
+  @media (max-width: 765px) {
     height: 480px;
+  }
+  @media (max-width: 576px) {
+    height: 380px;
   }
   @media (max-width: 400px) {
     height: 320px;
   }
   &-container {
+    position: relative;
     height: 100%;
     border: 2px solid #fff;
     border-radius: 25px;
@@ -235,6 +239,13 @@ body {
       font-size: rem(15px);
       right: -22px;
     }
+  }
+  &-hide-item {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: black;
+    top: 0;
   }
 }
 .lectures {
@@ -344,32 +355,41 @@ body {
         right: 18px;
       }
       @media (max-width: 1170px) {
-        height: 100px;
-        width: 100px;
-        top: 205px;
+        height: 60px;
+        width: 60px;
+        top: 171px;
+        right: 55px;
         img {
           width: -webkit-fill-available;
         }
       }
       @media (max-width: 992px) {
-        height: 70px;
-        width: 70px;
-        top: 170px;
+        height: 50px;
+        width: 50px;
+        top: 152px;
+        right: 10px;
+      }
+      @media (max-width: 765px) {
+        display: none;
       }
     }
     @media (max-width: 1350px) {
       right: 38px;
     }
     @media (max-width: 1170px) {
-      height: 110px;
-      line-height: 110px;
-      padding: 0 40px;
+      height: 80px;
+      line-height: 80px;
+      padding: 0 20px;
+      font-size: rem(45px);
     }
     @media (max-width: 992px) {
-      height: 90px;
-      line-height: 90px;
+      height: 70px;
+      line-height: 70px;
       font-size: rem(38px);
       right: -6px;
+    }
+    @media (max-width: 765px) {
+      display: none;
     }
   }
 }
@@ -562,7 +582,7 @@ body {
 .broadcast {
   position: relative;
   text-align: center;
-  padding: 117px 0px;
+  padding-top: 300px;
   margin-bottom: 243px;
   &-sticker {
     height: 97px;
@@ -662,16 +682,33 @@ body {
       }
     }
   }
+  @media (max-width: 776px) {
+    padding-top: 200px;
+  }
+  @media (max-width: 576px) {
+    padding-top: 150px;
+  }
+  @media (max-width: 400px) {
+    padding-top: 100px;
+  }
 }
 .event {
   margin-bottom: 150px;
 }
 .gentleman {
   margin-bottom: 200px;
+  &-title {
+    font-size: rem(52px);
+    margin-bottom: 30px;
+    @media (max-width: 576px) {
+      font-size: rem(38px);
+    }
+    @media (max-width: 400px) {
+      font-size: rem(34px);
+    }
+  }
   &-header {
     margin-bottom: 80px;
-    &-sticker {
-    }
   }
 }
 .histories-list {
@@ -1001,6 +1038,17 @@ input[type="radio"] {
       font-weight: 700;
       color: $colorCyan;
     }
+
+    @media (max-width: 776px) {
+      font-size: rem(18px);
+    }
+    @media (max-width: 576px) {
+      font-size: rem(16px);
+    }
+    @media (max-width: 400px) {
+      text-align: center;
+      font-size: rem(14px);
+    }
   }
   &-btn {
     display: block;
@@ -1016,6 +1064,22 @@ input[type="radio"] {
     &:hover {
       background: #4258ff;
     }
+  }
+
+  @media (max-width: 992px) {
+    max-width: 730px;
+  }
+  @media (max-width: 776px) {
+    max-width: 530px;
+    padding: 60px 20px 50px 20px;
+  }
+  @media (max-width: 576px) {
+    max-width: 380px;
+    padding: 40px 10px 50px 10px;
+  }
+  @media (max-width: 400px) {
+    max-width: 330px;
+    padding: 40px 10px 50px 10px;
   }
 }
 .mfp-close {
@@ -1194,6 +1258,9 @@ input[type="radio"] {
   font-weight: 500;
   line-height: 55px;
   margin-bottom: 33px;
+  @media (max-width: 400px) {
+    font-size: rem(26px);
+  }
 }
 .thanks-text {
   max-width: 600px;

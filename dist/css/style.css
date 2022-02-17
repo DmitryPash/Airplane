@@ -384,6 +384,13 @@ textarea {
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.ui-btn:hover {
+  background: #007afd8e;
 }
 
 .ui-sticker-blue {
@@ -739,7 +746,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .footer {
-  padding-bottom: 234px;
+  padding-bottom: 114px;
 }
 
 .footer-row {
@@ -926,6 +933,7 @@ body {
 }
 
 .video-container {
+  position: relative;
   height: 100%;
   border: 2px solid #fff;
   border-radius: 25px;
@@ -970,6 +978,14 @@ body {
   -webkit-transform: rotate(-15.53deg);
   -ms-transform: rotate(-15.53deg);
   transform: rotate(-15.53deg);
+}
+
+.video-hide-item {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: black;
+  top: 0;
 }
 
 .lectures {
@@ -1210,7 +1226,7 @@ body {
 .broadcast {
   position: relative;
   text-align: center;
-  padding: 117px 0px;
+  padding-top: 300px;
   margin-bottom: 243px;
 }
 
@@ -1281,6 +1297,11 @@ body {
 
 .gentleman {
   margin-bottom: 200px;
+}
+
+.gentleman-title {
+  font-size: 3.25rem;
+  margin-bottom: 30px;
 }
 
 .gentleman-header {
@@ -2087,9 +2108,10 @@ input[type=radio] {
   }
 
   .lectures-sticker-heart {
-    height: 100px;
-    width: 100px;
-    top: 205px;
+    height: 60px;
+    width: 60px;
+    top: 171px;
+    right: 55px;
   }
 
   .lectures-sticker-heart img {
@@ -2097,9 +2119,10 @@ input[type=radio] {
   }
 
   .lectures-sticker {
-    height: 110px;
-    line-height: 110px;
-    padding: 0 40px;
+    height: 80px;
+    line-height: 80px;
+    padding: 0 20px;
+    font-size: 2.8125rem;
   }
 }
 
@@ -2296,14 +2319,15 @@ input[type=radio] {
   }
 
   .lectures-sticker-heart {
-    height: 70px;
-    width: 70px;
-    top: 170px;
+    height: 50px;
+    width: 50px;
+    top: 152px;
+    right: 10px;
   }
 
   .lectures-sticker {
-    height: 90px;
-    line-height: 90px;
+    height: 70px;
+    line-height: 70px;
     font-size: 2.375rem;
     right: -6px;
   }
@@ -2344,6 +2368,10 @@ input[type=radio] {
     padding: 20px 10px 40px;
     margin-bottom: 60px;
   }
+
+  .popup-form {
+    max-width: 730px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -2363,6 +2391,19 @@ input[type=radio] {
     height: 60px;
     line-height: 60px;
     padding: 0 55px;
+  }
+
+  .broadcast {
+    padding-top: 200px;
+  }
+
+  .popup-form-text {
+    font-size: 1.125rem;
+  }
+
+  .popup-form {
+    max-width: 530px;
+    padding: 60px 20px 50px 20px;
   }
 }
 
@@ -2456,10 +2497,6 @@ input[type=radio] {
     margin-bottom: 58px;
   }
 
-  .footer {
-    padding-bottom: 184px;
-  }
-
   .podcasts-slider-slide {
     width: 50vw;
   }
@@ -2508,6 +2545,18 @@ input[type=radio] {
 }
 
 @media (max-width: 765px) {
+  .video {
+    height: 480px;
+  }
+
+  .lectures-sticker-heart {
+    display: none;
+  }
+
+  .lectures-sticker {
+    display: none;
+  }
+
   .podcast-btn-download {
     height: 60px;
     line-height: 60px;
@@ -2519,10 +2568,6 @@ input[type=radio] {
   .header {
     padding-top: 32px;
     margin-bottom: 50px;
-  }
-
-  .footer {
-    padding-bottom: 144px;
   }
 }
 
@@ -2611,6 +2656,10 @@ input[type=radio] {
     max-width: 100%;
   }
 
+  .ui-header-text {
+    font-size: 1.25rem;
+  }
+
   .ui-pgn-link,
   .ui-pgn-current,
   .ui-pgn-btn {
@@ -2643,7 +2692,7 @@ input[type=radio] {
   }
 
   .footer {
-    padding-bottom: 124px;
+    padding-bottom: 84px;
   }
 
   .gifts-btn {
@@ -2657,7 +2706,7 @@ input[type=radio] {
   }
 
   .video {
-    height: 480px;
+    height: 380px;
   }
 
   .video-sticker {
@@ -2685,6 +2734,14 @@ input[type=radio] {
     background-size: 19px;
   }
 
+  .broadcast {
+    padding-top: 150px;
+  }
+
+  .gentleman-title {
+    font-size: 2.375rem;
+  }
+
   .certificate-footer-field {
     width: 100%;
     margin-right: 0;
@@ -2700,6 +2757,15 @@ input[type=radio] {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .popup-form-text {
+    font-size: 1rem;
+  }
+
+  .popup-form {
+    max-width: 380px;
+    padding: 40px 10px 50px 10px;
   }
 }
 
@@ -2807,7 +2873,7 @@ input[type=radio] {
   }
 
   .footer {
-    padding-bottom: 104px;
+    padding-bottom: 74px;
   }
 }
 
@@ -2900,6 +2966,10 @@ input[type=radio] {
     max-width: 100%;
   }
 
+  .ui-header-text {
+    font-size: 1.125rem;
+  }
+
   .ui-ribbon div {
     height: 50px;
     line-height: 50px;
@@ -2983,11 +3053,33 @@ input[type=radio] {
     font-size: 1.25rem;
   }
 
+  .broadcast {
+    padding-top: 100px;
+  }
+
+  .gentleman-title {
+    font-size: 2.125rem;
+  }
+
   .certificate-text {
     font-size: 1.25rem;
   }
 
   .certificate-label-text {
     font-size: 0.9375rem;
+  }
+
+  .popup-form-text {
+    text-align: center;
+    font-size: 0.875rem;
+  }
+
+  .popup-form {
+    max-width: 330px;
+    padding: 40px 10px 50px 10px;
+  }
+
+  .thanks-sticker {
+    font-size: 1.625rem;
   }
 }
