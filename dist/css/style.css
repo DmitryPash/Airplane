@@ -678,7 +678,7 @@ input:focus:-ms-input-placeholder {
 .toggler {
   display: none;
   position: absolute;
-  right: 35px;
+  right: 0;
   bottom: 27px;
 }
 
@@ -2038,7 +2038,7 @@ body {
   }
 
   .header-active {
-    background: #301bac;
+    background: #007bfd;
     padding-bottom: 20px;
   }
 
@@ -2192,6 +2192,20 @@ body {
     margin-right: -100px;
     padding: 20px 10px 40px;
     margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 776px) {
+  .ui-ribbon div {
+    height: 100px;
+    line-height: 100px;
+    font-size: 2.375rem;
+  }
+
+  .gifts-btn {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 55px;
   }
 }
 
@@ -2453,9 +2467,9 @@ body {
   }
 
   .ui-ribbon div {
-    height: 100px;
-    line-height: 100px;
-    font-size: 2.375rem;
+    height: 80px;
+    line-height: 80px;
+    font-size: 2rem;
   }
 
   .header {
@@ -2465,6 +2479,12 @@ body {
 
   .footer {
     padding-bottom: 124px;
+  }
+
+  .gifts-btn {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 45px;
   }
 
   .gifts {
@@ -2699,9 +2719,9 @@ body {
   }
 
   .ui-ribbon div {
-    height: 70px;
-    line-height: 70px;
-    font-size: 1.75rem;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.5rem;
   }
 
   .header {
@@ -2713,9 +2733,13 @@ body {
   }
 
   .gifts-btn {
-    height: 50px;
-    line-height: 50px;
-    padding: 0 35px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 25px;
+  }
+
+  .gifts {
+    padding-top: 120px;
   }
 
   .video {
