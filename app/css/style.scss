@@ -968,6 +968,7 @@ input[type="radio"] {
     margin-right: 12px;
   }
 }
+
 .field-upload-photo {
   margin-bottom: 30px;
 }
@@ -1006,7 +1007,7 @@ input[type="radio"] {
   position: relative;
   margin: 20px auto;
   max-width: 930px;
-  padding: 100px 140px 100px 140px;
+  padding: 100px 20px 100px 20px;
   border-radius: 16px;
   &-img {
     margin-bottom: 15px;
@@ -1036,7 +1037,7 @@ input[type="radio"] {
     font-size: rem(20px);
     span {
       font-weight: 700;
-      color: $colorCyan;
+      color: $colorBlue;
     }
 
     @media (max-width: 776px) {
@@ -1092,6 +1093,24 @@ input[type="radio"] {
   background: black !important;
   right: -20px;
   top: -20px;
+  transition: 0.3s ease;
+  &:active {
+    top: -20px;
+    @media (max-width: 476px) {
+      top: -12px;
+    }
+  }
+  &:hover {
+    transform: rotate(90deg);
+  }
+  @media (max-width: 476px) {
+    width: 29px;
+    height: 29px;
+    line-height: 29px;
+    font-size: rem(25px);
+    right: -12px;
+    top: -12px;
+  }
 }
 
 .confirmation {
@@ -1242,10 +1261,11 @@ input[type="radio"] {
   transform: scale(1);
 }
 
-.mfp-close:active {
-  top: -20px;
+.mfp-container {
+  @media (max-width: 400px) {
+    padding: 0 15px;
+  }
 }
-
 // popup thanks
 .popup-thanks {
   text-align: center;
@@ -1259,7 +1279,7 @@ input[type="radio"] {
   line-height: 55px;
   margin-bottom: 33px;
   @media (max-width: 400px) {
-    font-size: rem(26px);
+    font-size: rem(24px);
   }
 }
 .thanks-text {
@@ -1290,6 +1310,45 @@ input[type="radio"] {
   line-height: 80px;
   padding: 0px 30px;
   font-size: rem(22px);
+}
+// upload
+.popup-upload {
+  background: $colorCyan;
+  position: relative;
+  margin: 20px auto;
+  max-width: 490px;
+  padding: 75px 25px;
+  border-radius: 16px;
+}
+.upload-input {
+  height: 58px;
+  line-height: 58px;
+}
+.upload-label {
+  color: #fff;
+  font-size: rem(11px);
+}
+.upload-hint {
+  color: #fff;
+}
+.upload-btn {
+  border: none;
+  font-size: rem(22px);
+  padding: 0 55px;
+  background: $colorBlue;
+
+  &:hover {
+    background: #2c17a7;
+  }
+}
+.upload-error {
+  font-size: rem(12px);
+}
+.upload-container-field {
+  margin-bottom: 25px;
+}
+.mfp-popup-header {
+  text-align: center;
 }
 // Modificator
 .active {
