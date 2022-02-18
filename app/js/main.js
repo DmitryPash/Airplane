@@ -22,7 +22,36 @@ $(document).on("click", ".mfp-link", function () {
   return false;
 });
 
-// Validation
+$(document).ready(function () {
+  // Validation
+  $("#form-validation").validate({
+    errorElement: "span",
+    errorClass: "mail-form",
+    rules: {
+      email: {
+        required: true,
+        email: true,
+      },
+    },
+    messages: {
+      email: {
+        required: "Пожалуйста введите ваш email",
+        email: "Введите корректный email",
+      },
+    },
+  });
+  // Menu
+  $(".toggler").click(function () {
+    $(this).toggleClass("active");
+    $(".header").toggleClass("header-active");
+    $(".navigation").slideToggle(300);
+  });
+  // Certificate
+  $(".certificate-item").click(function () {
+    $(".certificate-item").removeClass("certificate-active");
+    $(this).addClass("certificate-active");
+  });
+});
 
 jQuery.validator.addMethod(
   "lettersonly",
@@ -84,11 +113,11 @@ $(document).on("click", ".podcasts-card-play", function (e) {
   }
 });
 
-// menu
-$(document).ready(function () {
-  $(".toggler").click(function () {
-    $(this).toggleClass("active");
-    $(".header").toggleClass("header-active");
-    $(".navigation").slideToggle(300);
-  });
+$("#gift-btn").click(function () {
+  $("html, body").animate(
+    {
+      scrollTop: $(".certificate-items").offset().top,
+    },
+    2000
+  );
 });
