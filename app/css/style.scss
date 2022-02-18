@@ -59,6 +59,9 @@ body {
   -webkit-box-flex: 1;
   flex: 1 0 auto;
   padding-bottom: 200px;
+  @media (max-width: 400px) {
+    padding-bottom: 100px;
+  }
 }
 
 #footer {
@@ -725,6 +728,9 @@ body {
 }
 .gentleman {
   margin-bottom: 200px;
+  @media (max-width: 400px) {
+    margin-bottom: 50px;
+  }
   &-title {
     font-size: rem(52px);
     margin-bottom: 30px;
@@ -761,6 +767,9 @@ body {
     overflow: hidden;
     background: #fff;
     border-radius: 30px;
+    @media (max-width: 768px) {
+      border-radius: 15px;
+    }
     &.mfp-gallery {
       cursor: pointer;
     }
@@ -794,7 +803,7 @@ body {
   &-likes {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 2px;
 
     &-counter {
       display: inline-block;
@@ -810,10 +819,12 @@ body {
       color: #fff;
       font-size: rem(15px);
       font-weight: 500;
+      @media (max-width: 768px) {
+        margin-right: 0;
+      }
     }
     &-btn {
       position: relative;
-      top: -2px;
       display: inline-block;
       vertical-align: middle;
       width: 30px;
@@ -821,17 +832,24 @@ body {
       background: url(../images/icon/лайк.svg) center no-repeat;
       background-size: contain;
     }
+    @media (max-width: 768px) {
+      top: -5px;
+    }
+    // @media (max-width: 400px) {
+    //   top: -2px;
+    // }
   }
 
   @media (max-width: 768px) {
     &-author {
       font-size: rem(16px);
+      line-height: 1.1;
     }
     &-likes-counter {
       min-width: 35px;
       font-size: rem(12px);
       height: 20px;
-      line-height: 16px;
+      line-height: 20px;
     }
     &-likes-btn {
       width: 28px;
@@ -842,12 +860,21 @@ body {
 
 .histories-pgn {
   padding: 20px 0px;
-  margin-bottom: 110px;
   border-radius: 100px;
 
   &-link {
     padding: 0 38px;
     box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
+    @media (max-width: 576px) {
+      height: 55px;
+      line-height: 55px;
+      font-size: rem(20px);
+    }
+    @media (max-width: 480px) {
+      height: 60px;
+      line-height: 60px;
+      font-size: rem(20px);
+    }
   }
   @media (max-width: 992px) {
     display: block;
@@ -856,12 +883,11 @@ body {
     margin-left: -100px;
     margin-right: -100px;
     padding: 20px 10px 40px;
-    margin-bottom: 60px;
   }
 }
 .lady {
   background: $colorCyan;
-  padding: 124px 0px 170px 0px;
+  padding: 124px 0px 150px 0px;
   &-btn {
     background: $colorYellow;
     color: $colorBlack;
@@ -880,6 +906,9 @@ body {
   &-likes {
     background: $colorBlue;
   }
+  @media (max-width: 400px) {
+    padding: 60px 0px 70px 0px;
+  }
 }
 .certificate {
   position: relative;
@@ -889,6 +918,9 @@ body {
     margin-bottom: 80px;
     @media (max-width: 768px) {
       padding-top: 200px;
+    }
+    @media (max-width: 400px) {
+      padding-top: 120px;
     }
   }
   &-text {
@@ -902,9 +934,11 @@ body {
   }
 }
 .certificate-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  position: relative;
+  text-align: left;
 }
 .certificate-footer {
   &-field {
@@ -952,14 +986,16 @@ body {
     font-weight: 500;
     line-height: 1.2;
     color: #fff;
+    padding-right: 82px;
     @media (max-width: 800px) {
-      font-size: rem(18px);
-    }
-    @media (max-width: 400px) {
-      font-size: rem(15px);
+      font-size: rem(16px);
+      line-height: 1.1;
     }
   }
   &-btn {
+    position: absolute;
+    right: 0;
+    top: -4px;
     display: inline-block;
     width: 82px;
     height: 26px;

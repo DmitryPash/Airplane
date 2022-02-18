@@ -319,10 +319,19 @@ textarea {
       color: #000;
       background: $colorYellow;
     }
+    @media (max-width: 480px) {
+      height: 32px;
+      line-height: 32px;
+      font-size: rem(16px);
+      padding: 0px 10px;
+    }
   }
   .ui-pgn-link-container {
     display: inline-block;
     margin: 0 15px;
+    @media (max-width: 480px) {
+      display: none;
+    }
   }
 
   @media (max-width: 576px) {

@@ -87,7 +87,7 @@ const swiperPodcasts = new Swiper(".podcasts-slider", {
   slidesPerView: "auto",
   coverflowEffect: {
     rotate: 0,
-    stretch: 100,
+    stretch: 350,
     depth: 100,
     scale: 0.85,
     modifier: 1,

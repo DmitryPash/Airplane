@@ -82,8 +82,8 @@
   -webkit-box-flex: 0;
   flex: 0 0 28%;
   max-width: 28%;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 13px;
+  margin-right: 13px;
 }
 
 /*  12-column */
@@ -1513,7 +1513,7 @@ body {
 .histories-card-likes {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 2px;
 }
 
 .histories-card-likes-counter {
@@ -1534,7 +1534,6 @@ body {
 
 .histories-card-likes-btn {
   position: relative;
-  top: -2px;
   display: inline-block;
   vertical-align: middle;
   width: 30px;
@@ -1545,7 +1544,6 @@ body {
 
 .histories-pgn {
   padding: 20px 0px;
-  margin-bottom: 110px;
   border-radius: 100px;
 }
 
@@ -1557,7 +1555,7 @@ body {
 
 .lady {
   background: #007bfd;
-  padding: 124px 0px 170px 0px;
+  padding: 124px 0px 150px 0px;
 }
 
 .lady-btn {
@@ -1599,15 +1597,8 @@ body {
 }
 
 .certificate-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  position: relative;
+  text-align: left;
 }
 
 .certificate-footer-field {
@@ -1656,9 +1647,13 @@ body {
   font-weight: 500;
   line-height: 1.2;
   color: #fff;
+  padding-right: 82px;
 }
 
 .certificate-label-btn {
+  position: absolute;
+  right: 0;
+  top: -4px;
   display: inline-block;
   width: 82px;
   height: 26px;
@@ -2601,7 +2596,6 @@ input[type=radio] {
     margin-left: -100px;
     margin-right: -100px;
     padding: 20px 10px 40px;
-    margin-bottom: 60px;
   }
 
   .popup-form {
@@ -2611,7 +2605,8 @@ input[type=radio] {
 
 @media (max-width: 800px) {
   .certificate-label-text {
-    font-size: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.1;
   }
 }
 
@@ -2755,15 +2750,28 @@ input[type=radio] {
     font-size: 10px;
   }
 
+  .histories-card-img {
+    border-radius: 15px;
+  }
+
+  .histories-card-likes-counter {
+    margin-right: 0;
+  }
+
+  .histories-card-likes {
+    top: -5px;
+  }
+
   .histories-card-author {
     font-size: 1rem;
+    line-height: 1.1;
   }
 
   .histories-card-likes-counter {
     min-width: 35px;
     font-size: 0.75rem;
     height: 20px;
-    line-height: 16px;
+    line-height: 20px;
   }
 
   .histories-card-likes-btn {
@@ -2979,6 +2987,12 @@ input[type=radio] {
     font-size: 2.375rem;
   }
 
+  .histories-pgn-link {
+    height: 55px;
+    line-height: 55px;
+    font-size: 1.25rem;
+  }
+
   .certificate-footer-field {
     margin-bottom: 25px;
   }
@@ -3067,6 +3081,17 @@ input[type=radio] {
 }
 
 @media (max-width: 480px) {
+  .ui-pgn-btn {
+    height: 32px;
+    line-height: 32px;
+    font-size: 1rem;
+    padding: 0px 10px;
+  }
+
+  .ui-pgn .ui-pgn-link-container {
+    display: none;
+  }
+
   .container {
     max-width: 1210px;
     padding-right: 15px;
@@ -3088,6 +3113,12 @@ input[type=radio] {
 
   .podcasts-slider-next {
     right: -5px;
+  }
+
+  .histories-pgn-link {
+    height: 60px;
+    line-height: 60px;
+    font-size: 1.25rem;
   }
 }
 
@@ -3227,6 +3258,10 @@ input[type=radio] {
     padding-bottom: 50px;
   }
 
+  #middle {
+    padding-bottom: 100px;
+  }
+
   .gifts-btn {
     height: 40px;
     line-height: 40px;
@@ -3295,16 +3330,24 @@ input[type=radio] {
     margin-bottom: 150px;
   }
 
+  .gentleman {
+    margin-bottom: 50px;
+  }
+
   .gentleman-title {
     font-size: 2.125rem;
   }
 
-  .certificate-text {
-    font-size: 1.25rem;
+  .lady {
+    padding: 60px 0px 70px 0px;
   }
 
-  .certificate-label-text {
-    font-size: 0.9375rem;
+  .certificate-header {
+    padding-top: 120px;
+  }
+
+  .certificate-text {
+    font-size: 1.25rem;
   }
 
   .popup-form-text {
