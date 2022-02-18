@@ -241,6 +241,16 @@ textarea {
     font-size: rem(52px);
     padding: 0 45px;
     margin-bottom: 54px;
+    @media (max-width: 576px) {
+      height: 78px;
+      line-height: 78px;
+      font-size: rem(42px);
+    }
+    @media (max-width: 400px) {
+      height: 58px;
+      line-height: 58px;
+      font-size: rem(24px);
+    }
   }
   &-text {
     font-size: rem(24px);
@@ -261,6 +271,8 @@ textarea {
   &-current {
     display: inline-block;
     vertical-align: middle;
+    font-weight: 500;
+    font-size: 19px;
     margin: 0px 7px;
     min-width: 40px;
     height: 40px;
@@ -275,6 +287,7 @@ textarea {
   &-link {
     color: #000000;
     background: $colorYellow;
+    box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
 
     &:hover {
       color: #fff;
@@ -286,6 +299,7 @@ textarea {
     background-color: #fff;
     color: #000;
     cursor: default;
+    box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
   }
 
   &-btn {
@@ -294,17 +308,21 @@ textarea {
     height: 40px;
     line-height: 40px;
     text-align: center;
-    font-size: rem(14px);
+    font-size: rem(15px);
+    font-weight: 500;
     color: #fff;
     min-width: 128px;
-    margin: 0px 28px;
     background: $colorCyan;
     border-radius: 8px;
-
+    box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
     &:hover {
       color: #000;
       background: $colorYellow;
     }
+  }
+  .ui-pgn-link-container {
+    display: inline-block;
+    margin: 0 15px;
   }
 
   @media (max-width: 576px) {
@@ -376,14 +394,14 @@ textarea {
   @media (max-width: 400px) {
     height: 50px;
     line-height: 50px;
-    font-size: rem(24px);
+    font-size: rem(18px);
   }
 }
 
 .ui-ribbon {
   &-yellow {
     background: $colorYellow;
-    transform: rotate(-3deg);
+    transform: rotate(-2.5deg);
     z-index: -1;
   }
   &-cyan {
