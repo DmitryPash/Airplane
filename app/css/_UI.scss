@@ -330,8 +330,8 @@ textarea {
   top: 0;
   left: -2000px;
   right: -2000px;
-  height: 150px;
-  line-height: 150px;
+  height: 127px;
+  line-height: 127px;
   font-size: rem(52px);
   font-weight: 500;
   color: #000;
@@ -362,7 +362,7 @@ textarea {
   }
   &-cyan {
     background: $colorCyan;
-    transform: rotate(5deg);
+    transform: rotate(3deg);
     z-index: -2;
   }
 }

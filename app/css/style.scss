@@ -58,7 +58,7 @@ body {
 #middle {
   -webkit-box-flex: 1;
   flex: 1 0 auto;
-  padding-bottom: 90px;
+  padding-bottom: 200px;
 }
 
 #footer {
@@ -849,69 +849,55 @@ body {
   }
 }
 .certificate-row {
-  width: 100%;
-  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  bottom: -60px;
 }
 .certificate-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   &-field {
-    margin-right: 53px;
+    margin-bottom: 0;
     input {
       position: relative;
       height: 58px;
       line-height: 58px;
     }
-    @media (max-width: 768px) {
-      margin-right: 33px;
-    }
     @media (max-width: 576px) {
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 40px;
+      margin-bottom: 25px;
     }
+  }
+  &-label {
+    font-size: rem(11px);
+    margin-bottom: 7px;
   }
   &-btn {
     border: none;
-    padding: 0 36px;
-    @media (max-width: 576px) {
-      width: 100%;
+    width: 100%;
+    padding: 0px 20px;
+    @media (max-width: 768px) {
+      font-size: rem(18px);
     }
-  }
-  @media (max-width: 576px) {
-    flex-direction: column;
   }
 }
 .certificate-item {
   margin-bottom: 43px;
 }
 .certificate-items {
-  margin-bottom: 80px;
+  margin-bottom: 38px;
 }
 .certificate-label {
   display: inline-block;
   position: relative;
   width: 100%;
-  height: 260px;
   text-align: center;
   line-height: 48px;
-  background: #fff;
-  background-image: url(../images/Box.png);
-  background-position: center;
-  background-repeat: no-repeat;
   border-radius: 30px;
   color: $colorBlack;
   cursor: pointer;
-  margin-bottom: 70px;
   border: 1px solid #ffffff00;
   &-text {
     font-size: rem(19px);
     font-weight: 500;
+    line-height: 1.2;
     color: #fff;
     @media (max-width: 800px) {
       font-size: rem(18px);
@@ -930,6 +916,20 @@ body {
     color: #fff;
     font-weight: 500;
     border-radius: 5px;
+  }
+  &-img {
+    background: #fff;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 22px;
+
+    & img {
+      transition: 0.3s ease;
+    }
+    & img:hover {
+      transform: scale(1.03);
+    }
   }
 }
 // input[type="radio"]:checked + .certificate-label {

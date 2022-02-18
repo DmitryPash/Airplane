@@ -101,7 +101,7 @@
    </div>
    <div class="gifts">
       <div class="gifts-flex">
-         <a href="#" class="gifts-btn ui-btn">
+         <a href="#" class="gifts-btn ui-btn" id="gift-btn">
             Получить
          </a>
       </div>
@@ -465,7 +465,7 @@
 
 
    </div>
-   <div class="certificate">
+   <div class="certificate" id="certificate">
       <div class="certificate-header">
          <div class="ui-ribbon">
             <div class="ui-ribbon-yellow">
@@ -490,6 +490,9 @@
                   <div class="certificate-item">
                      <input type="radio" id="contactChoice1" name="contact">
                      <label for="contactChoice1" class="certificate-label">
+                        <div class="certificate-label-img">
+                           <img src="./images/Box.png" alt="alt">
+                        </div>
                         <div class="certificate-row">
                            <div class="certificate-label-text">
                               Подарочный сертификат №1
@@ -499,99 +502,115 @@
                            </div>
                         </div>
                      </label>
-
                   </div>
                </div>
                <div class="col-4 col-l-6 col-sm-12">
                   <div class="certificate-item">
                      <input type="radio" id="contactChoice2" name="contact">
                      <label for="contactChoice2" class="certificate-label">
+                        <div class="certificate-label-img">
+                           <img src="./images/Box.png" alt="alt">
+                        </div>
                         <div class="certificate-row">
                            <div class="certificate-label-text">
-                              Подарочный сертификат №2
+                              Подарочный сертификат №1
                            </div>
                            <div class="certificate-label-btn">
                               Выбрать
                            </div>
                         </div>
                      </label>
-
                   </div>
                </div>
                <div class="col-4 col-l-6 col-sm-12">
                   <div class="certificate-item">
                      <input type="radio" id="contactChoice3" name="contact">
                      <label for="contactChoice3" class="certificate-label">
+                        <div class="certificate-label-img">
+                           <img src="./images/Box.png" alt="alt">
+                        </div>
                         <div class="certificate-row">
                            <div class="certificate-label-text">
-                              Подарочный сертификат №3
+                              Подарочный сертификат №1
                            </div>
                            <div class="certificate-label-btn">
                               Выбрать
                            </div>
                         </div>
                      </label>
-
                   </div>
                </div>
                <div class="col-4 col-l-6 col-sm-12">
                   <div class="certificate-item">
                      <input type="radio" id="contactChoice4" name="contact">
                      <label for="contactChoice4" class="certificate-label">
+                        <div class="certificate-label-img">
+                           <img src="./images/Box.png" alt="alt">
+                        </div>
                         <div class="certificate-row">
                            <div class="certificate-label-text">
-                              Подарочный сертификат №4
+                              Подарочный сертификат №1
                            </div>
                            <div class="certificate-label-btn">
                               Выбрать
                            </div>
                         </div>
                      </label>
-
                   </div>
                </div>
                <div class="col-4 col-l-6 col-sm-12">
                   <div class="certificate-item">
                      <input type="radio" id="contactChoice5" name="contact">
                      <label for="contactChoice5" class="certificate-label">
+                        <div class="certificate-label-img">
+                           <img src="./images/Box.png" alt="alt">
+                        </div>
                         <div class="certificate-row">
                            <div class="certificate-label-text">
-                              Подарочный сертификат №5
+                              Подарочный сертификат №1
                            </div>
                            <div class="certificate-label-btn">
                               Выбрать
                            </div>
                         </div>
                      </label>
-
                   </div>
                </div>
                <div class="col-4 col-l-6 col-sm-12">
                   <div class="certificate-item">
                      <input type="radio" id="contactChoice6" name="contact">
                      <label for="contactChoice6" class="certificate-label">
+                        <div class="certificate-label-img">
+                           <img src="./images/Box.png" alt="alt">
+                        </div>
                         <div class="certificate-row">
                            <div class="certificate-label-text">
-                              Подарочный сертификат №6
+                              Подарочный сертификат №1
                            </div>
                            <div class="certificate-label-btn">
                               Выбрать
                            </div>
                         </div>
                      </label>
-
                   </div>
                </div>
             </div>
          </div>
          <div class="certificate-footer">
-            <div class="certificate-footer-field ui-field">
-               <label for="email" class="ui-label">
-                  Твой рабочий email
-               </label>
-               <input type="text" placeholder="Введи свой email" name="email" class="ui-input">
+            <div class="row justify-center valign-center">
+               <div class="cert-col-28 col-lg-4 col-md-6 col-xs-12">
+                  <div class="certificate-footer-field ui-field">
+                     <label for="email" class="ui-label certificate-footer-label">
+                        Твой рабочий email
+                     </label>
+                     <input type="text" placeholder="Введи свой email" name="email" class="ui-input">
+                  </div>
+               </div>
+               <div class="cert-col-28 col-lg-4 col-md-6 col-xs-12">
+                  <button type="submit" class="certificate-footer-btn ui-btn">Получить сертификат</button>
+               </div>
             </div>
-            <button type="submit" class="certificate-footer-btn ui-btn">Получить сертификат</button>
+
          </div>
       </form>
    </div>
