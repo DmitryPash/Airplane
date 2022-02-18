@@ -1051,7 +1051,7 @@ body {
 }
 
 .video-sticker-img {
-  width: -webkit-fill-available;
+  width: 50%;
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -1343,7 +1343,7 @@ body {
 }
 
 .broadcast-sticker-tree img {
-  width: -webkit-fill-available;
+  width: 50%;
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -1440,7 +1440,7 @@ body {
 }
 
 .gentleman {
-  margin-bottom: 200px;
+  margin-bottom: 271px;
 }
 
 .gentleman-title {
@@ -1459,6 +1459,7 @@ body {
 }
 
 .histories-card {
+  position: relative;
   margin-bottom: 40px;
 }
 
@@ -1540,6 +1541,33 @@ body {
   height: 24px;
   background: url(../images/icon/лайк.svg) center no-repeat;
   background-size: contain;
+}
+
+.histories-card-text {
+  display: none;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 315px;
+  height: 326px;
+  background: #fff;
+  border-radius: 30px;
+  padding: 27px 37px;
+  font-size: 0.875rem;
+  color: #1a140f;
+  line-height: 1.5;
+  z-index: 2;
+}
+
+.histories-card-text:hover {
+  display: block;
+}
+
+.histories-card-img:hover + .histories-card-text {
+  display: block;
 }
 
 .histories-pgn {
@@ -2343,7 +2371,7 @@ input[type=radio] {
   }
 
   .lectures-sticker-heart img {
-    width: -webkit-fill-available;
+    width: 50%;
   }
 
   .lectures-sticker {
@@ -2351,6 +2379,22 @@ input[type=radio] {
     line-height: 80px;
     padding: 0 20px;
     font-size: 2.8125rem;
+  }
+
+  .event-sticker-photo {
+    width: 123px;
+    height: 123px;
+    right: 87px;
+  }
+
+  .event-sticker-photo img {
+    width: 50%;
+  }
+
+  .event-sticker-chees {
+    height: 123px;
+    line-height: 123px;
+    font-size: 4.375rem;
   }
 }
 
@@ -2589,13 +2633,30 @@ input[type=radio] {
     width: 130px;
   }
 
+  .event-sticker-photo {
+    width: 83px;
+    height: 83px;
+    right: 29px;
+    top: 0;
+  }
+
+  .event-sticker-chees {
+    height: 83px;
+    line-height: 83px;
+    font-size: 2.5rem;
+  }
+
+  .gentleman {
+    margin-bottom: 150px;
+  }
+
   .histories-pgn {
     display: block;
     text-align: center;
     border-radius: 0;
     margin-left: -100px;
     margin-right: -100px;
-    padding: 20px 10px 40px;
+    padding: 0;
   }
 
   .popup-form {
@@ -2748,6 +2809,21 @@ input[type=radio] {
   .podcasts-slider-next:after,
   .podcasts-slider-prev:after {
     font-size: 10px;
+  }
+
+  .event-sticker-photo {
+    width: 53px;
+    height: 53px;
+    bottom: -92px;
+    top: auto;
+  }
+
+  .event-sticker-chees {
+    height: 83px;
+    line-height: 83px;
+    font-size: 3.125rem;
+    bottom: -195px;
+    top: auto;
   }
 
   .histories-card-img {
@@ -3339,7 +3415,7 @@ input[type=radio] {
   }
 
   .lady {
-    padding: 60px 0px 70px 0px;
+    padding: 60px 0px 50px 0px;
   }
 
   .certificate-header {
