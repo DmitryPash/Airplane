@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 .row {
   display: -webkit-box;
   display: -webkit-inline-box;
@@ -1034,67 +1032,6 @@ body {
   background: #007afd8e;
 }
 
-.video {
-  position: relative;
-  margin-bottom: 277px;
-}
-
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  border: 2px solid #fff;
-  border-radius: 25px;
-  overflow: hidden;
-}
-
-.video-frame {
-  width: 100%;
-  height: 100%;
-}
-
-.video-sticker {
-  position: absolute;
-  z-index: 1;
-  bottom: 54px;
-  right: 0px;
-  padding: 0 54px;
-  height: 109px;
-  border-radius: 109px;
-  -webkit-box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
-  box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.video-sticker-img {
-  width: -webkit-fill-available;
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-}
-
-.video-sticker-text {
-  position: absolute;
-  bottom: -35px;
-  right: -72px;
-  padding: 0px 30px;
-  height: 83px;
-  line-height: 83px;
-  font-size: 2.6875rem;
-  -webkit-transform: rotate(-15.53deg);
-  -ms-transform: rotate(-15.53deg);
-  transform: rotate(-15.53deg);
-}
-
-.video-hide-item {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background: black;
-  top: 0;
-}
-
 .lectures {
   position: relative;
   margin-bottom: 113px;
@@ -1194,405 +1131,6 @@ body {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-}
-
-.podcast {
-  position: relative;
-  margin-bottom: 200px;
-}
-
-.podcast-btn {
-  text-align: center;
-}
-
-.podcast-btn-download {
-  padding: 0 40px;
-}
-
-.podcasts-slider-wrp {
-  padding-left: 75px;
-  padding-right: 75px;
-  position: relative;
-  margin-bottom: 60px;
-}
-
-.podcasts-slider-slide {
-  width: 604px;
-}
-
-.podcasts-slider-slide img {
-  display: block;
-}
-
-.podcasts-slider-next,
-.podcasts-slider-prev {
-  width: 61px;
-  height: 61px;
-  line-height: 59px;
-  border: 1px solid #ffffff00;
-  border-radius: 50%;
-  margin-top: -27px;
-  background-color: #007bfd;
-  color: #fff;
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-
-.podcasts-slider-next:after,
-.podcasts-slider-prev:after {
-  font-size: 20px;
-}
-
-.podcasts-slider-next:hover,
-.podcasts-slider-prev:hover {
-  border: 1px solid #fff;
-}
-
-.podcasts-slider-prev {
-  left: 0;
-}
-
-.podcasts-slider-next {
-  right: 0;
-}
-
-.podcasts-slider-icon {
-  position: absolute;
-  right: -35px;
-  top: -114px;
-  width: 150px;
-  -webkit-transform: rotate(327deg);
-  -ms-transform: rotate(327deg);
-  transform: rotate(327deg);
-  z-index: -1;
-}
-
-.podcasts-card {
-  position: relative;
-  padding-bottom: 65%;
-  overflow: hidden;
-  border: 1px solid #fff;
-  border-radius: 30px;
-}
-
-.podcasts-card iframe {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-}
-
-.podcasts-card-plug {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 100%;
-  border-radius: 30px;
-}
-
-.podcasts-card-play {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  width: 86px;
-  height: 86px;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: #e0fe02 url(../images/icon/play.svg) 54% 50% no-repeat;
-  background-size: 24px;
-  cursor: pointer;
-  z-index: 1;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  -o-transition: transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-
-.podcasts-card-play:hover {
-  -webkit-transform: translate(-50%, -50%) scale(1.05);
-  -ms-transform: translate(-50%, -50%) scale(1.05);
-  transform: translate(-50%, -50%) scale(1.05);
-}
-
-.swiper-slide-active .podcasts-card-play {
-  visibility: visible;
-  opacity: 1;
-}
-
-.broadcast {
-  position: relative;
-  text-align: center;
-  padding-top: 300px;
-  margin-bottom: 243px;
-}
-
-.broadcast-sticker {
-  height: 97px;
-  line-height: 97px;
-  font-size: 3.25rem;
-  padding: 0 35px;
-  margin-bottom: 70px;
-}
-
-.broadcast-sticker-tree {
-  position: absolute;
-  height: 66px;
-  width: 170px;
-  top: 0;
-  left: 0;
-  -webkit-transform: rotate(-17.61deg);
-  -ms-transform: rotate(-17.61deg);
-  transform: rotate(-17.61deg);
-}
-
-.broadcast-sticker-tree img {
-  width: -webkit-fill-available;
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-}
-
-.broadcast-sticker-rocket {
-  position: absolute;
-  height: 66px;
-  width: 170px;
-  border-radius: 15px;
-  right: 0;
-  -webkit-transform: rotate(-17.98deg);
-  -ms-transform: rotate(-17.98deg);
-  transform: rotate(-17.98deg);
-}
-
-.broadcast-sticker-rocket img {
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-}
-
-.broadcast-text {
-  display: inline-block;
-  text-align: center;
-  max-width: 800px;
-  font-size: 1.5rem;
-  margin-bottom: 70px;
-}
-
-.broadcast-btn-link {
-  padding: 0 20px;
-}
-
-.event {
-  position: relative;
-  margin-bottom: 242px;
-}
-
-.event-title {
-  font-size: 3.25rem;
-  font-weight: 500;
-  margin-bottom: 30px;
-}
-
-.event-text {
-  max-width: 540px;
-  font-size: 1.5rem;
-  line-height: 1.5;
-}
-
-.event-sticker-photo {
-  position: absolute;
-  right: 261px;
-  top: -30px;
-  width: 163px;
-  height: 163px;
-  -webkit-box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
-  box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
-  -webkit-transform: rotate(20deg);
-  -ms-transform: rotate(20deg);
-  transform: rotate(20deg);
-  border-radius: 20px;
-}
-
-.event-sticker-photo img {
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-}
-
-.event-sticker-chees {
-  position: absolute;
-  right: 5px;
-  top: 95px;
-  height: 143px;
-  line-height: 143px;
-  padding: 0 30px;
-  -webkit-transform: rotate(-25deg);
-  -ms-transform: rotate(-25deg);
-  transform: rotate(-25deg);
-  font-size: 5rem;
-  font-weight: 500;
-  border-radius: 70px;
-}
-
-.gentleman {
-  margin-bottom: 200px;
-}
-
-.gentleman-title {
-  font-size: 3.25rem;
-  margin-bottom: 30px;
-}
-
-.gentleman-header {
-  margin-bottom: 80px;
-}
-
-.histories-list {
-  margin-bottom: 30px;
-  position: relative;
-  z-index: 1;
-}
-
-.histories-card {
-  margin-bottom: 40px;
-}
-
-.histories-card .ui-video {
-  display: block;
-  margin-bottom: 15px;
-  background: #fff;
-}
-
-.histories-card-img {
-  display: block;
-  position: relative;
-  padding-bottom: 65%;
-  margin-bottom: 15px;
-  overflow: hidden;
-  background: #fff;
-  border-radius: 30px;
-}
-
-.histories-card-img.mfp-gallery {
-  cursor: pointer;
-}
-
-.histories-card-img iframe {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.histories-card-img > img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-}
-
-.histories-card-bottom {
-  position: relative;
-  padding-right: 100px;
-}
-
-.histories-card-author {
-  font-size: 1.1875rem;
-}
-
-.histories-card-likes {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.histories-card-likes-counter {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 9px;
-  height: 25px;
-  line-height: 25px;
-  min-width: 45px;
-  text-align: center;
-  padding: 0px 5px;
-  border-radius: 8px;
-  background: #007bfd;
-  color: #fff;
-  font-size: 0.9375rem;
-  font-weight: 500;
-}
-
-.histories-card-likes-btn {
-  position: relative;
-  top: -2px;
-  display: inline-block;
-  vertical-align: middle;
-  width: 30px;
-  height: 24px;
-  background: url(../images/icon/лайк.svg) center no-repeat;
-  background-size: contain;
-}
-
-.histories-pgn {
-  padding: 20px 0px;
-  margin-bottom: 110px;
-  border-radius: 100px;
-}
-
-.histories-pgn-link {
-  padding: 0 38px;
-  -webkit-box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
-  box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.lady {
-  background: #007bfd;
-  padding: 124px 0px 170px 0px;
-}
-
-.lady-btn {
-  background: #e0fe02;
-  color: #1a140f;
-}
-
-.lady-btn:hover {
-  background: #c6df0d;
-}
-
-.lady-btn-skip {
-  background: #0e0060;
-}
-
-.lady-pgn-link:hover {
-  background: #0e0060;
-}
-
-.lady-likes {
-  background: #0e0060;
 }
 
 .certificate {
@@ -2263,12 +1801,6 @@ input[type=radio] {
   }
 }
 
-@media (max-width: 1300px) {
-  .video-sticker-text {
-    right: -34px;
-  }
-}
-
 @media (max-width: 1170px) {
   .col-lg-1 {
     -ms-flex: 0 0 8.33333%;
@@ -2546,23 +2078,6 @@ input[type=radio] {
     margin-bottom: 100px;
   }
 
-  .video {
-    margin-bottom: 100px;
-  }
-
-  .video-sticker {
-    padding: 0 44px;
-    height: 88px;
-  }
-
-  .video-sticker-text {
-    padding: 0px 25px;
-    height: 63px;
-    line-height: 63px;
-    font-size: 2.0625rem;
-    bottom: -18px;
-  }
-
   .lectures-title {
     font-size: 2.625rem;
   }
@@ -2579,43 +2094,6 @@ input[type=radio] {
     line-height: 70px;
     font-size: 2.375rem;
     right: -6px;
-  }
-
-  .podcast {
-    margin-bottom: 100px;
-  }
-
-  .podcast-btn-download {
-    font-size: 1.25rem;
-  }
-
-  .podcasts-slider-slide {
-    width: 440px;
-  }
-
-  .podcasts-slider-icon {
-    display: none;
-    visibility: hidden;
-  }
-
-  .broadcast-sticker {
-    font-size: 2.625rem;
-  }
-
-  .broadcast-sticker-tree,
-  .broadcast-sticker-rocket {
-    height: 56px;
-    width: 130px;
-  }
-
-  .histories-pgn {
-    display: block;
-    text-align: center;
-    border-radius: 0;
-    margin-left: -100px;
-    margin-right: -100px;
-    padding: 20px 10px 40px;
-    margin-bottom: 60px;
   }
 
   .popup-form {
@@ -2640,11 +2118,6 @@ input[type=radio] {
     height: 60px;
     line-height: 60px;
     padding: 0 55px;
-  }
-
-  .broadcast {
-    padding-top: 200px;
-    margin-bottom: 200px;
   }
 
   .popup-form-text {
@@ -2747,44 +2220,6 @@ input[type=radio] {
     margin-bottom: 58px;
   }
 
-  .podcasts-slider-slide {
-    width: 50vw;
-  }
-
-  .podcasts-slider-wrp {
-    padding-left: 35px;
-    padding-right: 35px;
-  }
-
-  .podcasts-slider-next,
-  .podcasts-slider-prev {
-    width: 25px;
-    height: 25px;
-    line-height: 23px;
-    margin-top: -12px;
-  }
-
-  .podcasts-slider-next:after,
-  .podcasts-slider-prev:after {
-    font-size: 10px;
-  }
-
-  .histories-card-author {
-    font-size: 1rem;
-  }
-
-  .histories-card-likes-counter {
-    min-width: 35px;
-    font-size: 0.75rem;
-    height: 20px;
-    line-height: 16px;
-  }
-
-  .histories-card-likes-btn {
-    width: 28px;
-    height: 20px;
-  }
-
   .certificate-header {
     padding-top: 200px;
   }
@@ -2805,12 +2240,6 @@ input[type=radio] {
 
   .lectures-sticker {
     display: none;
-  }
-
-  .podcast-btn-download {
-    height: 60px;
-    line-height: 60px;
-    font-size: 1.125rem;
   }
 }
 
@@ -2967,35 +2396,7 @@ input[type=radio] {
     padding-top: 180px;
   }
 
-  .video-sticker {
-    padding: 0 34px;
-    height: 68px;
-    bottom: 18px;
-  }
-
-  .video-sticker-text {
-    padding: 0px 20px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 1.4375rem;
-  }
-
   .lectures-title {
-    font-size: 2.375rem;
-  }
-
-  .podcasts-card-play {
-    width: 60px;
-    height: 60px;
-    background-size: 19px;
-  }
-
-  .broadcast {
-    padding-top: 150px;
-    margin-bottom: 170px;
-  }
-
-  .gentleman-title {
     font-size: 2.375rem;
   }
 
@@ -3034,36 +2435,6 @@ input[type=radio] {
   .lectures-text {
     font-size: 1.125rem;
   }
-
-  .podcast-btn-download {
-    height: 50px;
-    line-height: 50px;
-    font-size: 1rem;
-  }
-
-  .broadcast-sticker {
-    height: 77px;
-    line-height: 77px;
-    font-size: 2.125rem;
-    padding: 0 30px;
-    margin-bottom: 50px;
-  }
-
-  .broadcast-sticker-tree,
-  .broadcast-sticker-rocket {
-    height: 46px;
-    width: 110px;
-  }
-
-  .broadcast-text {
-    font-size: 1.375rem;
-  }
-
-  .broadcast-btn-link {
-    padding: 0 15px;
-    height: 60px;
-    line-height: 60px;
-  }
 }
 
 @media (max-width: 520px) {
@@ -3091,23 +2462,6 @@ input[type=radio] {
     max-width: 1210px;
     padding-right: 15px;
     padding-left: 15px;
-  }
-
-  .podcasts-slider-wrp {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .podcasts-slider-slide {
-    width: 68vw;
-  }
-
-  .podcasts-slider-prev {
-    left: -5px;
-  }
-
-  .podcasts-slider-next {
-    right: -5px;
   }
 }
 
@@ -3263,20 +2617,6 @@ input[type=radio] {
     padding-top: 120px;
   }
 
-  .video-sticker {
-    padding: 0 20px;
-    height: 40px;
-    bottom: 2px;
-  }
-
-  .video-sticker-text {
-    padding: 0px 10px;
-    height: 23px;
-    line-height: 23px;
-    font-size: 0.9375rem;
-    right: -22px;
-  }
-
   .lectures-title {
     font-size: 2rem;
     margin-bottom: 34px;
@@ -3284,45 +2624,6 @@ input[type=radio] {
 
   .lectures-text {
     margin-bottom: 40px;
-  }
-
-  .podcast-btn-download {
-    font-size: 0.875rem;
-  }
-
-  .broadcast-sticker {
-    height: 67px;
-    line-height: 67px;
-    font-size: 1.5rem;
-    padding: 0 25px;
-    margin-bottom: 20px;
-  }
-
-  .broadcast-sticker-rocket {
-    bottom: 0px;
-  }
-
-  .broadcast-sticker-tree,
-  .broadcast-sticker-rocket {
-    height: 46px;
-    width: 90px;
-  }
-
-  .broadcast-text {
-    font-size: 1.125rem;
-  }
-
-  .broadcast-btn-link {
-    font-size: 1.25rem;
-  }
-
-  .broadcast {
-    padding-top: 100px;
-    margin-bottom: 150px;
-  }
-
-  .gentleman-title {
-    font-size: 2.125rem;
   }
 
   .certificate-text {
