@@ -521,6 +521,8 @@ textarea {
 .ui-pgn-current {
   display: inline-block;
   vertical-align: middle;
+  font-weight: 500;
+  font-size: 19px;
   margin: 0px 7px;
   min-width: 40px;
   height: 40px;
@@ -561,10 +563,10 @@ textarea {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
   color: #fff;
   min-width: 128px;
-  margin: 0px 28px;
   background: #007bfd;
   border-radius: 8px;
   -webkit-box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
@@ -574,6 +576,11 @@ textarea {
 .ui-pgn-btn:hover {
   color: #000;
   background: #e0fe02;
+}
+
+.ui-pgn .ui-pgn-link-container {
+  display: inline-block;
+  margin: 0 15px;
 }
 
 .ui-ribbon div {
@@ -592,9 +599,9 @@ textarea {
 
 .ui-ribbon-yellow {
   background: #e0fe02;
-  -webkit-transform: rotate(-3deg);
-  -ms-transform: rotate(-3deg);
-  transform: rotate(-3deg);
+  -webkit-transform: rotate(-2.5deg);
+  -ms-transform: rotate(-2.5deg);
+  transform: rotate(-2.5deg);
   z-index: -1;
 }
 
@@ -1015,13 +1022,12 @@ body {
 
 .video {
   position: relative;
-  height: 664px;
   margin-bottom: 277px;
 }
 
 .video-container {
   position: relative;
-  height: 100%;
+  padding-bottom: 56.25%;
   border: 2px solid #fff;
   border-radius: 25px;
   overflow: hidden;
@@ -2527,7 +2533,6 @@ input[type=radio] {
   }
 
   .video {
-    height: 550px;
     margin-bottom: 100px;
   }
 
@@ -2545,9 +2550,7 @@ input[type=radio] {
   }
 
   .lectures-title {
-    height: 78px;
-    line-height: 78px;
-    font-size: 2.375rem;
+    font-size: 2.625rem;
   }
 
   .lectures-sticker-heart {
@@ -2778,8 +2781,8 @@ input[type=radio] {
 }
 
 @media (max-width: 765px) {
-  .video {
-    height: 480px;
+  .lectures-streamers-streamer-title {
+    padding-right: 0;
   }
 
   .lectures-sticker-heart {
@@ -2944,10 +2947,6 @@ input[type=radio] {
     padding-top: 180px;
   }
 
-  .video {
-    height: 380px;
-  }
-
   .video-sticker {
     padding: 0 34px;
     height: 68px;
@@ -2962,9 +2961,7 @@ input[type=radio] {
   }
 
   .lectures-title {
-    height: 68px;
-    line-height: 68px;
-    font-size: 2rem;
+    font-size: 2.375rem;
   }
 
   .podcasts-card-play {
@@ -3219,7 +3216,7 @@ input[type=radio] {
   .ui-ribbon div {
     height: 50px;
     line-height: 50px;
-    font-size: 1.5rem;
+    font-size: 1.125rem;
   }
 
   .header {
@@ -3240,10 +3237,6 @@ input[type=radio] {
     padding-top: 120px;
   }
 
-  .video {
-    height: 320px;
-  }
-
   .video-sticker {
     padding: 0 20px;
     height: 40px;
@@ -3259,9 +3252,7 @@ input[type=radio] {
   }
 
   .lectures-title {
-    height: 38px;
-    line-height: 38px;
-    font-size: 1.375rem;
+    font-size: 2rem;
     margin-bottom: 34px;
   }
 

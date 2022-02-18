@@ -149,25 +149,14 @@ body {
 }
 .video {
   position: relative;
-  height: 664px;
   margin-bottom: 277px;
 
   @media (max-width: 992px) {
-    height: 550px;
     margin-bottom: 100px;
-  }
-  @media (max-width: 765px) {
-    height: 480px;
-  }
-  @media (max-width: 576px) {
-    height: 380px;
-  }
-  @media (max-width: 400px) {
-    height: 320px;
   }
   &-container {
     position: relative;
-    height: 100%;
+    padding-bottom: 56.25%;
     border: 2px solid #fff;
     border-radius: 25px;
     overflow: hidden;
@@ -255,19 +244,13 @@ body {
     font-size: rem(52px);
     margin-bottom: 54px;
     @media (max-width: 992px) {
-      height: 78px;
-      line-height: 78px;
-      font-size: rem(38px);
+      font-size: rem(42px);
     }
     @media (max-width: 576px) {
-      height: 68px;
-      line-height: 68px;
-      font-size: rem(32px);
+      font-size: rem(38px);
     }
     @media (max-width: 400px) {
-      height: 38px;
-      line-height: 38px;
-      font-size: rem(22px);
+      font-size: rem(32px);
       margin-bottom: 34px;
     }
   }
@@ -319,6 +302,9 @@ body {
         line-height: 1.1;
         margin-bottom: 10px;
         padding-right: 10%;
+        @media (max-width: 765px) {
+          padding-right: 0;
+        }
       }
       &-name {
         font-size: rem(15px);
