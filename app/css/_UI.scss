@@ -241,6 +241,16 @@ textarea {
     font-size: rem(52px);
     padding: 0 45px;
     margin-bottom: 54px;
+    @media (max-width: 576px) {
+      height: 78px;
+      line-height: 78px;
+      font-size: rem(42px);
+    }
+    @media (max-width: 400px) {
+      height: 58px;
+      line-height: 58px;
+      font-size: rem(24px);
+    }
   }
   &-text {
     font-size: rem(24px);
@@ -275,6 +285,7 @@ textarea {
   &-link {
     color: #000000;
     background: $colorYellow;
+    box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
 
     &:hover {
       color: #fff;
@@ -286,6 +297,7 @@ textarea {
     background-color: #fff;
     color: #000;
     cursor: default;
+    box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
   }
 
   &-btn {
@@ -300,7 +312,7 @@ textarea {
     margin: 0px 28px;
     background: $colorCyan;
     border-radius: 8px;
-
+    box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
     &:hover {
       color: #000;
       background: $colorYellow;

@@ -538,6 +538,8 @@ textarea {
 .ui-pgn-link {
   color: #000000;
   background: #e0fe02;
+  -webkit-box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .ui-pgn-link:hover {
@@ -549,6 +551,8 @@ textarea {
   background-color: #fff;
   color: #000;
   cursor: default;
+  -webkit-box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .ui-pgn-btn {
@@ -563,6 +567,8 @@ textarea {
   margin: 0px 28px;
   background: #007bfd;
   border-radius: 8px;
+  -webkit-box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .ui-pgn-btn:hover {
@@ -1373,7 +1379,58 @@ body {
 }
 
 .event {
-  margin-bottom: 150px;
+  position: relative;
+  margin-bottom: 242px;
+}
+
+.event-title {
+  font-size: 3.25rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.event-text {
+  max-width: 540px;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.event-sticker-photo {
+  position: absolute;
+  right: 261px;
+  top: -30px;
+  width: 163px;
+  height: 163px;
+  -webkit-box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
+  border-radius: 20px;
+}
+
+.event-sticker-photo img {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.event-sticker-chees {
+  position: absolute;
+  right: 5px;
+  top: 95px;
+  height: 143px;
+  line-height: 143px;
+  padding: 0 30px;
+  -webkit-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  transform: rotate(-25deg);
+  font-size: 5rem;
+  font-weight: 500;
+  border-radius: 70px;
 }
 
 .gentleman {
@@ -1488,6 +1545,34 @@ body {
 
 .histories-pgn-link {
   padding: 0 38px;
+  -webkit-box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.lady {
+  background: #007bfd;
+  padding: 124px 0px 170px 0px;
+}
+
+.lady-btn {
+  background: #e0fe02;
+  color: #1a140f;
+}
+
+.lady-btn:hover {
+  background: #c6df0d;
+}
+
+.lady-btn-skip {
+  background: #0e0060;
+}
+
+.lady-pgn-link:hover {
+  background: #0e0060;
+}
+
+.lady-likes {
+  background: #0e0060;
 }
 
 .certificate {
@@ -2542,6 +2627,7 @@ input[type=radio] {
 
   .broadcast {
     padding-top: 200px;
+    margin-bottom: 200px;
   }
 
   .popup-form-text {
@@ -2803,6 +2889,12 @@ input[type=radio] {
     max-width: 100%;
   }
 
+  .ui-header-sticker {
+    height: 78px;
+    line-height: 78px;
+    font-size: 2.625rem;
+  }
+
   .ui-header-text {
     font-size: 1.25rem;
   }
@@ -2883,6 +2975,7 @@ input[type=radio] {
 
   .broadcast {
     padding-top: 150px;
+    margin-bottom: 170px;
   }
 
   .gentleman-title {
@@ -3113,6 +3206,12 @@ input[type=radio] {
     max-width: 100%;
   }
 
+  .ui-header-sticker {
+    height: 58px;
+    line-height: 58px;
+    font-size: 1.5rem;
+  }
+
   .ui-header-text {
     font-size: 1.125rem;
   }
@@ -3202,6 +3301,7 @@ input[type=radio] {
 
   .broadcast {
     padding-top: 100px;
+    margin-bottom: 150px;
   }
 
   .gentleman-title {

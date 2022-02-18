@@ -684,16 +684,58 @@ body {
   }
   @media (max-width: 776px) {
     padding-top: 200px;
+    margin-bottom: 200px;
   }
   @media (max-width: 576px) {
     padding-top: 150px;
+    margin-bottom: 170px;
   }
   @media (max-width: 400px) {
     padding-top: 100px;
+    margin-bottom: 150px;
   }
 }
 .event {
-  margin-bottom: 150px;
+  position: relative;
+  margin-bottom: 242px;
+  &-title {
+    font-size: rem(52px);
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  &-text {
+    max-width: 540px;
+    font-size: rem(24px);
+    line-height: 1.5;
+  }
+  &-sticker-photo {
+    position: absolute;
+    right: 261px;
+    top: -30px;
+    width: 163px;
+    height: 163px;
+    box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
+    transform: rotate(20deg);
+    border-radius: 20px;
+    img {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+  }
+  &-sticker-chees {
+    position: absolute;
+    right: 5px;
+    top: 95px;
+    height: 143px;
+    line-height: 143px;
+    padding: 0 30px;
+    transform: rotate(-25deg);
+    font-size: rem(80px);
+    font-weight: 500;
+    border-radius: 70px;
+  }
 }
 .gentleman {
   margin-bottom: 200px;
@@ -711,6 +753,7 @@ body {
     margin-bottom: 80px;
   }
 }
+
 .histories-list {
   margin-bottom: 30px;
   position: relative;
@@ -815,8 +858,10 @@ body {
   padding: 20px 0px;
   margin-bottom: 110px;
   border-radius: 100px;
+
   &-link {
     padding: 0 38px;
+    box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
   }
   @media (max-width: 992px) {
     display: block;
@@ -826,6 +871,28 @@ body {
     margin-right: -100px;
     padding: 20px 10px 40px;
     margin-bottom: 60px;
+  }
+}
+.lady {
+  background: $colorCyan;
+  padding: 124px 0px 170px 0px;
+  &-btn {
+    background: $colorYellow;
+    color: $colorBlack;
+    &:hover {
+      background: #c6df0d;
+    }
+    &-skip {
+      background: $colorBlue;
+    }
+  }
+  &-pgn-link {
+    &:hover {
+      background: $colorBlue;
+    }
+  }
+  &-likes {
+    background: $colorBlue;
   }
 }
 .certificate {
