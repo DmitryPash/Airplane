@@ -163,6 +163,14 @@ body {
     border: 2px solid #fff;
     border-radius: 25px;
     overflow: hidden;
+    video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: black;
+    }
   }
   &-frame {
     width: 100%;
@@ -677,11 +685,11 @@ body {
   }
   @media (max-width: 576px) {
     padding-top: 150px;
-    margin-bottom: 170px;
+    margin-bottom: 150px;
   }
   @media (max-width: 400px) {
     padding-top: 100px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
   }
 }
 .event {
@@ -691,6 +699,9 @@ body {
     font-size: rem(52px);
     font-weight: 500;
     margin-bottom: 30px;
+    @media (max-width: 400px) {
+      font-size: rem(40px);
+    }
   }
   &-text {
     max-width: 540px;
@@ -729,7 +740,7 @@ body {
     @media (max-width: 768px) {
       width: 53px;
       height: 53px;
-      bottom: -92px;
+      bottom: -53px;
       top: auto;
     }
   }
@@ -758,7 +769,7 @@ body {
       height: 83px;
       line-height: 83px;
       font-size: rem(50px);
-      bottom: -195px;
+      bottom: -149px;
       top: auto;
     }
   }
@@ -769,7 +780,7 @@ body {
     margin-bottom: 150px;
   }
   @media (max-width: 400px) {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
   &-title {
     font-size: rem(52px);
@@ -783,6 +794,9 @@ body {
   }
   &-header {
     margin-bottom: 80px;
+    @media (max-width: 400px) {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -794,7 +808,9 @@ body {
 .histories-card {
   position: relative;
   margin-bottom: 40px;
-
+  @media (max-width: 400px) {
+    margin-bottom: 20px;
+  }
   .ui-video {
     display: block;
     margin-bottom: 15px;
@@ -895,8 +911,14 @@ body {
     color: $colorBlack;
     line-height: 1.5;
     z-index: 2;
+    overflow: hidden;
     &:hover {
       display: block;
+    }
+    @media (max-width: 400px) {
+      height: 226px;
+      font-size: rem(9px);
+      top: 42%;
     }
   }
 
@@ -970,7 +992,7 @@ body {
     background: $colorBlue;
   }
   @media (max-width: 400px) {
-    padding: 60px 0px 50px 0px;
+    padding: 60px 0px 70px 0px;
   }
 }
 .certificate {
