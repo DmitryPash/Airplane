@@ -1,0 +1,74 @@
+<div class="mfp-popup zoom-anim-dialog popup-upload">
+   <div class=" mfp-popup-inner">
+      <div class="mfp-popup-header">
+         <div class="thanks-sticker ui-btn-sticker ui-yellow">#отправьсвоефото</div>
+      </div>
+      <div class="form-container">
+         <form id="form_upload">
+            <div class="upload-container-field">
+               <div class="ui-field">
+                  <label for="name" class="ui-field-label upload-label">Твое имя</label>
+                  <input type="text" name="name" placeholder="Введите свое имя" class="ui-input upload-input" required>
+               </div>
+               <div class="ui-field">
+                  <label for="lastname" class="ui-field-label upload-label">Твоя фамилия</label>
+                  <input type="text" name="lastname" placeholder="Введите свою фамилию" class="ui-input upload-input"
+                     required>
+               </div>
+            </div>
+            <div class="ui-field ui-field-upload ui-centered">
+               <div class="ui-uploader">
+                  <span class="ui-uploader-link ui-centered">Прикрепить файл</span>
+                  <input type="file" name="files" id="files" accept=".jpg,.jpeg,.png" required>
+
+               </div>
+               <div class="ui-uploader-previews"></div>
+
+               <div class="upload-hint ui-centered">Требования к загрузке файлов:
+                  Фото в форматах .jpg, .jpeg, .png, не более 2 мб.</div>
+            </div>
+
+            <div class="ui-field-btn ui-centered">
+               <button class="upload-btn ui-btn" type="submit">Загрузить</button>
+            </div>
+
+         </form>
+      </div>
+
+   </div>
+
+   <script>
+      function popupInit() {
+         $('form#form_upload').validate({
+            errorElement: 'div',
+            errorClass: "upload-error",
+            rules: {
+               name: {
+                  lettersonly: true
+               },
+               lastname: {
+                  lettersonly: true
+               },
+               files: {
+                  required: true
+               }
+            },
+            messages: {
+               name: {
+                  required: "Пожалуйста введите своё имя",
+                  lettersonly: "Введите корректное имя",
+               },
+               lastname: {
+                  required: "Пожалуйста введите свою фамилию",
+                  lettersonly: "Введите корректную фамилию",
+               },
+               files: {
+                  required: "Пожалуйста выберете файл",
+               },
+            },
+         });
+      }
+
+      jQuery(document).ready(popupInit)
+   </script>
+</div>

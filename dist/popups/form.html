@@ -1,73 +1,102 @@
-<div class="zoom-anim-dialog popup-form">
-   <div class="thanks-sticker ui-btn-sticker ui-yellow">
-      #отправьсвоефото
-   </div>
-   <div class="form-container">
-      <form action="" id="form-validation">
-         <div class="ui-field">
-            <label for="name" class="ui-label">
-               Твое имя
-            </label>
-            <input type="text" placeholder="Введи свое имя" name="name" class="ui-input">
-         </div>
-         <div class="ui-field">
-            <label for="secondname" class="ui-label">
-               Твоя фамилия
-            </label>
-            <input type="text" placeholder="Введи свою фамилию" name="secondname" class="ui-input">
-         </div>
-         <div class="ui-field field-upload-photo">
-            <label for="upload_photo" class="ui-label upload-photo">
-               <img src="../images/icon/upload.svg" alt="alt"> Прикрепить файл
-            </label>
-            <input type="checkbox" name="upload_photo" class="file-input" id="upload_photo">
-            <div class="upload-photo-type">
-               Требования к загрузке файлов:
-               Фото в форматах .jpg, .jpeg, .png, не более 2 мб.
+<div class="mfp-popup zoom-anim-dialog popup-form">
+   <div class=" mfp-popup-inner">
+      <div class="mfp-popup-header">
+         <div class="thanks-sticker ui-btn-sticker ui-yellow">#отправьсвоефото</div>
+      </div>
+
+      <form id="form_upload">
+         <div class="form-container-field">
+            <div class="row">
+               <div class="col-6">
+                  <div class="ui-field">
+                     <label for="name" class="ui-field-label upload-label">Твое имя</label>
+                     <input type="text" name="name" placeholder="Введите свое имя" class="ui-input upload-input"
+                        required>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div class="ui-field">
+                     <label for="lastname" class="ui-field-label upload-label">Твоя фамилия</label>
+                     <input type="text" name="lastname" placeholder="Введите свою фамилию" class="ui-input upload-input"
+                        required>
+                  </div>
+               </div>
+               <div class="col-12">
+                  <div class="form-textarea-container">
+                     <div class="ui-field">
+                        <label for="textarea" class="ui-field-label upload-label">Твоя история</label>
+                        <textarea placeholder="Напиши свою историю фотографии" name="textarea"
+                           class="form-text-field"></textarea>
+                     </div>
+                  </div>
+
+               </div>
             </div>
+
+
          </div>
-         <button class="popup-form-btn form-btn ui-btn" type="submit">Загрузить</button>
+         <div class="ui-field ui-field-upload ui-centered">
+            <div class="ui-uploader">
+               <span class="ui-uploader-link ui-centered">Прикрепить файл</span>
+               <input type="file" name="files" id="files" accept=".jpg,.jpeg,.png" required>
+
+            </div>
+            <div class="ui-uploader-previews"></div>
+
+            <div class="upload-hint ui-centered">Требования к загрузке файлов: <br>
+               Фото в форматах .jpg, .jpeg, .png, не более 2 мб.</div>
+         </div>
+
+         <div class="ui-field-btn ui-centered">
+            <button class="upload-btn ui-btn" type="submit">Загрузить</button>
+         </div>
+
       </form>
+
+
    </div>
 
    <script>
-      $(document).ready(function () {
-         $("#form-validation").validate({
-            errorElement: 'span',
-            errorPlacement: function (error, element) {
-               if (element.attr("type") == "checkbox") {
-                  return element.next('label').append(error);
-               }
-
-               error.insertAfter($(element));
-            },
+      function popupInit() {
+         $('form#form_upload').validate({
+            errorElement: 'div',
+            errorClass: "upload-error",
             rules: {
                name: {
-                  required: true,
-                  lettersonly: true,
+                  lettersonly: true
                },
-               secondname: {
-                  required: true,
-                  lettersonly: true,
+               lastname: {
+                  lettersonly: true
                },
-               upload_photo: {
+               files: {
+                  required: true
+               },
+               textarea: {
                   required: true,
+                  maxlength: 360
                }
-
             },
             messages: {
                name: {
-                  required: "Пожалуйста введите своё имя",
+                  required: "Пожалуйста, введите своё имя",
                   lettersonly: "Введите корректное имя",
                },
-               secondname: {
-                  required: "Пожалуйста введите свою фамилию",
+               lastname: {
+                  required: "Пожалуйста, введите свою фамилию",
                   lettersonly: "Введите корректную фамилию",
                },
+               files: {
+                  required: "Прикрепите своё фото",
+               },
+               textarea: {
+                  required: "Пожалуйста, напишите свою историю",
+                  maxlength: "Введите не больше 360 символов",
+               }
+
             },
          });
+      }
 
-      });
-
+      jQuery(document).ready(popupInit)
    </script>
 </div>

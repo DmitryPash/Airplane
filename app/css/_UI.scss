@@ -189,8 +189,9 @@ textarea {
 .ui-field {
   position: relative;
   margin-bottom: 16px;
-  color: #fa5353;
+  color: #ff7070;
   text-align: left;
+  font-weight: 500;
   &-upload {
     margin-bottom: 30px;
   }
@@ -207,9 +208,10 @@ textarea {
   font-size: rem(16px);
   border: 1px solid #ffffff00;
   color: #000;
-  ::placeholder {
+  &::placeholder {
     font-family: $ffCoFo;
-    color: #8b8d9b;
+    color: #c0c0c0;
+    font-size: rem(18px);
   }
   &:focus {
     border: 1px solid $colorBlue;
@@ -400,7 +402,32 @@ textarea {
 .ui-btn-sticker {
   box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
 }
-
+.ui-video-play {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: $colorYellow;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  cursor: pointer;
+  transition: box-shadow 0.4s, transform 0.4s;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    top: 50%;
+    margin-left: 4px;
+    transform: translate(-50%, -50%);
+    background: url(../images/icon/play.svg) center no-repeat;
+    background-size: contain;
+    transition: transform 0.4s;
+  }
+}
 .ui-uploader {
   position: relative;
   display: inline-block;

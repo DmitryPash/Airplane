@@ -11,22 +11,25 @@ let path = {
     images: dist + "/images/",
     popups: dist + "/popups/",
     fonts: dist + "/fonts/cofo/",
+    media: dist + "/media/",
   },
   src: {
     html: app + "/*.html",
     css: app + "/css/*.scss",
     js: app + "/js/*.js",
-    images: app + "/images/**/*.{jpg,png,svg,gif,ico,webp}",
+    images: app + "/images/**/*.{jpg,png,svg,gif,ico,webp,mp4}",
     popups: app + "/popups/*.html",
     fonts: app + "/fonts/cofo/*",
+    media: dist + "/media/*.{mp4}",
   },
   watch: {
     html: app + "/**/*.html",
     css: app + "/css/**/*.scss",
     js: app + "/js/**/*.js",
-    images: app + "/images/**/*.{jpg,png,svg,gif,ico,webp}",
+    images: app + "/images/**/*.{jpg,png,svg,gif,ico,webp,mp4}",
     fonts: app + "/fonts/cofo/*",
     popups: app + "/popups/*.html",
+    media: app + "/media/*.{mp4}",
   },
   clean: "./" + dist + "/",
 };
@@ -82,12 +85,7 @@ function js() {
     .pipe(browsersync.stream());
 }
 function fonts() {
-  return (
-    src(path.src.fonts)
-      // .pipe(fileinclude())
-      .pipe(dest(path.build.fonts))
-  );
-  // .pipe(browsersync.stream());
+  return src(path.src.fonts).pipe(dest(path.build.fonts));
 }
 
 function images() {
@@ -100,6 +98,10 @@ function popups() {
     .pipe(fileinclude())
     .pipe(dest(path.build.popups))
     .pipe(browsersync.stream());
+}
+
+function media() {
+  return src(path.src.media).pipe(dest(path.build.media));
 }
 
 gulp.task("svgSprite", function () {
@@ -123,11 +125,14 @@ function watchFiles() {
   gulp.watch([path.watch.css], css);
   gulp.watch([path.watch.js], js);
   gulp.watch([path.watch.fonts], fonts);
+  gulp.watch([path.watch.media], media);
   gulp.watch([path.watch.images], images);
   gulp.watch([path.watch.popups], popups);
 }
 
-let build = gulp.series(gulp.parallel(js, css, html, images, popups, fonts));
+let build = gulp.series(
+  gulp.parallel(js, css, html, images, popups, fonts, media)
+);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.images = images;
@@ -139,3 +144,4 @@ exports.build = build;
 exports.watch = watch;
 exports.default = watch;
 exports.popups = popups;
+exports.media = media;

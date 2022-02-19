@@ -425,8 +425,9 @@ textarea {
 .ui-field {
   position: relative;
   margin-bottom: 16px;
-  color: #fa5353;
+  color: #ff7070;
   text-align: left;
+  font-weight: 500;
 }
 
 .ui-field-upload {
@@ -446,29 +447,34 @@ textarea {
   color: #000;
 }
 
-.ui-input ::-webkit-input-placeholder {
+.ui-input::-webkit-input-placeholder {
   font-family: "CoFo Sans";
-  color: #8b8d9b;
+  color: #c0c0c0;
+  font-size: 1.125rem;
 }
 
-.ui-input ::-moz-placeholder {
+.ui-input::-moz-placeholder {
   font-family: "CoFo Sans";
-  color: #8b8d9b;
+  color: #c0c0c0;
+  font-size: 1.125rem;
 }
 
-.ui-input :-ms-input-placeholder {
+.ui-input:-ms-input-placeholder {
   font-family: "CoFo Sans";
-  color: #8b8d9b;
+  color: #c0c0c0;
+  font-size: 1.125rem;
 }
 
-.ui-input ::-ms-input-placeholder {
+.ui-input::-ms-input-placeholder {
   font-family: "CoFo Sans";
-  color: #8b8d9b;
+  color: #c0c0c0;
+  font-size: 1.125rem;
 }
 
-.ui-input ::placeholder {
+.ui-input::placeholder {
   font-family: "CoFo Sans";
-  color: #8b8d9b;
+  color: #c0c0c0;
+  font-size: 1.125rem;
 }
 
 .ui-input:focus {
@@ -616,6 +622,46 @@ textarea {
 .ui-btn-sticker {
   -webkit-box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
   box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ui-video-play {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: #e0fe02;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.4s, -webkit-transform 0.4s;
+  transition: -webkit-box-shadow 0.4s, -webkit-transform 0.4s;
+  -o-transition: box-shadow 0.4s, transform 0.4s;
+  transition: box-shadow 0.4s, transform 0.4s;
+  transition: box-shadow 0.4s, transform 0.4s, -webkit-box-shadow 0.4s, -webkit-transform 0.4s;
+}
+
+.ui-video-play:after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 50%;
+  top: 50%;
+  margin-left: 4px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: url(../images/icon/play.svg) center no-repeat;
+  background-size: contain;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  -o-transition: transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 .ui-uploader {
@@ -1039,7 +1085,6 @@ body {
   height: 100%;
   left: 0;
   top: 0;
-  background: black;
 }
 
 .video-frame {
@@ -1323,6 +1368,33 @@ body {
 .swiper-slide-active .podcasts-card-play {
   visibility: visible;
   opacity: 1;
+}
+
+.podcasts-slider-pgn .swiper-pagination-bullet {
+  display: inline-block;
+  position: relative;
+  height: 80px;
+  width: 230px;
+  line-height: 80px;
+  background: #007bfd;
+  font-weight: 400;
+  font-size: 1.375rem;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  position: relative;
+  z-index: 99999;
 }
 
 .broadcast {
@@ -1795,8 +1867,8 @@ input[type=radio] {
   background: #007bfd;
   position: relative;
   margin: 20px auto;
-  max-width: 930px;
-  padding: 100px 20px 100px 20px;
+  max-width: 784px;
+  padding: 85px 125px 85px 125px;
   border-radius: 16px;
 }
 
@@ -1853,6 +1925,10 @@ input[type=radio] {
 
 .popup-form-btn:hover {
   background: #4258ff;
+}
+
+.popup-form .upload-hint {
+  font-size: 0.75rem;
 }
 
 .mfp-close {
@@ -2118,6 +2194,54 @@ input[type=radio] {
   line-height: 80px;
   padding: 0px 30px;
   font-size: 1.375rem;
+}
+
+.form-textarea-container {
+  margin-bottom: 30px;
+}
+
+.form-text-field {
+  padding: 16px 24px;
+  width: 100%;
+  height: 174px;
+  border-radius: 8px;
+  resize: none;
+  font-size: 1.125rem;
+  border: 1px solid #ffffff00;
+}
+
+.form-text-field::-webkit-input-placeholder {
+  color: #c0c0c0;
+  font-size: 1.125rem;
+  font-family: "CoFo Sans", sans-serif;
+}
+
+.form-text-field::-moz-placeholder {
+  color: #c0c0c0;
+  font-size: 1.125rem;
+  font-family: "CoFo Sans", sans-serif;
+}
+
+.form-text-field:-ms-input-placeholder {
+  color: #c0c0c0;
+  font-size: 1.125rem;
+  font-family: "CoFo Sans", sans-serif;
+}
+
+.form-text-field::-ms-input-placeholder {
+  color: #c0c0c0;
+  font-size: 1.125rem;
+  font-family: "CoFo Sans", sans-serif;
+}
+
+.form-text-field::placeholder {
+  color: #c0c0c0;
+  font-size: 1.125rem;
+  font-family: "CoFo Sans", sans-serif;
+}
+
+.form-text-field:hover {
+  border: 1px solid #0e0060;
 }
 
 .popup-upload {
