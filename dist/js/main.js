@@ -88,14 +88,13 @@ const swiper = new Swiper(".top-screen-container", {
   },
 });
 
-var menu = ["Slide 1", "Slide 2", "Slide 3"];
+// var menu = ["Slide 1", "Slide 2", "Slide 3"];
 const swiperPodcasts = new Swiper(".podcasts-slider", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
   loop: true,
   slidesPerView: "auto",
-  // focusableElements: "button",
   coverflowEffect: {
     rotate: 0,
     stretch: 350,
@@ -112,9 +111,27 @@ const swiperPodcasts = new Swiper(".podcasts-slider", {
   //   el: ".podcasts-slider-pgn",
   //   clickable: true,
   //   renderBullet: function (index, className) {
-  //     return '<span class="' + className + '">' + menu[index] + "</span>";
+  //     return (
+  //       '<span class="' +
+  //       className +
+  //       '">' +
+  //       "Скачать конспект лекции" +
+  //       "</span>"
+  //     );
   //   },
   // },
+  breakpoints: {
+    1170: {
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 100,
+        depth: 80,
+        scale: 0.85,
+        modifier: 1,
+        slideShadows: false,
+      },
+    },
+  },
 });
 swiperPodcasts.on("slideChange", function () {
   $(".podcasts-slider iframe").remove();
@@ -131,18 +148,35 @@ $(document).on("click", ".podcasts-card-play", function (e) {
   }
 });
 
+const videoSticker = document.querySelector(".video-sticker");
+const videoStickerText = document.querySelector(".video-sticker-text");
 const videos = document.querySelectorAll(".ui-video video");
 videos.forEach((el) => {
   el.addEventListener("playing", function () {
     this.nextElementSibling.style.display = "none";
+
     this.controls = true;
   });
   //отображаем кнопку при паузе видео
   el.addEventListener("pause", function () {
     this.nextElementSibling.style.display = "block";
+    videoSticker.style.display = "block";
+    videoStickerText.style.display = "block";
   });
   //прячем кнопку при запуске видео через нативные контролы
   el.addEventListener("play", function () {
     this.nextElementSibling.style.display = "none";
+    videoSticker.style.display = "none";
+    videoStickerText.style.display = "none";
   });
+});
+
+$(document).on("click", ".ui-video-play", function (e) {
+  e.preventDefault();
+  const video = $(this).prev("video").get(0) || null;
+  if (video) {
+    video.controls = true;
+    video.play();
+  }
+  return false;
 });

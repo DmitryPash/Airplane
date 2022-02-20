@@ -425,7 +425,6 @@ textarea {
 .ui-field {
   position: relative;
   margin-bottom: 16px;
-  color: #ff7070;
   text-align: left;
   font-weight: 500;
 }
@@ -1135,6 +1134,12 @@ body {
   top: 0;
 }
 
+.ui-video-play:hover {
+  -webkit-transform: translate(-50%, -50%) scale(1.05);
+  -ms-transform: translate(-50%, -50%) scale(1.05);
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
 .lectures {
   position: relative;
   margin-bottom: 113px;
@@ -1558,6 +1563,7 @@ body {
   overflow: hidden;
   background: #fff;
   border-radius: 30px;
+  border: 1px solid #fff;
 }
 
 .histories-card-img.mfp-gallery {
@@ -1585,7 +1591,7 @@ body {
 
 .histories-card-bottom {
   position: relative;
-  padding-right: 100px;
+  padding-right: 115px;
 }
 
 .histories-card-author {
@@ -1594,14 +1600,14 @@ body {
 
 .histories-card-likes {
   position: absolute;
-  right: 0;
+  right: 8px;
   top: 2px;
 }
 
 .histories-card-likes-counter {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 9px;
+  margin-right: 4px;
   height: 25px;
   line-height: 25px;
   min-width: 45px;
@@ -2280,6 +2286,9 @@ input[type=radio] {
 
 .upload-error {
   font-size: 0.75rem;
+  color: #ff7070;
+  text-align: left;
+  font-weight: 500;
 }
 
 .upload-container-field {

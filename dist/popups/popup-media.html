@@ -1,0 +1,46 @@
+<div class="mfp-popup zoom-anim-dialog popup-media">
+  <div class="popup-media-slider swiper">
+    <div class="swiper-wrapper"></div>
+    <div class="swiper-button-next popup-media-next"></div>
+    <div class="swiper-button-prev popup-media-prev"></div>
+  </div>
+  <script>
+    function popupInit() {
+      $('.mfp-gallery').each(function(key,item){
+        const source = $(item).attr('data-src') || null
+        const video = $(item).attr('data-video') || null
+        const author = $(item).attr('data-author') || ''
+
+        let entity
+        if (source) {
+          entity = `<img class="popup-media-img" src="${source}" />`
+        }	else if (video) {
+          entity = `<video class="popup-media-video" preload="metadata" controls src="${video}"></video>`
+        }
+
+        let slide = `<div class="swiper-slide"><div class="popup-media-slide">${entity}<div class="popup-media-title">${author}</div></div></div>`
+
+        $('.popup-media-slider .swiper-wrapper').append(slide)
+      })
+
+      const swiperMedia = new Swiper(".popup-media-slider", {
+        slidesPerView: 1,
+        autoHeight: true,
+        navigation: {
+          nextEl: ".popup-media-next",
+          prevEl: ".popup-media-prev",
+        }
+      });
+
+      swiperMedia.slideTo(FARBA.galleryCurrentIndex)
+
+      swiperMedia.on('slideChange', function () {
+        $(".popup-media-slider video").each(function(key,item){
+          $(item).get(0).pause()
+        });
+      });
+    }
+    
+    jQuery(document).ready(popupInit)
+  </script>
+</div>
