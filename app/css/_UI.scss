@@ -426,6 +426,22 @@ textarea {
     background-size: contain;
     transition: transform 0.4s;
   }
+  @media (max-width: 576px) {
+    width: 100px;
+    height: 100px;
+    &:after {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  @media (max-width: 400px) {
+    width: 60px;
+    height: 60px;
+    &:after {
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
 .ui-uploader {
   position: relative;

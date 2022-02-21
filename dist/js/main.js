@@ -1,3 +1,44 @@
+const FARBA = {
+  galleryCurrentIndex: 0,
+
+  //функция для навешивания изображений фоном
+  backgrounded(selector) {
+    $(selector).each(function () {
+      var $this = $(this),
+        $src = $this.find(".ui-backgrounded-bg").attr("src");
+      if ($this.find(".ui-backgrounded-bg").length) {
+        $this
+          .addClass("backgrounded")
+          .css("backgroundImage", "url(" + $src + ")");
+      }
+    });
+  },
+
+  //lazy load для сторонних либ
+  lazyLibraryLoad(scriptSrc, linkHref, callback) {
+    let script;
+    const domScript = document.querySelector(`script[src="${scriptSrc}"]`);
+
+    if (!domScript) {
+      script = document.createElement("script");
+      script.src = scriptSrc;
+      document.querySelector("#wrapper").after(script);
+    }
+
+    if (linkHref !== "") {
+      let style = document.createElement("link");
+      style.href = linkHref;
+      style.rel = "stylesheet";
+      document.querySelector("link").before(style);
+    }
+
+    if (!domScript) {
+      script.onload = callback;
+    } else {
+      domScript.onload = callback;
+    }
+  },
+};
 //инициализация MFP popup для форм
 $(document).on("click", ".mfp-link", function () {
   var a = $(this);
@@ -20,6 +61,32 @@ $(document).on("click", ".mfp-link", function () {
     },
   });
   return false;
+});
+$(document).on("click", ".mfp-gallery", function (e) {
+  e.preventDefault();
+  const _this = $(this);
+
+  $.magnificPopup.open({
+    items: { src: _this.attr("data-href") },
+    type: "ajax",
+    overflowY: "scroll",
+    removalDelay: 800,
+    mainClass: "my-mfp-zoom-in",
+    ajax: {
+      tError: "Error. Not valid url",
+    },
+    callbacks: {
+      ajaxContentAdded: function () {
+        setTimeout(function () {
+          $(".mfp-wrap, .mfp-bg").addClass("not_delay");
+          $(".mfp-popup").addClass("not_delay");
+        }, 700);
+      },
+    },
+  });
+
+  FARBA.galleryCurrentIndex = $(this).closest(".col-us-6").index();
+  // console.log(FARBA.galleryCurrentIndex);
 });
 
 $(document).ready(function () {
@@ -107,19 +174,7 @@ const swiperPodcasts = new Swiper(".podcasts-slider", {
     nextEl: ".podcasts-slider-next",
     prevEl: ".podcasts-slider-prev",
   },
-  // pagination: {
-  //   el: ".podcasts-slider-pgn",
-  //   clickable: true,
-  //   renderBullet: function (index, className) {
-  //     return (
-  //       '<span class="' +
-  //       className +
-  //       '">' +
-  //       "Скачать конспект лекции" +
-  //       "</span>"
-  //     );
-  //   },
-  // },
+
   breakpoints: {
     1170: {
       coverflowEffect: {
@@ -148,8 +203,6 @@ $(document).on("click", ".podcasts-card-play", function (e) {
   }
 });
 
-const videoSticker = document.querySelector(".video-sticker");
-const videoStickerText = document.querySelector(".video-sticker-text");
 const videos = document.querySelectorAll(".ui-video video");
 videos.forEach((el) => {
   el.addEventListener("playing", function () {
@@ -160,14 +213,10 @@ videos.forEach((el) => {
   //отображаем кнопку при паузе видео
   el.addEventListener("pause", function () {
     this.nextElementSibling.style.display = "block";
-    videoSticker.style.display = "block";
-    videoStickerText.style.display = "block";
   });
   //прячем кнопку при запуске видео через нативные контролы
   el.addEventListener("play", function () {
     this.nextElementSibling.style.display = "none";
-    videoSticker.style.display = "none";
-    videoStickerText.style.display = "none";
   });
 });
 
