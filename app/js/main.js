@@ -65,7 +65,6 @@ $(document).on("click", ".mfp-link", function () {
 $(document).on("click", ".mfp-gallery", function (e) {
   e.preventDefault();
   const _this = $(this);
-
   $.magnificPopup.open({
     items: { src: _this.attr("data-href") },
     type: "ajax",
@@ -85,34 +84,12 @@ $(document).on("click", ".mfp-gallery", function (e) {
     },
   });
 
-  FARBA.galleryCurrentIndex = $(this).closest(".col-us-6").index();
-  // console.log(FARBA.galleryCurrentIndex);
+  FARBA.galleryCurrentIndex = $(this).closest(".col-us-12").index();
+  console.log(FARBA.galleryCurrentIndex);
 });
-$(document).on("click", ".mfp-lady", function (e) {
-  e.preventDefault();
-  const _this = $(this);
 
-  $.magnificPopup.open({
-    items: { src: _this.attr("data-href") },
-    type: "ajax",
-    overflowY: "scroll",
-    removalDelay: 800,
-    mainClass: "my-mfp-zoom-in",
-    ajax: {
-      tError: "Error. Not valid url",
-    },
-    callbacks: {
-      ajaxContentAdded: function () {
-        setTimeout(function () {
-          $(".mfp-wrap, .mfp-bg").addClass("not_delay");
-          $(".mfp-popup").addClass("not_delay");
-        }, 700);
-      },
-    },
-  });
-
-  FARBA.galleryCurrentIndex = $(this).closest(".col-us-6").index();
-  // console.log(FARBA.galleryCurrentIndex);
+$(document).on("click", ".histories-card-text", function () {
+  $(this).closest(".histories-card").find("a").click();
 });
 
 $(document).ready(function () {
@@ -181,7 +158,6 @@ const swiper = new Swiper(".top-screen-container", {
   },
 });
 
-// var menu = ["Slide 1", "Slide 2", "Slide 3"];
 const swiperPodcasts = new Swiper(".podcasts-slider", {
   effect: "coverflow",
   grabCursor: true,

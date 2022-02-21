@@ -104,6 +104,94 @@ body {
     margin-bottom: 100px;
   }
 }
+.miss {
+  position: relative;
+  margin-bottom: 400px;
+  &-title {
+    font-size: rem(52px);
+    font-weight: 500;
+    margin-bottom: 30px;
+    @media (max-width: 992px) {
+      font-size: rem(42px);
+    }
+    @media (max-width: 576px) {
+      font-size: rem(38px);
+    }
+    @media (max-width: 400px) {
+      font-size: rem(30px);
+    }
+  }
+  &-text {
+    max-width: 540px;
+    line-height: 1.5;
+    margin-bottom: 45px;
+  }
+  &-sticker-chees {
+    height: 92px;
+    line-height: 92px;
+    padding: 0 40px;
+    font-size: rem(48px);
+    font-weight: 500;
+    border-radius: 70px;
+    @media (max-width: 1170px) {
+      height: 82px;
+      line-height: 82px;
+      font-size: rem(38px);
+    }
+    @media (max-width: 992px) {
+      height: 62px;
+      line-height: 62px;
+      font-size: rem(32px);
+    }
+    @media (max-width: 768px) {
+      height: 52px;
+      line-height: 52px;
+      font-size: rem(24px);
+    }
+    @media (max-width: 576px) {
+      height: 32px;
+      line-height: 32px;
+      font-size: rem(22px);
+    }
+  }
+  &-sticker-donotmiss {
+    position: absolute;
+    right: 62px;
+    top: 47px;
+    transform: rotate(-15.4deg);
+    height: 135px;
+    line-height: 135px;
+    padding: 0 40px;
+    font-size: rem(55px);
+    font-weight: 500;
+    border-radius: 40px;
+    @media (max-width: 1170px) {
+      height: 105px;
+      line-height: 105px;
+      padding: 0 25px;
+      border-radius: 30px;
+      font-size: rem(48px);
+    }
+    @media (max-width: 992px) {
+      font-size: rem(42px);
+      top: 240px;
+      right: 0;
+    }
+    @media (max-width: 768px) {
+      // font-size: rem(28px);
+    }
+    @media (max-width: 576px) {
+      height: 55px;
+      line-height: 55px;
+      padding: 0 20px;
+      font-size: rem(28px);
+      border-radius: 20px;
+    }
+  }
+  @media (max-width: 992px) {
+    margin-bottom: 200px;
+  }
+}
 .gifts {
   position: relative;
   // height: 368px;
@@ -1050,6 +1138,10 @@ body {
 }
 .certificate {
   position: relative;
+  margin-bottom: 200px;
+  @media (max-width: 400px) {
+    margin-bottom: 100px;
+  }
   &-header {
     margin: 0 auto;
     padding-top: 300px;
@@ -1072,9 +1164,6 @@ body {
   }
 }
 .certificate-row {
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
   position: relative;
   text-align: left;
 }
@@ -1159,10 +1248,7 @@ body {
     }
   }
 }
-// input[type="radio"]:checked + .certificate-label {
-//   color: $colorBlue;
-//   background: plum;
-// }
+
 .certificate-active * .certificate-label-btn {
   background: $colorYellow;
   font-size: 0;
@@ -1173,6 +1259,54 @@ body {
 }
 input[type="radio"] {
   display: none;
+}
+
+.stream {
+  position: relative;
+  margin-bottom: 100px;
+  @media (max-width: 576px) {
+    margin-bottom: 0px;
+  }
+  &-title {
+    @media (max-width: 400px) {
+      font-size: rem(24px);
+    }
+  }
+  &-text {
+    max-width: 750px;
+    margin-bottom: 60px;
+  }
+  &-btn {
+    padding: 0px 37px;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.2);
+    @media (max-width: 400px) {
+      padding: 0px 33px;
+    }
+  }
+  &-sticker {
+    @media (max-width: 1350px) {
+      right: -90px;
+    }
+    @media (max-width: 1170px) {
+      right: -36px;
+    }
+    @media (max-width: 992px) {
+      bottom: 0;
+      top: initial;
+    }
+  }
+  &-sticker-heart {
+    @media (max-width: 1350px) {
+      right: -71px;
+    }
+    @media (max-width: 1170px) {
+      right: -16px;
+    }
+    @media (max-width: 992px) {
+      bottom: 17px;
+      top: initial;
+    }
+  }
 }
 .file-input {
   display: none;
@@ -1698,10 +1832,4 @@ input[type="radio"] {
 
 .mail-form {
   position: absolute;
-}
-
-// Правик
-
-.lady .span {
-  // поменять стиль ховера - убрать
 }

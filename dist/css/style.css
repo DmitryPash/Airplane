@@ -1028,6 +1028,47 @@ body {
   margin-bottom: 200px;
 }
 
+.miss {
+  position: relative;
+  margin-bottom: 400px;
+}
+
+.miss-title {
+  font-size: 3.25rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.miss-text {
+  max-width: 540px;
+  line-height: 1.5;
+  margin-bottom: 45px;
+}
+
+.miss-sticker-chees {
+  height: 92px;
+  line-height: 92px;
+  padding: 0 40px;
+  font-size: 3rem;
+  font-weight: 500;
+  border-radius: 70px;
+}
+
+.miss-sticker-donotmiss {
+  position: absolute;
+  right: 62px;
+  top: 47px;
+  -webkit-transform: rotate(-15.4deg);
+  -ms-transform: rotate(-15.4deg);
+  transform: rotate(-15.4deg);
+  height: 135px;
+  line-height: 135px;
+  padding: 0 40px;
+  font-size: 3.4375rem;
+  font-weight: 500;
+  border-radius: 40px;
+}
+
 .gifts {
   position: relative;
   padding-top: 300px;
@@ -1705,6 +1746,7 @@ body {
 
 .certificate {
   position: relative;
+  margin-bottom: 200px;
 }
 
 .certificate-header {
@@ -1819,6 +1861,22 @@ body {
 
 input[type=radio] {
   display: none;
+}
+
+.stream {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.stream-text {
+  max-width: 750px;
+  margin-bottom: 60px;
+}
+
+.stream-btn {
+  padding: 0px 37px;
+  -webkit-box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.2);
 }
 
 .file-input {
@@ -2397,6 +2455,14 @@ input[type=radio] {
   .lectures-sticker {
     right: 38px;
   }
+
+  .stream-sticker {
+    right: -90px;
+  }
+
+  .stream-sticker-heart {
+    right: -71px;
+  }
 }
 
 @media (max-width: 1330px) {
@@ -2576,6 +2642,89 @@ input[type=radio] {
     max-width: 100%;
   }
 
+  .header-active {
+    background: #007bfd;
+    padding-bottom: 20px;
+  }
+
+  .header-row {
+    display: block;
+  }
+
+  .toggler {
+    display: block;
+  }
+
+  .toggler > div {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -20px;
+    border-radius: 1px;
+    background: #fff;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    -o-transition: transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+  }
+
+  .toggler-item-1 {
+    -webkit-transform: translate(0, -6px);
+    -ms-transform: translate(0, -6px);
+    transform: translate(0, -6px);
+  }
+
+  .toggler-item-3 {
+    -webkit-transform: translate(0, 6px);
+    -ms-transform: translate(0, 6px);
+    transform: translate(0, 6px);
+  }
+
+  .logo {
+    display: block;
+  }
+
+  .navigation {
+    display: none;
+    width: 100%;
+  }
+
+  .navigation ul {
+    display: block;
+    padding: 30px 0px;
+  }
+
+  .navigation ul li {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .navigation a {
+    font-size: 0.9375rem;
+    height: auto;
+    line-height: 1.35;
+    padding: 10px 0px;
+    margin: 0;
+  }
+
+  .miss-sticker-chees {
+    height: 82px;
+    line-height: 82px;
+    font-size: 2.375rem;
+  }
+
+  .miss-sticker-donotmiss {
+    height: 105px;
+    line-height: 105px;
+    padding: 0 25px;
+    border-radius: 30px;
+    font-size: 3rem;
+  }
+
   .lectures-sticker-heart {
     height: 60px;
     width: 60px;
@@ -2616,6 +2765,14 @@ input[type=radio] {
     font-size: 0.75rem;
     padding: 27px 27px;
     top: 42%;
+  }
+
+  .stream-sticker {
+    right: -36px;
+  }
+
+  .stream-sticker-heart {
+    right: -16px;
   }
 }
 
@@ -2709,75 +2866,6 @@ input[type=radio] {
     max-width: 100%;
   }
 
-  .header-active {
-    background: #007bfd;
-    padding-bottom: 20px;
-  }
-
-  .header-row {
-    display: block;
-  }
-
-  .toggler {
-    display: block;
-  }
-
-  .toggler > div {
-    position: absolute;
-    width: 20px;
-    height: 2px;
-    top: 50%;
-    margin-top: -1px;
-    left: 50%;
-    margin-left: -20px;
-    border-radius: 1px;
-    background: #fff;
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: -webkit-transform 0.2s;
-    -o-transition: transform 0.2s;
-    transition: transform 0.2s;
-    transition: transform 0.2s, -webkit-transform 0.2s;
-  }
-
-  .toggler-item-1 {
-    -webkit-transform: translate(0, -6px);
-    -ms-transform: translate(0, -6px);
-    transform: translate(0, -6px);
-  }
-
-  .toggler-item-3 {
-    -webkit-transform: translate(0, 6px);
-    -ms-transform: translate(0, 6px);
-    transform: translate(0, 6px);
-  }
-
-  .logo {
-    display: block;
-  }
-
-  .navigation {
-    display: none;
-    width: 100%;
-  }
-
-  .navigation ul {
-    display: block;
-    padding: 30px 0px;
-  }
-
-  .navigation ul li {
-    display: block;
-    margin-bottom: 20px;
-  }
-
-  .navigation a {
-    font-size: 0.9375rem;
-    height: auto;
-    line-height: 1.35;
-    padding: 10px 0px;
-    margin: 0;
-  }
-
   .footer-links {
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
@@ -2786,6 +2874,26 @@ input[type=radio] {
 
   .top-screen {
     margin-bottom: 100px;
+  }
+
+  .miss-title {
+    font-size: 2.625rem;
+  }
+
+  .miss-sticker-chees {
+    height: 62px;
+    line-height: 62px;
+    font-size: 2rem;
+  }
+
+  .miss-sticker-donotmiss {
+    font-size: 2.625rem;
+    top: 240px;
+    right: 0;
+  }
+
+  .miss {
+    margin-bottom: 200px;
   }
 
   .gifts {
@@ -2878,6 +2986,16 @@ input[type=radio] {
     margin-left: -100px;
     margin-right: -100px;
     padding: 0;
+  }
+
+  .stream-sticker {
+    bottom: 0;
+    top: initial;
+  }
+
+  .stream-sticker-heart {
+    bottom: 17px;
+    top: initial;
   }
 
   .popup-form {
@@ -3008,6 +3126,12 @@ input[type=radio] {
   .header {
     padding-top: 42px;
     margin-bottom: 58px;
+  }
+
+  .miss-sticker-chees {
+    height: 52px;
+    line-height: 52px;
+    font-size: 1.5rem;
   }
 
   .podcasts-slider-slide {
@@ -3252,6 +3376,24 @@ input[type=radio] {
     padding-bottom: 84px;
   }
 
+  .miss-title {
+    font-size: 2.375rem;
+  }
+
+  .miss-sticker-chees {
+    height: 32px;
+    line-height: 32px;
+    font-size: 1.375rem;
+  }
+
+  .miss-sticker-donotmiss {
+    height: 55px;
+    line-height: 55px;
+    padding: 0 20px;
+    font-size: 1.75rem;
+    border-radius: 20px;
+  }
+
   .gifts-btn {
     height: 50px;
     line-height: 50px;
@@ -3302,6 +3444,10 @@ input[type=radio] {
 
   .certificate-footer-field {
     margin-bottom: 25px;
+  }
+
+  .stream {
+    margin-bottom: 0px;
   }
 
   .popup-form-text {
@@ -3597,6 +3743,10 @@ input[type=radio] {
     padding-bottom: 100px;
   }
 
+  .miss-title {
+    font-size: 1.875rem;
+  }
+
   .gifts-btn {
     height: 40px;
     line-height: 40px;
@@ -3696,12 +3846,24 @@ input[type=radio] {
     padding: 60px 0px 70px 0px;
   }
 
+  .certificate {
+    margin-bottom: 100px;
+  }
+
   .certificate-header {
     padding-top: 120px;
   }
 
   .certificate-text {
     font-size: 1.25rem;
+  }
+
+  .stream-title {
+    font-size: 1.5rem;
+  }
+
+  .stream-btn {
+    padding: 0px 33px;
   }
 
   .popup-form-text {

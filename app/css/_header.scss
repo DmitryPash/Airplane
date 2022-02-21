@@ -26,7 +26,7 @@
   position: relative;
 }
 .header-active {
-  @media (max-width: 992px) {
+  @media (max-width: 1170px) {
     background: $colorCyan;
     padding-bottom: 20px;
   }
@@ -34,7 +34,7 @@
 .header-row {
   display: flex;
   justify-content: space-between;
-  @media (max-width: 992px) {
+  @media (max-width: 1170px) {
     display: block;
   }
 }
@@ -44,7 +44,7 @@
   right: 0;
   bottom: 27px;
 
-  @media (max-width: 992px) {
+  @media (max-width: 1170px) {
     display: block;
     & > div {
       position: absolute;
@@ -94,7 +94,7 @@
       opacity: 0.8;
     }
   }
-  @media (max-width: 992px) {
+  @media (max-width: 1170px) {
     display: block;
   }
 }
@@ -110,7 +110,6 @@
   a {
     height: 67px;
     line-height: 67px;
-    // padding: 0px 15px;
     font-size: rem(15px);
     font-weight: 700;
     letter-spacing: 0.025em;
@@ -121,7 +120,7 @@
       color: $colorYellow;
     }
   }
-  @media (max-width: 992px) {
+  @media (max-width: 1170px) {
     display: none;
     width: 100%;
     ul {
