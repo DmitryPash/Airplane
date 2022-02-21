@@ -88,6 +88,32 @@ $(document).on("click", ".mfp-gallery", function (e) {
   FARBA.galleryCurrentIndex = $(this).closest(".col-us-6").index();
   // console.log(FARBA.galleryCurrentIndex);
 });
+$(document).on("click", ".mfp-lady", function (e) {
+  e.preventDefault();
+  const _this = $(this);
+
+  $.magnificPopup.open({
+    items: { src: _this.attr("data-href") },
+    type: "ajax",
+    overflowY: "scroll",
+    removalDelay: 800,
+    mainClass: "my-mfp-zoom-in",
+    ajax: {
+      tError: "Error. Not valid url",
+    },
+    callbacks: {
+      ajaxContentAdded: function () {
+        setTimeout(function () {
+          $(".mfp-wrap, .mfp-bg").addClass("not_delay");
+          $(".mfp-popup").addClass("not_delay");
+        }, 700);
+      },
+    },
+  });
+
+  FARBA.galleryCurrentIndex = $(this).closest(".col-us-6").index();
+  // console.log(FARBA.galleryCurrentIndex);
+});
 
 $(document).ready(function () {
   // Validation
