@@ -2611,6 +2611,14 @@ input[type=radio] {
     line-height: 123px;
     font-size: 4.375rem;
   }
+
+  .histories-card-text {
+    height: 300px;
+    width: 285px;
+    font-size: 0.75rem;
+    padding: 27px 27px;
+    top: 42%;
+  }
 }
 
 @media (max-width: 992px) {
@@ -3427,11 +3435,6 @@ input[type=radio] {
     margin-top: 35px;
   }
 
-  .popup-media button.mfp-close {
-    right: 10px;
-    top: -35px !important;
-  }
-
   .popup-media-prev,
   .popup-media-next {
     width: 25px;
@@ -3686,6 +3689,7 @@ input[type=radio] {
 
   .histories-card-text {
     height: 226px;
+    width: 225px;
     font-size: 0.5625rem;
     top: 42%;
   }

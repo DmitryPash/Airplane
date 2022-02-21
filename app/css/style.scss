@@ -960,8 +960,16 @@ body {
     &:hover {
       display: block;
     }
+    @media (max-width: 1170px) {
+      height: 300px;
+      width: 285px;
+      font-size: rem(12px);
+      padding: 27px 27px;
+      top: 42%;
+    }
     @media (max-width: 400px) {
       height: 226px;
+      width: 225px;
       font-size: rem(9px);
       top: 42%;
     }
@@ -1656,10 +1664,10 @@ input[type="radio"] {
     width: 100%;
     margin-top: 35px;
 
-    button.mfp-close {
-      right: 10px;
-      top: -35px !important;
-    }
+    // button.mfp-close {
+    //   right: 10px;
+    //   top: -35px !important;
+    // }
 
     &-prev,
     &-next {
