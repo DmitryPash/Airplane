@@ -47,6 +47,7 @@ $(document).on("click", ".mfp-link", function () {
     type: "ajax",
     overflowY: "scroll",
     removalDelay: 610,
+
     mainClass: "my-mfp-zoom-in",
     ajax: {
       tError: "Error. Not valid url",
@@ -65,26 +66,29 @@ $(document).on("click", ".mfp-link", function () {
 $(document).on("click", ".mfp-gallery", function (e) {
   e.preventDefault();
   const _this = $(this);
-  $.magnificPopup.open({
-    items: { src: _this.attr("data-href") },
-    type: "ajax",
-    overflowY: "scroll",
-    removalDelay: 800,
-    mainClass: "my-mfp-zoom-in",
-    ajax: {
-      tError: "Error. Not valid url",
-    },
-    callbacks: {
-      ajaxContentAdded: function () {
-        setTimeout(function () {
-          $(".mfp-wrap, .mfp-bg").addClass("not_delay");
-          $(".mfp-popup").addClass("not_delay");
-        }, 700);
+  if ($(window).width() >= 992) {
+    $.magnificPopup.open({
+      items: { src: _this.attr("data-href") },
+      type: "ajax",
+      overflowY: "scroll",
+      removalDelay: 800,
+      mainClass: "my-mfp-zoom-in",
+      ajax: {
+        tError: "Error. Not valid url",
       },
-    },
-  });
-
-  FARBA.galleryCurrentIndex = $(this).closest(".col-us-12").index();
+      callbacks: {
+        ajaxContentAdded: function () {
+          setTimeout(function () {
+            $(".mfp-wrap, .mfp-bg").addClass("not_delay");
+            $(".mfp-popup").addClass("not_delay");
+          }, 700);
+        },
+      },
+    });
+    FARBA.galleryCurrentIndex = $(this).closest(".col-us-12").index();
+  } else {
+    _this.hasClass("active");
+  }
   console.log(FARBA.galleryCurrentIndex);
 });
 
@@ -155,6 +159,9 @@ const swiper = new Swiper(".top-screen-container", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+  autoplay: {
+    delay: 3000,
   },
 });
 
@@ -231,3 +238,21 @@ $(document).on("click", ".ui-video-play", function (e) {
   }
   return false;
 });
+
+// Toggle-top
+
+function backTop() {
+  let button = $(".toggle-top");
+  $(window).on("scroll", () => {
+    if ($(this).scrollTop() >= 50 && $(window).width() >= 1170) {
+      button.fadeIn();
+    } else {
+      button.fadeOut();
+    }
+  });
+  button.on("click", (e) => {
+    e.preventDefault();
+    $("html").animate({ scrollTop: 0 }, 1000);
+  });
+}
+backTop();

@@ -24,11 +24,6 @@
   }
   &-social {
     white-space: nowrap;
-    @media (max-width: 575px) {
-      flex: 0 0 100%;
-      order: 2;
-      text-align: center;
-    }
     &:hover {
       color: $colorYellow;
     }
@@ -83,5 +78,26 @@
       text-decoration: underline;
       margin: 0;
     }
+  }
+}
+
+.toggle-top {
+  display: none;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid;
+  background: $colorCyan;
+  border: 1px solid #fff;
+  transition: 0.3s ease;
+  background-image: url(../images/icon/backToTop-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  &:hover,
+  &:focus {
+    border: 1px solid $colorBlue;
+    border: 1px solid transparent;
   }
 }

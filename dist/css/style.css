@@ -946,6 +946,30 @@ input:focus:-ms-input-placeholder {
   color: #e0fe02;
 }
 
+.toggle-top {
+  display: none;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid;
+  background: #007bfd;
+  border: 1px solid #fff;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  background-image: url(../images/icon/backToTop-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.toggle-top:hover,
+.toggle-top:focus {
+  border: 1px solid #0e0060;
+  border: 1px solid transparent;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -2351,10 +2375,24 @@ input[type=radio] {
 }
 
 .upload-error {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   color: #ff7070;
   text-align: left;
   font-weight: 500;
+}
+
+.upload-input.upload-error {
+  font-size: 1rem;
+  color: #1a140f;
+  font-family: "CoFo Sans", sans-serif;
+  font-weight: 400;
+}
+
+.form-text-field.upload-error {
+  font-size: 1rem;
+  color: #1a140f;
+  font-family: "CoFo Sans", sans-serif;
+  font-weight: 400;
 }
 
 .upload-container-field {
@@ -3461,16 +3499,6 @@ input[type=radio] {
 }
 
 @media (max-width: 575px) {
-  .footer-social {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
-    text-align: center;
-  }
-
   .footer-links {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;

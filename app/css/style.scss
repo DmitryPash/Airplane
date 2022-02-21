@@ -1726,10 +1726,22 @@ input[type="radio"] {
   }
 }
 .upload-error {
-  font-size: rem(12px);
+  font-size: rem(13px);
   color: #ff7070;
   text-align: left;
   font-weight: 500;
+}
+.upload-input.upload-error {
+  font-size: rem(16px);
+  color: $colorBlack;
+  font-family: $ffCoFo;
+  font-weight: 400;
+}
+.form-text-field.upload-error {
+  font-size: rem(16px);
+  color: $colorBlack;
+  font-family: $ffCoFo;
+  font-weight: 400;
 }
 .upload-container-field {
   margin-bottom: 25px;
