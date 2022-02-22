@@ -1317,14 +1317,20 @@ body {
   padding: 0 40px;
 }
 
+.achievement {
+  margin-bottom: 200px;
+}
+
 .achievement-item {
-  background: #e0fe02;
+  background: #007bfd;
+  height: calc(100% - 32px);
   border-radius: 30px;
   color: #1a140f;
   padding: 134px 65px;
   font-size: 1.5rem;
   line-height: 1.3;
   text-align: center;
+  margin-bottom: 32px;
 }
 
 .achievement-content {
@@ -3795,6 +3801,12 @@ input[type=radio] {
 
   .footer {
     padding-bottom: 50px;
+  }
+
+  .footer-row {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   #middle {
