@@ -1,6 +1,5 @@
 @import "grid";
 @import "UI";
-@import "media";
 @import "header";
 @import "footer";
 
@@ -42,6 +41,7 @@ body {
   line-height: 1.42;
   color: #ffffff;
   background-color: $colorBlue;
+
 }
 
 #wrapper {
@@ -80,6 +80,21 @@ body {
     padding-left: 15px;
   }
 }
+@media (min-width:1170px) {
+  ::-webkit-scrollbar {
+    background: #007bfd;
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+  background: #1d00bf;
+  width: 8px;
+  height: 8px;
+  -webkit-transition: all .8s;
+  transition: all .8s;
+}
+}
+
 
 // Slider gifts-slider
 
@@ -511,6 +526,26 @@ body {
       }
     }
   }
+}
+.achievement {
+  &-item {
+    background: $colorYellow;
+    border-radius: 30px;
+    color: $colorBlack;
+    padding: 134px 65px;
+    font-size: rem(24px);
+    line-height: 1.3;
+    text-align: center;
+  }
+  &-content {
+    max-width: 250px;
+  }
+  &-text {
+
+    font-weight: 500;
+    margin-bottom: 22px;
+  }
+
 }
 .podcasts-slider {
   &-wrp {
@@ -1849,3 +1884,4 @@ input[type="radio"] {
 .mail-form {
   position: absolute;
 }
+
