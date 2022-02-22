@@ -1279,8 +1279,12 @@ input[type="radio"] {
   &-btn {
     padding: 0px 37px;
     box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.2);
+    @media (max-width: 768px) {
+      display: block;
+    }
     @media (max-width: 400px) {
       padding: 0px 33px;
+      font-size: rem(18px);
     }
   }
   &-sticker {

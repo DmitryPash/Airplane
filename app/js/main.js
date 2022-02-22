@@ -66,7 +66,10 @@ $(document).on("click", ".mfp-link", function () {
 $(document).on("click", ".mfp-gallery", function (e) {
   e.preventDefault();
   const _this = $(this);
-  if ($(window).width() >= 992) {
+  
+  
+  if ($(window).width() >= 992 || _this.hasClass('active-card                                                                                                                                                            *-') || _this.closest('.histories-card').find('.histories-card-text').length == 0) {
+    $('.histories-card-img').removeClass('active');
     $.magnificPopup.open({
       items: { src: _this.attr("data-href") },
       type: "ajax",
@@ -87,9 +90,9 @@ $(document).on("click", ".mfp-gallery", function (e) {
     });
     FARBA.galleryCurrentIndex = $(this).closest(".col-us-12").index();
   } else {
-    _this.hasClass("active");
+     $('.histories-card-img').removeClass('active-card');
+    _this.addClass("active-card");
   }
-  console.log(FARBA.galleryCurrentIndex);
 });
 
 $(document).on("click", ".histories-card-text", function () {

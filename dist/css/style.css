@@ -368,6 +368,7 @@ li {
 
 button {
   cursor: pointer;
+  font-family: "CoFo Sans";
 }
 
 input,
@@ -3245,6 +3246,10 @@ input[type=radio] {
   .certificate-footer-btn {
     font-size: 1.125rem;
   }
+
+  .stream-btn {
+    display: block;
+  }
 }
 
 @media (max-width: 765px) {
@@ -3749,16 +3754,6 @@ input[type=radio] {
     font-size: 1.125rem;
   }
 
-  .ui-video-play {
-    width: 60px;
-    height: 60px;
-  }
-
-  .ui-video-play:after {
-    width: 20px;
-    height: 20px;
-  }
-
   .header {
     margin-bottom: 0px;
   }
@@ -3892,6 +3887,7 @@ input[type=radio] {
 
   .stream-btn {
     padding: 0px 33px;
+    font-size: 1.125rem;
   }
 
   .popup-form-text {
