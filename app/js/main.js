@@ -68,8 +68,8 @@ $(document).on("click", ".mfp-gallery", function (e) {
   const _this = $(this);
   
   
-  if ($(window).width() >= 992 || _this.hasClass('active-card                                                                                                                                                            *-') || _this.closest('.histories-card').find('.histories-card-text').length == 0) {
-    $('.histories-card-img').removeClass('active');
+  if ($(window).width() >= 992 || _this.hasClass('active-card') || _this.closest('.histories-card').find('.histories-card-text').length == 0) {
+    $('.histories-card-img').removeClass('active-card');
     $.magnificPopup.open({
       items: { src: _this.attr("data-href") },
       type: "ajax",
