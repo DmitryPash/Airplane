@@ -234,11 +234,15 @@ const swiperPodcasts = new Swiper(".podcasts-slider", {
       },
     },
   },
-  // on: {
-  //   slideChange: function (swiper) {
-  //     console.log("CurrentActive: ", swiper.activeIndex);
-  //   },
-  // },
+  on: {
+    slideChange: function (swiper) {
+      const index = swiper.realIndex;
+      const el = $(".podcasts-slider-slide:eq(" + index + ")");
+      const data = el.attr("data-conspect") || null;
+
+      $(".podcast-btn-download").attr("href", data);
+    },
+  },
 });
 
 swiperPodcasts.on("slideChange", function () {
