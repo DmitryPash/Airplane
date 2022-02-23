@@ -66,10 +66,13 @@ $(document).on("click", ".mfp-link", function () {
 $(document).on("click", ".mfp-gallery", function (e) {
   e.preventDefault();
   const _this = $(this);
-  
-  
-  if ($(window).width() >= 992 || _this.hasClass('active-card') || _this.closest('.histories-card').find('.histories-card-text').length == 0) {
-    $('.histories-card-img').removeClass('active-card');
+
+  if (
+    $(window).width() >= 992 ||
+    _this.hasClass("active-card") ||
+    _this.closest(".histories-card").find(".histories-card-text").length == 0
+  ) {
+    $(".histories-card-img").removeClass("active-card");
     $.magnificPopup.open({
       items: { src: _this.attr("data-href") },
       type: "ajax",
@@ -90,7 +93,7 @@ $(document).on("click", ".mfp-gallery", function (e) {
     });
     FARBA.galleryCurrentIndex = $(this).closest(".col-us-12").index();
   } else {
-     $('.histories-card-img').removeClass('active-card');
+    $(".histories-card-img").removeClass("active-card");
     _this.addClass("active-card");
   }
 });
@@ -117,6 +120,38 @@ $(document).ready(function () {
       },
     },
   });
+
+  $("form#form_achievement").validate({
+    errorElement: "div",
+    errorClass: "upload-error",
+    rules: {
+      name: {
+        lettersonly: true,
+      },
+      lastname: {
+        lettersonly: true,
+      },
+      textarea: {
+        required: true,
+        maxlength: 360,
+      },
+    },
+    messages: {
+      name: {
+        required: "Пожалуйста, введите своё имя",
+        lettersonly: "Введите корректное имя",
+      },
+      lastname: {
+        required: "Пожалуйста, введите свою фамилию",
+        lettersonly: "Введите корректную фамилию",
+      },
+      textarea: {
+        required: "Пожалуйста, напишите свою историю",
+        maxlength: "Введите не больше 360 символов",
+      },
+    },
+  });
+
   // Menu
   $(".toggler").click(function () {
     $(this).toggleClass("active");
@@ -176,7 +211,7 @@ const swiperPodcasts = new Swiper(".podcasts-slider", {
   slidesPerView: "auto",
   coverflowEffect: {
     rotate: 0,
-    stretch: 350,
+    stretch: 303,
     depth: 100,
     scale: 0.85,
     modifier: 1,
@@ -186,20 +221,26 @@ const swiperPodcasts = new Swiper(".podcasts-slider", {
     nextEl: ".podcasts-slider-next",
     prevEl: ".podcasts-slider-prev",
   },
-
   breakpoints: {
     1170: {
       coverflowEffect: {
-        rotate: 0,
-        stretch: 100,
-        depth: 80,
-        scale: 0.85,
-        modifier: 1,
-        slideShadows: false,
+        stretch: 303,
+      },
+    },
+    992: {
+      coverflowEffect: {
+        depth: 10,
+        stretch: 470,
       },
     },
   },
+  on: {
+    slideChange: function (swiper) {
+      console.log("CurrentActive: ", swiper.activeIndex);
+    },
+  },
 });
+
 swiperPodcasts.on("slideChange", function () {
   $(".podcasts-slider iframe").remove();
 });

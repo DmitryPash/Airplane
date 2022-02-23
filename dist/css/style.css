@@ -1319,7 +1319,12 @@ body {
 }
 
 .achievement {
+  position: relative;
   margin-bottom: 200px;
+}
+
+.achievement-items {
+  margin-bottom: 80px;
 }
 
 .achievement-item {
@@ -1340,10 +1345,31 @@ body {
 }
 
 .achievement-btn {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 33.33333%;
-  flex: 0 0 33.33333%;
-  max-width: 33.33333%;
+  max-width: 405px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+}
+
+.achievement-btn .ui-btn {
+  display: block;
+  font-weight: 500;
+}
+
+.achievement-btn .ui-btn:hover {
+  background: #c7df0df5;
+}
+
+.achievement-form {
+  max-width: 512px;
+  margin: 0 auto;
+}
+
+.achievement-form .upload-btn {
+  background: #007bfd;
+}
+
+.achievement-form .upload-btn:hover {
+  background: #007afdb3;
 }
 
 .achievement-yel {
@@ -3861,6 +3887,23 @@ input[type=radio] {
 
   .podcast-btn-download {
     font-size: 0.875rem;
+  }
+
+  .achievement-items {
+    margin-bottom: 40px;
+  }
+
+  .achievement-item {
+    padding: 94px 45px;
+    font-size: 1.25rem;
+  }
+
+  .achievement-btn .ui-btn {
+    font-size: 1.125rem;
+  }
+
+  .achievement-btn {
+    margin-bottom: 60px;
   }
 
   .broadcast-sticker {
