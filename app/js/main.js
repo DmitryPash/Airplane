@@ -234,11 +234,11 @@ const swiperPodcasts = new Swiper(".podcasts-slider", {
       },
     },
   },
-  on: {
-    slideChange: function (swiper) {
-      console.log("CurrentActive: ", swiper.activeIndex);
-    },
-  },
+  // on: {
+  //   slideChange: function (swiper) {
+  //     console.log("CurrentActive: ", swiper.activeIndex);
+  //   },
+  // },
 });
 
 swiperPodcasts.on("slideChange", function () {
