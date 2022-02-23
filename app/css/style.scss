@@ -1195,7 +1195,12 @@ body {
 .lady {
   background: $colorCyan;
   padding: 124px 0px 150px 0px;
-
+  &-container {
+    margin-bottom: 150px;
+    @media (max-width: 400px) {
+      margin-bottom: 80px;
+    }
+  }
   &-btn {
     background: $colorYellow;
     color: $colorBlack;

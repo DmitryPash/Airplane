@@ -1816,6 +1816,10 @@ body {
   padding: 124px 0px 150px 0px;
 }
 
+.lady-container {
+  margin-bottom: 150px;
+}
+
 .lady-btn {
   background: #e0fe02;
   color: #1a140f;
@@ -3975,6 +3979,10 @@ input[type=radio] {
     width: 225px;
     font-size: 0.5625rem;
     top: 42%;
+  }
+
+  .lady-container {
+    margin-bottom: 80px;
   }
 
   .lady {
