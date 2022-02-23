@@ -133,7 +133,7 @@ $(document).ready(function () {
       },
       textarea: {
         required: true,
-        maxlength: 360,
+        maxlength: 70,
       },
     },
     messages: {
@@ -146,8 +146,8 @@ $(document).ready(function () {
         lettersonly: "Введите корректную фамилию",
       },
       textarea: {
-        required: "Пожалуйста, напишите свою историю",
-        maxlength: "Введите не больше 360 символов",
+        required: "Пожалуйста, напишите свое поздравление",
+        maxlength: "Введите не больше 70 символов",
       },
     },
   });
