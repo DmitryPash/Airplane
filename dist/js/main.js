@@ -207,7 +207,7 @@ const swiperPodcasts = new Swiper(".podcasts-slider", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
-  loop: true,
+  // loop: true,
   slidesPerView: "auto",
   coverflowEffect: {
     rotate: 0,

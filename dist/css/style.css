@@ -381,7 +381,7 @@ textarea {
   position: relative;
   height: 80px;
   line-height: 80px;
-  background: #007bfd;
+  background: #0e0060;
   font-weight: 400;
   font-size: 1.375rem;
   color: #ffffff;
@@ -404,7 +404,7 @@ textarea {
 .ui-sticker-blue {
   display: inline-block;
   position: relative;
-  background: #007bfd;
+  background: #0e0060;
   font-weight: 400;
   font-size: 1.5rem;
   color: #ffffff;
@@ -610,7 +610,7 @@ textarea {
 }
 
 .ui-ribbon-cyan {
-  background: #007bfd;
+  background: #0e0060;
   -webkit-transform: rotate(3deg);
   -ms-transform: rotate(3deg);
   transform: rotate(3deg);
@@ -955,7 +955,7 @@ input:focus:-ms-input-placeholder {
   width: 50px;
   height: 50px;
   border: 1px solid;
-  background: #007bfd;
+  background: #0e0060;
   border: 1px solid #fff;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
@@ -994,7 +994,7 @@ body {
   font-size: 0.9375rem;
   line-height: 1.42;
   color: #ffffff;
-  background-color: #0e0060;
+  background-color: #007bfd;
 }
 
 #wrapper {
@@ -1042,7 +1042,7 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-  background: #007bfd;
+  background: #0e0060;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -1328,7 +1328,7 @@ body {
 }
 
 .achievement-item {
-  background: #007bfd;
+  background: #0e0060;
   height: calc(100% - 32px);
   border-radius: 30px;
   color: #fff;
@@ -1365,7 +1365,7 @@ body {
 }
 
 .achievement-form .upload-btn {
-  background: #007bfd;
+  background: #0e0060;
 }
 
 .achievement-form .upload-btn:hover {
@@ -1400,7 +1400,7 @@ body {
   border: 1px solid #ffffff00;
   border-radius: 50%;
   margin-top: -27px;
-  background-color: #007bfd;
+  background-color: #0e0060;
   color: #fff;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
@@ -1622,6 +1622,7 @@ body {
   -ms-transform: rotate(20deg);
   transform: rotate(20deg);
   border-radius: 20px;
+  background: #007bfd;
 }
 
 .event-sticker-photo img {
@@ -1648,8 +1649,15 @@ body {
   border-radius: 70px;
 }
 
-.gentleman {
-  margin-bottom: 176px;
+.gentleman .histories-pgn-link {
+  background: #e0fe02;
+  color: #000;
+}
+
+.gentleman-bg {
+  background: #0e0060;
+  padding-top: 100px;
+  padding-bottom: 130px;
 }
 
 .gentleman-title {
@@ -1814,6 +1822,7 @@ body {
 .lady {
   background: #007bfd;
   padding: 124px 0px 150px 0px;
+  margin-bottom: 50px;
 }
 
 .lady-container {
@@ -1927,7 +1936,7 @@ body {
   height: 26px;
   line-height: 26px;
   text-align: center;
-  background: #007bfd;
+  background: #0e0060;
   color: #fff;
   font-weight: 500;
   border-radius: 5px;
@@ -2775,7 +2784,7 @@ input[type=radio] {
   }
 
   .header-active {
-    background: #007bfd;
+    background: #0e0060;
     padding-bottom: 20px;
   }
 
@@ -3959,7 +3968,7 @@ input[type=radio] {
   }
 
   .gentleman {
-    margin-bottom: 100px;
+    margin-bottom: 0px;
   }
 
   .gentleman-title {

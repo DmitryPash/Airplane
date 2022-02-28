@@ -40,7 +40,7 @@ body {
   font-size: rem(15px);
   line-height: 1.42;
   color: #ffffff;
-  background-color: $colorBlue;
+  background-color: $colorCyan;
 }
 
 #wrapper {
@@ -103,7 +103,7 @@ body {
   background: #ffffff;
 }
 .swiper-pagination-bullet-active {
-  background: $colorCyan;
+  background: $colorBlue;
 }
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets
@@ -535,7 +535,7 @@ body {
     }
   }
   &-item {
-    background: $colorCyan;
+    background: $colorBlue;
     height: calc(100% - 32px);
     border-radius: 30px;
     color: #fff;
@@ -575,7 +575,7 @@ body {
     max-width: 512px;
     margin: 0 auto;
     .upload-btn {
-      background: $colorCyan;
+      background: $colorBlue;
       &:hover {
         background: #007afdb3;
       }
@@ -610,7 +610,7 @@ body {
     border: 1px solid #ffffff00;
     border-radius: 50%;
     margin-top: -27px;
-    background-color: $colorCyan;
+    background-color: $colorBlue;
     color: #fff;
     transition: 0.3s ease;
 
@@ -911,6 +911,7 @@ body {
     box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
     transform: rotate(20deg);
     border-radius: 20px;
+    background: $colorCyan;
     img {
       position: absolute;
       transform: translate(-50%, -50%);
@@ -969,12 +970,20 @@ body {
   }
 }
 .gentleman {
-  margin-bottom: 176px;
+  .histories-pgn-link {
+    background: $colorYellow;
+    color: #000;
+  }
+  &-bg {
+    background: $colorBlue;
+    padding-top: 100px;
+    padding-bottom: 130px;
+  }
   @media (max-width: 992px) {
     margin-bottom: 150px;
   }
   @media (max-width: 400px) {
-    margin-bottom: 100px;
+    margin-bottom: 0px;
   }
   &-title {
     font-size: rem(52px);
@@ -1195,6 +1204,7 @@ body {
 .lady {
   background: $colorCyan;
   padding: 124px 0px 150px 0px;
+  margin-bottom: 50px;
   &-container {
     margin-bottom: 150px;
     @media (max-width: 400px) {
@@ -1321,7 +1331,7 @@ body {
     height: 26px;
     line-height: 26px;
     text-align: center;
-    background: $colorCyan;
+    background: $colorBlue;
     color: #fff;
     font-weight: 500;
     border-radius: 5px;
